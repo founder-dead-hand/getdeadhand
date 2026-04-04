@@ -3,43 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Automatic Response System. AI that works for you. Not in place of you. Built for contractors who answer their own phones." />
+  <meta name="description" content="Automatic response system for contractors. Every inbound call triaged, ranked, and ready to handle before you've listened to a single voicemail." />
   <meta name="robots" content="index, follow" />
   <title>Dead Hand — Automatic Response System</title>
-
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-icon.png" />
   <link rel="apple-touch-icon" href="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-icon.png" />
-
-  <!-- Open Graph -->
   <meta property="og:title" content="Dead Hand — Automatic Response System" />
   <meta property="og:description" content="When everything is hitting the fan, you're still covering leads." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://getdeadhand.com" />
   <meta property="og:image" content="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-badge.png" />
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet" />
-
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --black:        #0a0a0a;
-      --black-card:   #111111;
-      --black-raised: #1a1a1a;
-      --red:          #c0392b;
-      --white:        #e8e8e8;
-      --white-bright: #ffffff;
-      --dim:          #666666;
-      --dimmer:       #333333;
-      --border:       1px solid #2a2a2a;
+      --black:   #0a0a0a;
+      --card:    #111111;
+      --raised:  #1a1a1a;
+      --red:     #c0392b;
+      --white:   #e8e8e8;
+      --bright:  #ffffff;
+      --dim:     #666666;
+      --dimmer:  #333333;
+      --border:  1px solid #2a2a2a;
 
-      --font-display: 'Bebas Neue', sans-serif;
-      --font-mono:    'IBM Plex Mono', monospace;
-      --font-body:    'IBM Plex Sans', sans-serif;
+      --display: 'Bebas Neue', sans-serif;
+      --mono:    'IBM Plex Mono', monospace;
+      --body:    'IBM Plex Sans', sans-serif;
+
+      --space-xs: 8px;
+      --space-sm: 16px;
+      --space-md: 32px;
+      --space-lg: 64px;
+      --space-xl: 96px;
+
+      --max: 680px;
+      --pad: clamp(20px, 5vw, 48px);
     }
 
     html { scroll-behavior: smooth; }
@@ -47,91 +49,103 @@
     body {
       background: var(--black);
       color: var(--white);
-      font-family: var(--font-body);
+      font-family: var(--body);
+      font-size: 17px;
+      line-height: 1.7;
       -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── LAYOUT ── */
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--pad);
     }
 
     /* ── HERO ── */
     .hero {
-      min-height: 100vh;
+      min-height: 100svh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 48px 24px;
       text-align: center;
+      padding: var(--space-xl) var(--pad);
       border-bottom: var(--border);
     }
 
-    .hero-wordmark {
+    .hero-mark {
       width: 100%;
-      max-width: 520px;
-      margin-bottom: 48px;
+      max-width: 480px;
+      height: auto;
+      margin-bottom: var(--space-lg);
     }
 
     .hero-headline {
-      font-family: var(--font-display);
-      font-size: clamp(32px, 5.5vw, 58px);
-      color: var(--white-bright);
-      letter-spacing: 2px;
-      line-height: 1.1;
-      margin-bottom: 20px;
-      max-width: 760px;
+      font-family: var(--display);
+      font-size: clamp(36px, 6vw, 60px);
+      color: var(--bright);
+      letter-spacing: 1px;
+      line-height: 1.05;
+      margin-bottom: var(--space-sm);
+      max-width: 640px;
     }
 
     .hero-sub {
-      font-family: var(--font-mono);
-      font-size: clamp(14px, 2vw, 20px);
+      font-family: var(--mono);
+      font-size: clamp(14px, 2.2vw, 18px);
       color: var(--dim);
-      letter-spacing: 4px;
-      margin-bottom: 56px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: var(--space-lg);
     }
 
-    /* ── EMAIL FORM ── */
-    .form-wrap {
+    /* ── FORM ── */
+    .form {
       display: flex;
       flex-direction: column;
       gap: 10px;
       width: 100%;
-      max-width: 420px;
+      max-width: 400px;
     }
 
-    .form-input {
-      background: var(--black-raised);
+    .form input[type="email"] {
+      background: var(--raised);
       border: var(--border);
       color: var(--white);
-      font-family: var(--font-mono);
+      font-family: var(--mono);
       font-size: 15px;
-      padding: 16px 18px;
+      padding: 15px 18px;
       width: 100%;
       outline: none;
       border-radius: 0;
       -webkit-appearance: none;
+      transition: border-color 120ms;
     }
 
-    .form-input::placeholder { color: var(--dimmer); }
-    .form-input:focus { border-color: #444; }
+    .form input[type="email"]::placeholder { color: var(--dimmer); }
+    .form input[type="email"]:focus { border-color: #555; }
 
-    .form-honeypot { display: none; }
+    .form-honey { display: none; }
 
-    .form-btn {
+    .form button {
       background: var(--red);
       border: none;
-      color: var(--white-bright);
-      font-family: var(--font-display);
+      color: var(--bright);
+      font-family: var(--display);
       font-size: 20px;
       letter-spacing: 4px;
-      padding: 16px;
+      padding: 15px;
       width: 100%;
       cursor: pointer;
       border-radius: 0;
-      transition: opacity 120ms ease;
+      transition: opacity 120ms;
     }
 
-    .form-btn:hover { opacity: 0.88; }
+    .form button:hover { opacity: 0.85; }
 
     .form-note {
-      font-family: var(--font-mono);
+      font-family: var(--mono);
       font-size: 11px;
       color: var(--dimmer);
       letter-spacing: 1px;
@@ -140,289 +154,431 @@
 
     /* ── SECTIONS ── */
     .section {
-      padding: 96px 24px;
-      max-width: 720px;
+      padding: var(--space-xl) var(--pad);
+      max-width: var(--max);
       margin: 0 auto;
       border-bottom: var(--border);
     }
 
-    .section-label {
-      font-family: var(--font-mono);
+    .label {
+      font-family: var(--mono);
       font-size: 11px;
       color: var(--red);
       letter-spacing: 4px;
-      margin-bottom: 24px;
+      text-transform: uppercase;
+      margin-bottom: var(--space-md);
+      display: block;
     }
 
-    .section-heading {
-      font-family: var(--font-display);
-      font-size: clamp(32px, 4vw, 48px);
-      color: var(--white-bright);
-      letter-spacing: 2px;
+    .section h2 {
+      font-family: var(--display);
+      font-size: clamp(30px, 4vw, 44px);
+      color: var(--bright);
+      letter-spacing: 1px;
       line-height: 1.1;
-      margin-bottom: 28px;
+      margin-bottom: var(--space-md);
     }
 
-    .section-body {
-      font-size: 18px;
-      line-height: 1.85;
-      color: var(--white);
+    .section p { color: var(--white); margin-bottom: var(--space-sm); }
+    .section p:last-child { margin-bottom: 0; }
+
+    /* ── REAL TALK (middle section) ── */
+    .realtalk {
+      padding: var(--space-xl) var(--pad);
+      max-width: var(--max);
+      margin: 0 auto;
+      border-bottom: var(--border);
     }
 
-    .section-body p + p { margin-top: 18px; }
-
-    /* ── HOW IT WORKS ── */
-    .steps {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      margin-top: 48px;
+    .realtalk p {
+      color: var(--dim);
+      font-size: 17px;
+      line-height: 1.8;
+      margin-bottom: var(--space-sm);
     }
+
+    .realtalk p:last-child { margin-bottom: 0; }
+
+    /* ── STEPS ── */
+    .steps { margin-top: var(--space-md); }
 
     .step {
-      display: flex;
-      gap: 28px;
-      padding: 32px 0;
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: var(--space-sm) var(--space-md);
+      padding: var(--space-md) 0;
       border-top: var(--border);
     }
 
     .step:last-child { border-bottom: var(--border); }
 
     .step-num {
-      font-family: var(--font-display);
+      font-family: var(--display);
       font-size: 52px;
       color: var(--dimmer);
-      letter-spacing: 2px;
       line-height: 1;
-      flex-shrink: 0;
-      width: 52px;
+      padding-top: 4px;
     }
 
-    .step-title {
-      font-family: var(--font-display);
-      font-size: 24px;
-      color: var(--white-bright);
+    .step h3 {
+      font-family: var(--display);
+      font-size: 22px;
+      color: var(--bright);
       letter-spacing: 2px;
-      margin-bottom: 10px;
+      margin-bottom: var(--space-xs);
     }
 
-    .step-desc {
-      font-size: 17px;
+    .step p {
+      font-size: 16px;
       color: var(--dim);
-      line-height: 1.7;
+      line-height: 1.65;
     }
 
-    /* ── FOUNDER NOTE ── */
-    .founder {
-      padding: 96px 24px;
-      max-width: 720px;
+    /* ── REVIEW / SOCIAL PROOF ── */
+    .review {
+      padding: var(--space-xl) var(--pad);
+      max-width: var(--max);
       margin: 0 auto;
       border-bottom: var(--border);
     }
 
-    .founder-label {
-      font-family: var(--font-mono);
+    .review-label {
+      font-family: var(--mono);
       font-size: 11px;
       color: var(--dimmer);
       letter-spacing: 4px;
-      margin-bottom: 32px;
+      text-transform: uppercase;
+      margin-bottom: var(--space-md);
+      display: block;
     }
 
-    .founder-text {
+    .review blockquote {
+      border-left: 3px solid var(--red);
+      padding-left: var(--space-md);
+      margin-bottom: var(--space-md);
+    }
+
+    .review blockquote p {
       font-size: 19px;
-      line-height: 1.9;
+      line-height: 1.8;
       color: var(--white);
+      font-style: normal;
+      margin-bottom: var(--space-sm);
     }
 
-    .founder-text p + p { margin-top: 22px; }
+    .review blockquote p:last-child { margin-bottom: 0; }
 
-    .founder-sig {
-      font-family: var(--font-mono);
+    .review-sig {
+      font-family: var(--mono);
       font-size: 12px;
       color: var(--dim);
       letter-spacing: 2px;
-      margin-top: 40px;
+      text-transform: uppercase;
+      margin-top: var(--space-md);
+    }
+
+    /* ── PRICING STRIP ── */
+    .pricing-strip {
+      padding: var(--space-xl) var(--pad);
+      max-width: var(--max);
+      margin: 0 auto;
+      border-bottom: var(--border);
+    }
+
+    .pricing-strip h2 {
+      font-family: var(--display);
+      font-size: clamp(30px, 4vw, 44px);
+      color: var(--bright);
+      letter-spacing: 1px;
+      margin-bottom: var(--space-md);
+    }
+
+    .pricing-card {
+      background: var(--card);
+      border: var(--border);
+      padding: var(--space-md);
+      margin-bottom: var(--space-sm);
+    }
+
+    .pricing-card.featured {
+      border-color: var(--red);
+    }
+
+    .pricing-tier {
+      font-family: var(--display);
+      font-size: 28px;
+      color: var(--bright);
+      letter-spacing: 3px;
+      margin-bottom: var(--space-xs);
+    }
+
+    .pricing-price {
+      font-family: var(--mono);
+      font-size: 32px;
+      color: var(--red);
+      margin-bottom: var(--space-xs);
+    }
+
+    .pricing-price span {
+      font-size: 14px;
+      color: var(--dim);
+    }
+
+    .pricing-desc {
+      font-size: 15px;
+      color: var(--dim);
+      line-height: 1.6;
+      margin-bottom: var(--space-sm);
+    }
+
+    .pricing-features {
+      list-style: none;
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--dim);
+      letter-spacing: 0.5px;
+    }
+
+    .pricing-features li {
+      padding: 5px 0;
+      border-bottom: 1px solid var(--dimmer);
+    }
+
+    .pricing-features li:last-child { border-bottom: none; }
+
+    .pricing-features li::before {
+      content: "— ";
+      color: var(--red);
+    }
+
+    .pricing-note {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--dimmer);
+      letter-spacing: 1px;
+      margin-top: var(--space-md);
+      line-height: 1.7;
     }
 
     /* ── TRADE LINKS ── */
     .trades {
-      padding: 48px 24px;
-      max-width: 720px;
+      padding: var(--space-lg) var(--pad);
+      max-width: var(--max);
       margin: 0 auto;
       display: flex;
-      gap: 12px;
+      gap: 10px;
       flex-wrap: wrap;
     }
 
     .trade-link {
-      font-family: var(--font-display);
+      font-family: var(--display);
       font-size: 14px;
       letter-spacing: 2px;
       color: var(--dim);
       text-decoration: none;
       border: var(--border);
       padding: 10px 18px;
-      transition: color 120ms ease, border-color 120ms ease;
+      transition: color 120ms, border-color 120ms;
     }
 
-    .trade-link:hover { color: var(--white); border-color: #444; }
+    .trade-link:hover { color: var(--white); border-color: #555; }
 
     /* ── FOOTER ── */
     footer {
-      padding: 32px 24px;
+      padding: var(--space-md) var(--pad);
       border-top: var(--border);
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 16px;
+      gap: var(--space-sm);
     }
 
-    .footer-wordmark {
-      height: 28px;
-      opacity: 0.35;
+    .footer-mark {
+      height: 22px;
+      width: auto;
+      opacity: 0.3;
     }
 
-    .footer-meta {
-      font-family: var(--font-mono);
-      font-size: 10px;
+    .footer-links {
+      font-family: var(--mono);
+      font-size: 11px;
       color: var(--dimmer);
       letter-spacing: 1px;
+      display: flex;
+      gap: var(--space-sm);
+      flex-wrap: wrap;
     }
 
-    .footer-link {
+    .footer-links a {
       color: var(--dimmer);
       text-decoration: none;
+      transition: color 120ms;
     }
 
-    .footer-link:hover { color: var(--dim); }
+    .footer-links a:hover { color: var(--dim); }
 
-    /* ── RESPONSIVE ── */
-    @media (max-width: 600px) {
-      .step { gap: 16px; }
-      .step-num { font-size: 40px; width: 40px; }
+    @media (max-width: 500px) {
+      .step { grid-template-columns: 40px 1fr; gap: var(--space-xs) var(--space-sm); }
+      .step-num { font-size: 40px; }
       footer { flex-direction: column; align-items: flex-start; }
-      .hero-sub { letter-spacing: 2px; }
+      .pricing-price { font-size: 26px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- HERO -->
   <section class="hero">
     <img
       src="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-wordmark.png"
       alt="Dead Hand — Automatic Response System"
-      class="hero-wordmark"
+      class="hero-mark"
     />
     <h1 class="hero-headline">When everything is hitting the fan,<br>you're still covering leads.</h1>
-    <p class="hero-sub">THE AI YOUR CUSTOMERS NEVER TALK TO</p>
+    <p class="hero-sub">Handle the lead like any other text.</p>
 
-    <form
-      class="form-wrap"
-      name="early-access"
-      method="POST"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
-    >
+    <form class="form" name="early-access" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="early-access" />
-      <p class="form-honeypot">
-        <label>Don't fill this out: <input name="bot-field" /></label>
-      </p>
-      <input
-        class="form-input"
-        type="email"
-        name="email"
-        placeholder="YOUR EMAIL"
-        required
-        autocomplete="email"
-      />
-      <button class="form-btn" type="submit">GET EARLY ACCESS</button>
+      <p class="form-honey"><label>Skip this: <input name="bot-field" /></label></p>
+      <input type="email" name="email" placeholder="YOUR EMAIL" required autocomplete="email" />
+      <button type="submit">GET EARLY ACCESS</button>
       <p class="form-note">No spam. No newsletter. Just access when it's ready.</p>
     </form>
   </section>
 
-  <!-- THE PROBLEM -->
   <section class="section">
-    <p class="section-label">THE PROBLEM</p>
-    <h2 class="section-heading">The phone is your biggest asset and your biggest headache.</h2>
-    <div class="section-body">
-      <p>You're busy because you're good at what you do. But being on a job means you're not on the phone. And when you're not on the phone, someone else is.</p>
-      <p>That water heater call you missed at 2pm on Friday? It went to whoever picked up. Not because they're better. Because they answered.</p>
-      <p>Answering services put someone between you and your customer. AI operators put a robot on your line. Neither of those is you — and your customers can tell.</p>
-    </div>
+    <span class="label">The Problem</span>
+    <h2>The phone is your biggest earner and your biggest headache.</h2>
+    <p>You're busy because you're good. But busy means you're on a job, and on a job means you're not on the phone. And when you're not on the phone, someone else is.</p>
+    <p>That water heater call you missed Friday afternoon went to whoever picked up. Not because they're better. Because they answered.</p>
+    <p>Answering services put a stranger between you and your customer. AI operators put a robot on your line. Your customers know the difference immediately, and so do you.</p>
   </section>
 
-  <!-- HOW IT WORKS -->
+  <section class="realtalk">
+    <p>The day before a holiday, phones ring fast, you can't answer, and half your callers don't leave a message because they figure you're already closed. Those calls used to disappear.</p>
+    <p>The estimate request that came in by email at 9pm — the one you'd have seen Monday morning after someone else already quoted it. Now it's ranked and waiting before you go to sleep.</p>
+    <p>Leads don't live in your head anymore. They don't pile up in a voicemail box you'll get to eventually. They come in, they get ranked, they get handled. The same way you'd reply to any text.</p>
+  </section>
+
   <section class="section">
-    <p class="section-label">HOW IT WORKS</p>
-    <h2 class="section-heading">A briefing in your hand before you've listened to a single voicemail.</h2>
+    <span class="label">How It Works</span>
+    <h2>A briefing in your hand before you've listened to a single voicemail.</h2>
 
     <div class="steps">
       <div class="step">
         <div class="step-num">01</div>
-        <div class="step-content">
-          <div class="step-title">CALL COMES IN</div>
-          <p class="step-desc">The system tries to bridge the call to you. If you're under a sink, it routes to your voicemail — recorded in your voice, in your words.</p>
+        <div>
+          <h3>Call Comes In</h3>
+          <p>The system tries to bridge the call to you. If you're under a sink, it routes to your voicemail — recorded in your voice, your words, setting the right expectation.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">02</div>
-        <div class="step-content">
-          <div class="step-title">AI READS THE ROOM</div>
-          <p class="step-desc">The moment they hang up, AI triages the voicemail. Urgency tier. Job type. What they said, exactly. A reply draft ready to send.</p>
+        <div>
+          <h3>AI Reads the Room</h3>
+          <p>The moment they hang up, the job is classified. Urgency tier. Job type. What they said, extracted cleanly. A reply draft ready to send — in your voice, not a robot's.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">03</div>
-        <div class="step-content">
-          <div class="step-title">YOU GET THE BRIEFING</div>
-          <p class="step-desc">Before you've heard the voicemail, you know who called, what they need, and how urgent it is. The draft is ready. You send it or edit it. Your words go out. Not a robot's.</p>
+        <div>
+          <h3>You Get the Briefing</h3>
+          <p>Before you've heard a single voicemail, you know who called, what they need, and how urgent it is. The draft is written. You send it or edit it. Your words go out.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">04</div>
-        <div class="step-content">
-          <div class="step-title">LEAD IS YOURS</div>
-          <p class="step-desc">They hear back in minutes. The job is yours before they try anyone else. Close out the lead when it's done. The system moves on.</p>
+        <div>
+          <h3>Lead Is Yours</h3>
+          <p>They hear back in minutes. The job is yours before they try the next number. Close it out when it's done. The system moves on.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOUNDER NOTE -->
-  <section class="founder">
-    <p class="founder-label">FROM THE FOUNDER</p>
-    <div class="founder-text">
-      <p>I built this because I was the guy missing the calls. Twenty years running a service operation, answering my own phone, losing jobs to whoever picked up first.</p>
-      <p>I tried answering services. They cost money and made me sound like a company I'm not. I tried AI operators. They were worse — callers could tell immediately, and I lost the job faster than if I'd just missed the call.</p>
-      <p>What I needed wasn't something to answer for me. I needed something that made sure I never forgot to answer. That ranked my queue so I knew which call to return first. That had a reply ready so I wasn't composing texts from a job site at 6pm.</p>
-      <p>This is that tool. It doesn't replace you. It makes sure the leads don't disappear while you're working.</p>
-    </div>
-    <div class="founder-sig">— THE FOUNDER</div>
+  <section class="review">
+    <span class="review-label">First Review</span>
+    <blockquote>
+      <p>I built this because I was the guy missing the calls. Twenty years in the trades, answering my own phone, losing jobs to whoever picked up first.</p>
+      <p>Answering services made me sound like a company I'm not. AI operators were worse — callers knew immediately, and I lost the job faster than if I'd just missed the call.</p>
+      <p>What I needed wasn't something to answer for me. I needed something that made sure the lead didn't disappear while I was working. That ranked my queue so I knew which call to return first. That had a reply ready so I wasn't composing texts from a job site at 6pm.</p>
+      <p>The first real job it caught paid for a year of the platform.</p>
+    </blockquote>
+    <div class="review-sig">— The Founder &nbsp;·&nbsp; Active user since day one</div>
   </section>
 
-  <!-- TRADE LINKS -->
+  <section class="pricing-strip">
+    <span class="label">Pricing</span>
+    <h2>Flat rate. No overages. No surprises.</h2>
+
+    <div class="pricing-card featured">
+      <div class="pricing-tier">Starter</div>
+      <div class="pricing-price">$79 <span>/ month</span></div>
+      <p class="pricing-desc">For the owner-operator who answers their own phone. Everything you need, nothing you don't.</p>
+      <ul class="pricing-features">
+        <li>Inbound call capture and voicemail routing</li>
+        <li>AI triage — urgency ranked, job typed, reply drafted</li>
+        <li>SMS response from your dashboard or phone</li>
+        <li>Real-time push notifications by urgency tier</li>
+        <li>Dedicated business number included</li>
+        <li>Voicemail recorded in your voice</li>
+        <li>10DLC compliant SMS — no compliance headaches</li>
+      </ul>
+    </div>
+
+    <div class="pricing-card">
+      <div class="pricing-tier">Pro</div>
+      <div class="pricing-price">$149 <span>/ month</span></div>
+      <p class="pricing-desc">For shops with a second person handling calls, or owners who want more visibility across their pipeline.</p>
+      <ul class="pricing-features">
+        <li>Everything in Starter</li>
+        <li>Multiple team members</li>
+        <li>Email lead capture and triage</li>
+        <li>Google Business Profile message capture</li>
+        <li>Lead pipeline reporting</li>
+        <li>Custom AI voice and response tone</li>
+      </ul>
+    </div>
+
+    <div class="pricing-card">
+      <div class="pricing-tier">Team</div>
+      <div class="pricing-price">$249 <span>/ month</span></div>
+      <p class="pricing-desc">For shops running multiple trucks where the scheduler is the bottleneck, not the technicians.</p>
+      <ul class="pricing-features">
+        <li>Everything in Pro</li>
+        <li>Unlimited team members</li>
+        <li>Multi-line support</li>
+        <li>Priority routing by technician or region</li>
+        <li>Admin dashboard with tenant controls</li>
+      </ul>
+    </div>
+
+    <p class="pricing-note">Annual plans available at two months free. No contracts. Cancel any time. Infrastructure cost per tenant runs about $12/month — the rest funds the platform and keeps it running.</p>
+  </section>
+
   <div class="trades">
-    <a class="trade-link" href="/for-plumbers">FOR PLUMBERS</a>
-    <a class="trade-link" href="/for-hvac">FOR HVAC</a>
-    <a class="trade-link" href="/for-electrical">FOR ELECTRICAL</a>
-    <a class="trade-link" href="/pricing">PRICING</a>
+    <a class="trade-link" href="/for-plumbers">For Plumbers</a>
+    <a class="trade-link" href="/for-hvac">For HVAC</a>
+    <a class="trade-link" href="/for-electrical">For Electrical</a>
   </div>
 
-  <!-- FOOTER -->
   <footer>
     <img
       src="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-wordmark.png"
       alt="Dead Hand"
-      class="footer-wordmark"
+      class="footer-mark"
     />
-    <div class="footer-meta">
-      <a class="footer-link" href="https://dead-hand.app">SIGN IN</a>
-      &nbsp;&nbsp;·&nbsp;&nbsp;
-      <a class="footer-link" href="mailto:founder@dead-hand.app">CONTACT</a>
-      &nbsp;&nbsp;·&nbsp;&nbsp;
-      &copy; 2026
+    <div class="footer-links">
+      <a href="https://dead-hand.app">Sign In</a>
+      <a href="/pricing">Pricing</a>
+      <a href="/for-plumbers">Plumbers</a>
+      <a href="/for-hvac">HVAC</a>
+      <a href="/for-electrical">Electrical</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+      <a href="/sms-policy">SMS Policy</a>
+      <a href="mailto:founder@dead-hand.app">Contact</a>
+      <span>&copy; 2026</span>
     </div>
   </footer>
 

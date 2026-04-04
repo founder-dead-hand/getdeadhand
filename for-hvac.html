@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dead Hand for HVAC contractors. No heat calls in December, no AC calls in July — every emergency lead captured and responded to in minutes, not hours." />
+  <meta name="robots" content="index, follow" />
+  <title>Dead Hand for HVAC — Catch Every Emergency Call</title>
+  <link rel="icon" type="image/png" href="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-icon.png" />
+  <link rel="canonical" href="https://getdeadhand.com/for-hvac" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #0a0a0a; --card: #111111; --raised: #1a1a1a;
+      --red: #c0392b; --white: #e8e8e8; --bright: #ffffff;
+      --dim: #666666; --dimmer: #333333; --border: 1px solid #2a2a2a;
+      --display: 'Bebas Neue', sans-serif;
+      --mono: 'IBM Plex Mono', monospace;
+      --body: 'IBM Plex Sans', sans-serif;
+      --pad: clamp(20px, 5vw, 48px);
+      --max: 680px;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--black); color: var(--white); font-family: var(--body); font-size: 17px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    .nav { padding: 20px var(--pad); border-bottom: var(--border); display: flex; align-items: center; justify-content: space-between; }
+    .nav-mark { height: 28px; width: auto; }
+    .nav-link { font-family: var(--mono); font-size: 11px; color: var(--dim); text-decoration: none; letter-spacing: 2px; }
+    .nav-link:hover { color: var(--white); }
+    .hero { padding: 80px var(--pad) 64px; max-width: var(--max); margin: 0 auto; border-bottom: var(--border); }
+    .label { font-family: var(--mono); font-size: 11px; color: var(--red); letter-spacing: 4px; text-transform: uppercase; display: block; margin-bottom: 24px; }
+    .hero h1 { font-family: var(--display); font-size: clamp(36px, 6vw, 56px); color: var(--bright); letter-spacing: 1px; line-height: 1.05; margin-bottom: 24px; }
+    .hero p { font-size: 18px; color: var(--dim); line-height: 1.75; margin-bottom: 16px; }
+    .section { padding: 64px var(--pad); max-width: var(--max); margin: 0 auto; border-bottom: var(--border); }
+    .section h2 { font-family: var(--display); font-size: clamp(28px, 4vw, 40px); color: var(--bright); letter-spacing: 1px; line-height: 1.1; margin-bottom: 24px; }
+    .section p { color: var(--white); margin-bottom: 16px; }
+    .section p:last-child { margin-bottom: 0; }
+    .scenarios { margin-top: 32px; }
+    .scenario { border-top: var(--border); padding: 24px 0; }
+    .scenario:last-child { border-bottom: var(--border); }
+    .scenario h3 { font-family: var(--display); font-size: 20px; color: var(--bright); letter-spacing: 2px; margin-bottom: 8px; }
+    .scenario p { font-size: 16px; color: var(--dim); line-height: 1.65; }
+    .cta-section { padding: 64px var(--pad); max-width: var(--max); margin: 0 auto; text-align: center; }
+    .cta-section h2 { font-family: var(--display); font-size: clamp(28px, 4vw, 40px); color: var(--bright); letter-spacing: 1px; margin-bottom: 16px; }
+    .cta-section p { color: var(--dim); margin-bottom: 32px; }
+    .form { display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 400px; margin: 0 auto; }
+    .form input[type="email"] { background: var(--raised); border: var(--border); color: var(--white); font-family: var(--mono); font-size: 15px; padding: 15px 18px; width: 100%; outline: none; border-radius: 0; -webkit-appearance: none; }
+    .form input[type="email"]::placeholder { color: var(--dimmer); }
+    .form-honey { display: none; }
+    .form button { background: var(--red); border: none; color: var(--bright); font-family: var(--display); font-size: 20px; letter-spacing: 4px; padding: 15px; width: 100%; cursor: pointer; border-radius: 0; }
+    .form button:hover { opacity: 0.85; }
+    footer { padding: 24px var(--pad); border-top: var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .footer-mark { height: 20px; opacity: 0.3; }
+    .footer-links { font-family: var(--mono); font-size: 11px; color: var(--dimmer); letter-spacing: 1px; display: flex; gap: 16px; flex-wrap: wrap; }
+    .footer-links a { color: var(--dimmer); text-decoration: none; }
+    .footer-links a:hover { color: var(--dim); }
+    @media (max-width: 500px) { footer { flex-direction: column; align-items: flex-start; } }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="/"><img src="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-wordmark.png" alt="Dead Hand" class="nav-mark" /></a>
+    <a href="/" class="nav-link">← Back</a>
+  </nav>
+
+  <div class="hero">
+    <span class="label">For HVAC</span>
+    <h1>No heat in December doesn't wait for a callback.</h1>
+    <p>HVAC is the trade where urgency and revenue align perfectly. A no-heat call in winter or a no-AC call in a heat wave is both a crisis for the customer and a high-value job for you. The contractor who responds first gets it. Every time.</p>
+    <p>Dead Hand makes sure you're that contractor — whether you're on a rooftop, in a mechanical room, or driving between jobs.</p>
+  </div>
+
+  <section class="section">
+    <span class="label">What It Catches</span>
+    <h2>HVAC calls that can't wait.</h2>
+
+    <div class="scenarios">
+      <div class="scenario">
+        <h3>No Heat</h3>
+        <p>A family with no heat on a cold night is not a scheduling conversation. It's an emergency, and they're calling every HVAC company in their area right now. Dead Hand reads that call as what it is — emergency tier — and gets a response out in minutes. By the time your competitor's voicemail box is full, your customer already has a text saying someone's on the way.</p>
+      </div>
+      <div class="scenario">
+        <h3>No AC in Summer</h3>
+        <p>When it's 95 degrees and someone's central air goes down, they're not patient. They're not loyal to last year's contractor either. Fast response wins the job. Dead Hand flags high-heat, no-AC calls as urgent and gets them to the top of your queue regardless of what you're working on.</p>
+      </div>
+      <div class="scenario">
+        <h3>Short Cycling and Performance Issues</h3>
+        <p>The system that runs but never gets to temperature. The one that starts and stops every ten minutes. These calls are diagnostic in nature but potentially high-value — replacement conversations often start here. Dead Hand identifies the symptoms from the voicemail and classifies them correctly so you know what you're walking into before you call back.</p>
+      </div>
+      <div class="scenario">
+        <h3>Boiler and Hydronic Systems</h3>
+        <p>Leaking boilers, zone failures, pressure problems — these tend to be older systems with owners who are already anxious. A fast, professional response is the whole game. Dead Hand gets them a text acknowledgment before the anxiety turns into a call to someone else.</p>
+      </div>
+      <div class="scenario">
+        <h3>Maintenance and Tune-Up Requests</h3>
+        <p>Lower urgency, but steady revenue. Maintenance calls get ranked below emergencies and above spam, and they stay visible in your queue until you've either booked the job or closed the lead. They don't disappear into a voicemail box you'll clear out on Friday.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <span class="label">The Seasonal Problem</span>
+    <h2>Your busiest days are when you can answer least.</h2>
+    <p>The first cold snap of the season. The first week of a heat wave. Every HVAC contractor knows these days — phones ring continuously, you're booked three days out, and you're turning down work while new calls pile up in voicemail.</p>
+    <p>Dead Hand doesn't solve the capacity problem. It solves the lead loss problem. Every call that comes in during your busiest stretch gets captured, triaged, and acknowledged. The caller knows someone saw their message. They're more likely to wait. You're more likely to get the job when your schedule opens up.</p>
+    <p>The calls that would have gone to whoever answered next stay in your pipeline instead.</p>
+  </section>
+
+  <section class="cta-section">
+    <h2>Get early access.</h2>
+    <p>No commitment. First notification when the platform opens.</p>
+    <form class="form" name="early-access-hvac" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="early-access-hvac" />
+      <input type="hidden" name="trade" value="hvac" />
+      <p class="form-honey"><label>Skip this: <input name="bot-field" /></label></p>
+      <input type="email" name="email" placeholder="YOUR EMAIL" required autocomplete="email" />
+      <button type="submit">GET EARLY ACCESS</button>
+    </form>
+  </section>
+
+  <footer>
+    <img src="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-wordmark.png" alt="Dead Hand" class="footer-mark" />
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/for-plumbers">Plumbers</a>
+      <a href="/for-electrical">Electrical</a>
+      <a href="/pricing">Pricing</a>
+      <a href="mailto:founder@dead-hand.app">Contact</a>
+      <span>&copy; 2026</span>
+    </div>
+  </footer>
+
+</body>
+</html>

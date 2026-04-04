@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dead Hand for plumbers. Stop losing jobs to missed calls. Every inbound lead captured, triaged, and ready to handle before you've put down your pipe wrench." />
+  <meta name="robots" content="index, follow" />
+  <title>Dead Hand for Plumbers — Never Miss Another Lead</title>
+  <link rel="icon" type="image/png" href="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-icon.png" />
+  <link rel="canonical" href="https://getdeadhand.com/for-plumbers" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #0a0a0a; --card: #111111; --raised: #1a1a1a;
+      --red: #c0392b; --white: #e8e8e8; --bright: #ffffff;
+      --dim: #666666; --dimmer: #333333; --border: 1px solid #2a2a2a;
+      --display: 'Bebas Neue', sans-serif;
+      --mono: 'IBM Plex Mono', monospace;
+      --body: 'IBM Plex Sans', sans-serif;
+      --pad: clamp(20px, 5vw, 48px);
+      --max: 680px;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--black); color: var(--white); font-family: var(--body); font-size: 17px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    .nav { padding: 20px var(--pad); border-bottom: var(--border); display: flex; align-items: center; justify-content: space-between; }
+    .nav-mark { height: 28px; width: auto; }
+    .nav-link { font-family: var(--mono); font-size: 11px; color: var(--dim); text-decoration: none; letter-spacing: 2px; }
+    .nav-link:hover { color: var(--white); }
+    .hero { padding: 80px var(--pad) 64px; max-width: var(--max); margin: 0 auto; border-bottom: var(--border); }
+    .label { font-family: var(--mono); font-size: 11px; color: var(--red); letter-spacing: 4px; text-transform: uppercase; display: block; margin-bottom: 24px; }
+    .hero h1 { font-family: var(--display); font-size: clamp(36px, 6vw, 56px); color: var(--bright); letter-spacing: 1px; line-height: 1.05; margin-bottom: 24px; }
+    .hero p { font-size: 18px; color: var(--dim); line-height: 1.75; margin-bottom: 16px; }
+    .section { padding: 64px var(--pad); max-width: var(--max); margin: 0 auto; border-bottom: var(--border); }
+    .section h2 { font-family: var(--display); font-size: clamp(28px, 4vw, 40px); color: var(--bright); letter-spacing: 1px; line-height: 1.1; margin-bottom: 24px; }
+    .section p { color: var(--white); margin-bottom: 16px; }
+    .section p:last-child { margin-bottom: 0; }
+    .scenarios { margin-top: 32px; }
+    .scenario { border-top: var(--border); padding: 24px 0; }
+    .scenario:last-child { border-bottom: var(--border); }
+    .scenario h3 { font-family: var(--display); font-size: 20px; color: var(--bright); letter-spacing: 2px; margin-bottom: 8px; }
+    .scenario p { font-size: 16px; color: var(--dim); line-height: 1.65; }
+    .cta-section { padding: 64px var(--pad); max-width: var(--max); margin: 0 auto; text-align: center; }
+    .cta-section h2 { font-family: var(--display); font-size: clamp(28px, 4vw, 40px); color: var(--bright); letter-spacing: 1px; margin-bottom: 16px; }
+    .cta-section p { color: var(--dim); margin-bottom: 32px; }
+    .form { display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 400px; margin: 0 auto; }
+    .form input[type="email"] { background: var(--raised); border: var(--border); color: var(--white); font-family: var(--mono); font-size: 15px; padding: 15px 18px; width: 100%; outline: none; border-radius: 0; -webkit-appearance: none; }
+    .form input[type="email"]::placeholder { color: var(--dimmer); }
+    .form-honey { display: none; }
+    .form button { background: var(--red); border: none; color: var(--bright); font-family: var(--display); font-size: 20px; letter-spacing: 4px; padding: 15px; width: 100%; cursor: pointer; border-radius: 0; }
+    .form button:hover { opacity: 0.85; }
+    footer { padding: 24px var(--pad); border-top: var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .footer-mark { height: 20px; opacity: 0.3; }
+    .footer-links { font-family: var(--mono); font-size: 11px; color: var(--dimmer); letter-spacing: 1px; display: flex; gap: 16px; flex-wrap: wrap; }
+    .footer-links a { color: var(--dimmer); text-decoration: none; }
+    .footer-links a:hover { color: var(--dim); }
+    @media (max-width: 500px) { footer { flex-direction: column; align-items: flex-start; } }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="/"><img src="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-wordmark.png" alt="Dead Hand" class="nav-mark" /></a>
+    <a href="/" class="nav-link">← Back</a>
+  </nav>
+
+  <div class="hero">
+    <span class="label">For Plumbers</span>
+    <h1>You can't answer the phone from inside a crawl space.</h1>
+    <p>Every plumber who's been in business more than a year has lost a water heater job to voicemail. Not because they couldn't do the work — because whoever answered first got the call.</p>
+    <p>The phone is the front door of your business. When you're on a job, the door locks. Dead Hand keeps it open.</p>
+  </div>
+
+  <section class="section">
+    <span class="label">What It Catches</span>
+    <h2>The calls plumbers lose most.</h2>
+
+    <div class="scenarios">
+      <div class="scenario">
+        <h3>Water Heater Failures</h3>
+        <p>High-value, low-diagnostic, quick to quote. When someone's water heater goes, they call three numbers. Whoever calls back first gets the job. Dead Hand makes sure you're the one that called back — by text, in under five minutes, before they've finished leaving the voicemail.</p>
+      </div>
+      <div class="scenario">
+        <h3>Active Leaks</h3>
+        <p>A dripping valve is a nuisance. A spraying fitting is a crisis. The AI reads the difference and flags it immediately. Emergency tier goes to the top of your queue, bypasses do-not-disturb, and notifies you the way a fire alarm does — not the way an email does.</p>
+      </div>
+      <div class="scenario">
+        <h3>Main Line Backups</h3>
+        <p>Nobody's calm when the sewage is coming up through the basement drain. These calls need a fast response and a clear acknowledgment that someone's coming. Dead Hand sends that before the caller hangs up.</p>
+      </div>
+      <div class="scenario">
+        <h3>Estimate Requests</h3>
+        <p>The bathroom remodel inquiry. The water softener question. The caller who just bought the house and wants everything looked at. These don't have the urgency of a leak but they represent real revenue. They get ranked below emergencies and above noise, and they don't fall through the cracks.</p>
+      </div>
+      <div class="scenario">
+        <h3>The Friday Afternoon Call</h3>
+        <p>You're finishing a job, trying to get out early. The phone rings, you let it go to voicemail, and by Monday the caller has already hired someone who answered on Saturday. Dead Hand catches that call, sends an acknowledgment in your name, and keeps the lead warm until you're ready to follow up.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <span class="label">How It Works for You</span>
+    <h2>Same phone. Same number. Better response rate.</h2>
+    <p>Dead Hand doesn't replace your business phone line. It runs alongside it. Your number stays yours. Calls that reach voicemail go to a greeting recorded in your voice, with language that tells the caller something real happens when they leave a message.</p>
+    <p>The moment they hang up, AI reads the voicemail, ranks the urgency, identifies the job type, and drafts a reply. You get a notification — loud if it's urgent, quiet if it's not. You review the draft, tap send, and you've responded before you've even listened to the recording.</p>
+    <p>The lead is logged. The thread is open. When you're ready to follow up — call back, send another text, mark it booked — it's all in one place.</p>
+  </section>
+
+  <section class="cta-section">
+    <h2>Get early access.</h2>
+    <p>No commitment. First notification when the platform opens.</p>
+    <form class="form" name="early-access-plumbers" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="early-access-plumbers" />
+      <input type="hidden" name="trade" value="plumbing" />
+      <p class="form-honey"><label>Skip this: <input name="bot-field" /></label></p>
+      <input type="email" name="email" placeholder="YOUR EMAIL" required autocomplete="email" />
+      <button type="submit">GET EARLY ACCESS</button>
+    </form>
+  </section>
+
+  <footer>
+    <img src="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-wordmark.png" alt="Dead Hand" class="footer-mark" />
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/for-hvac">HVAC</a>
+      <a href="/for-electrical">Electrical</a>
+      <a href="/pricing">Pricing</a>
+      <a href="mailto:founder@dead-hand.app">Contact</a>
+      <span>&copy; 2026</span>
+    </div>
+  </footer>
+
+</body>
+</html>

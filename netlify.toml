@@ -8,3 +8,38 @@
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[redirects]]
+  from = "/for-plumbers"
+  to = "/for-plumbers.html"
+  status = 200
+
+[[redirects]]
+  from = "/for-hvac"
+  to = "/for-hvac.html"
+  status = 200
+
+[[redirects]]
+  from = "/for-electrical"
+  to = "/for-electrical.html"
+  status = 200
+
+[[redirects]]
+  from = "/pricing"
+  to = "/pricing.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from = "/terms"
+  to = "/terms.html"
+  status = 200
+
+[[redirects]]
+  from = "/sms-policy"
+  to = "/sms-policy.html"
+  status = 200

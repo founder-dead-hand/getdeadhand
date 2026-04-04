@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dead Hand pricing. Flat monthly rate, no contracts, no overages. Built for owner-operators who want the phone handled without the overhead." />
+  <meta name="robots" content="index, follow" />
+  <title>Dead Hand — Pricing</title>
+  <link rel="icon" type="image/png" href="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-icon.png" />
+  <link rel="canonical" href="https://getdeadhand.com/pricing" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #0a0a0a; --card: #111111; --raised: #1a1a1a;
+      --red: #c0392b; --white: #e8e8e8; --bright: #ffffff;
+      --dim: #666666; --dimmer: #333333; --border: 1px solid #2a2a2a;
+      --display: 'Bebas Neue', sans-serif;
+      --mono: 'IBM Plex Mono', monospace;
+      --body: 'IBM Plex Sans', sans-serif;
+      --pad: clamp(20px, 5vw, 48px);
+      --max: 680px;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--black); color: var(--white); font-family: var(--body); font-size: 17px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    .nav { padding: 20px var(--pad); border-bottom: var(--border); display: flex; align-items: center; justify-content: space-between; }
+    .nav-mark { height: 28px; width: auto; }
+    .nav-link { font-family: var(--mono); font-size: 11px; color: var(--dim); text-decoration: none; letter-spacing: 2px; }
+    .nav-link:hover { color: var(--white); }
+    .hero { padding: 80px var(--pad) 48px; max-width: var(--max); margin: 0 auto; border-bottom: var(--border); }
+    .label { font-family: var(--mono); font-size: 11px; color: var(--red); letter-spacing: 4px; text-transform: uppercase; display: block; margin-bottom: 24px; }
+    .hero h1 { font-family: var(--display); font-size: clamp(36px, 6vw, 52px); color: var(--bright); letter-spacing: 1px; line-height: 1.05; margin-bottom: 16px; }
+    .hero p { font-size: 17px; color: var(--dim); line-height: 1.75; }
+    .plans { padding: 64px var(--pad); max-width: var(--max); margin: 0 auto; }
+    .plan { border: var(--border); padding: 32px; margin-bottom: 16px; }
+    .plan.featured { border-color: var(--red); }
+    .plan-tag { font-family: var(--mono); font-size: 10px; color: var(--red); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 8px; display: block; }
+    .plan-name { font-family: var(--display); font-size: 32px; color: var(--bright); letter-spacing: 3px; margin-bottom: 4px; }
+    .plan-price { font-family: var(--mono); font-size: 36px; color: var(--red); margin-bottom: 4px; }
+    .plan-price span { font-size: 14px; color: var(--dim); }
+    .plan-annual { font-family: var(--mono); font-size: 12px; color: var(--dimmer); letter-spacing: 1px; margin-bottom: 20px; }
+    .plan-desc { font-size: 16px; color: var(--dim); line-height: 1.65; margin-bottom: 24px; border-top: var(--border); padding-top: 20px; }
+    .plan-features { list-style: none; font-family: var(--mono); font-size: 13px; color: var(--dim); }
+    .plan-features li { padding: 7px 0; border-bottom: 1px solid #1a1a1a; line-height: 1.5; }
+    .plan-features li:last-child { border-bottom: none; }
+    .plan-features li::before { content: "— "; color: var(--red); }
+    .compare { padding: 0 var(--pad) 64px; max-width: var(--max); margin: 0 auto; }
+    .compare h2 { font-family: var(--display); font-size: clamp(28px, 4vw, 40px); color: var(--bright); letter-spacing: 1px; margin-bottom: 24px; }
+    .compare-row { display: grid; grid-template-columns: 1fr 80px 80px 80px; gap: 0; border-top: var(--border); }
+    .compare-row.header { border-top: none; margin-bottom: 4px; }
+    .compare-cell { padding: 12px 8px; font-size: 14px; color: var(--dim); border-bottom: 1px solid #1a1a1a; }
+    .compare-cell:first-child { padding-left: 0; color: var(--white); }
+    .compare-cell.center { text-align: center; }
+    .compare-cell.col-head { font-family: var(--display); font-size: 16px; letter-spacing: 2px; color: var(--dim); text-align: center; padding-bottom: 8px; }
+    .compare-cell.col-head.featured { color: var(--red); }
+    .check { color: var(--white); }
+    .dash { color: var(--dimmer); }
+    .notes { padding: 0 var(--pad) 64px; max-width: var(--max); margin: 0 auto; border-bottom: var(--border); }
+    .note { font-family: var(--mono); font-size: 13px; color: var(--dimmer); line-height: 1.8; margin-bottom: 12px; letter-spacing: 0.5px; }
+    .note:last-child { margin-bottom: 0; }
+    .cta { padding: 64px var(--pad); max-width: var(--max); margin: 0 auto; text-align: center; }
+    .cta h2 { font-family: var(--display); font-size: clamp(28px, 4vw, 40px); color: var(--bright); letter-spacing: 1px; margin-bottom: 16px; }
+    .cta p { color: var(--dim); margin-bottom: 32px; }
+    .form { display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 400px; margin: 0 auto; }
+    .form input[type="email"] { background: var(--raised); border: var(--border); color: var(--white); font-family: var(--mono); font-size: 15px; padding: 15px 18px; width: 100%; outline: none; border-radius: 0; -webkit-appearance: none; }
+    .form input[type="email"]::placeholder { color: var(--dimmer); }
+    .form-honey { display: none; }
+    .form button { background: var(--red); border: none; color: var(--bright); font-family: var(--display); font-size: 20px; letter-spacing: 4px; padding: 15px; width: 100%; cursor: pointer; border-radius: 0; }
+    .form button:hover { opacity: 0.85; }
+    footer { padding: 24px var(--pad); border-top: var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .footer-mark { height: 20px; opacity: 0.3; }
+    .footer-links { font-family: var(--mono); font-size: 11px; color: var(--dimmer); letter-spacing: 1px; display: flex; gap: 16px; flex-wrap: wrap; }
+    .footer-links a { color: var(--dimmer); text-decoration: none; }
+    .footer-links a:hover { color: var(--dim); }
+    @media (max-width: 540px) {
+      .compare-row { grid-template-columns: 1fr 60px 60px 60px; }
+      .compare-cell { font-size: 12px; padding: 10px 4px; }
+      footer { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="/"><img src="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-wordmark.png" alt="Dead Hand" class="nav-mark" /></a>
+    <a href="/" class="nav-link">← Back</a>
+  </nav>
+
+  <div class="hero">
+    <span class="label">Pricing</span>
+    <h1>Flat rate. No contracts. No overages.</h1>
+    <p>One job recovered pays for months of the platform. The math isn't complicated.</p>
+  </div>
+
+  <section class="plans">
+
+    <div class="plan featured">
+      <span class="plan-tag">Most Popular</span>
+      <div class="plan-name">Starter</div>
+      <div class="plan-price">$79 <span>/ month</span></div>
+      <div class="plan-annual">$790 / year — two months free</div>
+      <p class="plan-desc">For the owner-operator who answers their own phone. Everything you need to stop losing leads to voicemail.</p>
+      <ul class="plan-features">
+        <li>Inbound call capture and intelligent voicemail routing</li>
+        <li>AI triage — urgency ranked, job typed, reply drafted</li>
+        <li>SMS response from dashboard or mobile app</li>
+        <li>Real-time push notifications ranked by urgency tier</li>
+        <li>Dedicated business phone number included</li>
+        <li>Custom voicemail greeting in your voice</li>
+        <li>Lead pipeline — new, responded, booked</li>
+        <li>10DLC compliant SMS with opt-out handling</li>
+        <li>On-demand AI reply suggestions for ongoing threads</li>
+      </ul>
+    </div>
+
+    <div class="plan">
+      <div class="plan-name">Pro</div>
+      <div class="plan-price">$149 <span>/ month</span></div>
+      <div class="plan-annual">$1,490 / year — two months free</div>
+      <p class="plan-desc">For shops with a second person handling calls, or owners who want full visibility across every channel leads come through.</p>
+      <ul class="plan-features">
+        <li>Everything in Starter</li>
+        <li>Multiple team members with role-based access</li>
+        <li>Email lead capture and AI triage</li>
+        <li>Google Business Profile message capture</li>
+        <li>Lead pipeline reporting and recovery metrics</li>
+        <li>Custom AI response tone per business</li>
+      </ul>
+    </div>
+
+    <div class="plan">
+      <div class="plan-name">Team</div>
+      <div class="plan-price">$249 <span>/ month</span></div>
+      <div class="plan-annual">$2,490 / year — two months free</div>
+      <p class="plan-desc">For shops running multiple trucks where the scheduler is the bottleneck. Full visibility across the operation.</p>
+      <ul class="plan-features">
+        <li>Everything in Pro</li>
+        <li>Unlimited team members</li>
+        <li>Multi-line support</li>
+        <li>Priority routing by technician or service area</li>
+        <li>Admin dashboard with full tenant controls</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section class="compare">
+    <h2>What's included.</h2>
+    <div class="compare-row header">
+      <div class="compare-cell"></div>
+      <div class="compare-cell col-head featured">Starter</div>
+      <div class="compare-cell col-head">Pro</div>
+      <div class="compare-cell col-head">Team</div>
+    </div>
+    <div class="compare-row"><div class="compare-cell">Call capture + voicemail routing</div><div class="compare-cell center check">✓</div><div class="compare-cell center check">✓</div><div class="compare-cell center check">✓</div></div>
+    <div class="compare-row"><div class="compare-cell">AI triage and urgency ranking</div><div class="compare-cell center check">✓</div><div class="compare-cell center check">✓</div><div class="compare-cell center check">✓</div></div>
+    <div class="compare-row"><div class="compare-cell">SMS response + on-demand AI drafts</div><div class="compare-cell center check">✓</div><div class="compare-cell center check">✓</div><div class="compare-cell center check">✓</div></div>
+    <div class="compare-row"><div class="compare-cell">Push notifications by urgency tier</div><div class="compare-cell center check">✓</div><div class="compare-cell center check">✓</div><div class="compare-cell center check">✓</div></div>
+    <div class="compare-row"><div class="compare-cell">Dedicated business number</div><div class="compare-cell center check">✓</div><div class="compare-cell center check">✓</div><div class="compare-cell center check">✓</div></div>
+    <div class="compare-row"><div class="compare-cell">Custom voicemail (your voice)</div><div class="compare-cell center check">✓</div><div class="compare-cell center check">✓</div><div class="compare-cell center check">✓</div></div>
+    <div class="compare-row"><div class="compare-cell">Team members</div><div class="compare-cell center" style="font-family:var(--mono);font-size:12px;color:var(--dim);">1</div><div class="compare-cell center" style="font-family:var(--mono);font-size:12px;color:var(--dim);">5</div><div class="compare-cell center check">∞</div></div>
+    <div class="compare-row"><div class="compare-cell">Email lead capture</div><div class="compare-cell center dash">—</div><div class="compare-cell center check">✓</div><div class="compare-cell center check">✓</div></div>
+    <div class="compare-row"><div class="compare-cell">Google Business Profile messages</div><div class="compare-cell center dash">—</div><div class="compare-cell center check">✓</div><div class="compare-cell center check">✓</div></div>
+    <div class="compare-row"><div class="compare-cell">Pipeline reporting</div><div class="compare-cell center dash">—</div><div class="compare-cell center check">✓</div><div class="compare-cell center check">✓</div></div>
+    <div class="compare-row"><div class="compare-cell">Multi-line support</div><div class="compare-cell center dash">—</div><div class="compare-cell center dash">—</div><div class="compare-cell center check">✓</div></div>
+    <div class="compare-row"><div class="compare-cell">Admin dashboard</div><div class="compare-cell center dash">—</div><div class="compare-cell center dash">—</div><div class="compare-cell center check">✓</div></div>
+  </section>
+
+  <section class="notes">
+    <p class="note">— No setup fees. No per-message charges. No surprise line items at the end of the month.</p>
+    <p class="note">— Cancel any time. No penalty, no notice period required. Your data stays yours for 90 days after cancellation.</p>
+    <p class="note">— Annual plans billed upfront at the rates shown. Monthly plans billed on the same date each month.</p>
+    <p class="note">— Infrastructure runs about $12/month per tenant. Everything above that funds the platform, development, and support.</p>
+    <p class="note">— Early access subscribers get Starter pricing locked for the first 12 months regardless of future price changes.</p>
+  </section>
+
+  <section class="cta">
+    <h2>Get early access.</h2>
+    <p>Lock your rate before the platform opens. No commitment required.</p>
+    <form class="form" name="early-access-pricing" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="early-access-pricing" />
+      <p class="form-honey"><label>Skip this: <input name="bot-field" /></label></p>
+      <input type="email" name="email" placeholder="YOUR EMAIL" required autocomplete="email" />
+      <button type="submit">GET EARLY ACCESS</button>
+    </form>
+  </section>
+
+  <footer>
+    <img src="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-wordmark.png" alt="Dead Hand" class="footer-mark" />
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/for-plumbers">Plumbers</a>
+      <a href="/for-hvac">HVAC</a>
+      <a href="/for-electrical">Electrical</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+      <a href="/sms-policy">SMS Policy</a>
+      <a href="mailto:founder@dead-hand.app">Contact</a>
+      <span>&copy; 2026</span>
+    </div>
+  </footer>
+
+</body>
+</html>

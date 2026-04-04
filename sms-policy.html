@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dead Hand SMS Policy. How we handle text message communications, consent, opt-out, and 10DLC compliance." />
+  <meta name="robots" content="index, follow" />
+  <title>Dead Hand — SMS Policy</title>
+  <link rel="icon" type="image/png" href="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-icon.png" />
+  <link rel="canonical" href="https://getdeadhand.com/sms-policy" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #0a0a0a; --card: #111111; --raised: #1a1a1a;
+      --red: #c0392b; --white: #e8e8e8; --bright: #ffffff;
+      --dim: #666666; --dimmer: #333333; --border: 1px solid #2a2a2a;
+      --display: 'Bebas Neue', sans-serif;
+      --mono: 'IBM Plex Mono', monospace;
+      --body: 'IBM Plex Sans', sans-serif;
+      --pad: clamp(20px, 5vw, 48px); --max: 680px;
+    }
+    body { background: var(--black); color: var(--white); font-family: var(--body); font-size: 17px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+    .nav { padding: 20px var(--pad); border-bottom: var(--border); display: flex; align-items: center; justify-content: space-between; }
+    .nav-mark { height: 28px; width: auto; }
+    .nav-link { font-family: var(--mono); font-size: 11px; color: var(--dim); text-decoration: none; letter-spacing: 2px; }
+    .nav-link:hover { color: var(--white); }
+    .content { max-width: var(--max); margin: 0 auto; padding: 64px var(--pad); }
+    .label { font-family: var(--mono); font-size: 11px; color: var(--red); letter-spacing: 4px; text-transform: uppercase; display: block; margin-bottom: 24px; }
+    h1 { font-family: var(--display); font-size: clamp(32px, 5vw, 48px); color: var(--bright); letter-spacing: 1px; margin-bottom: 8px; }
+    .updated { font-family: var(--mono); font-size: 11px; color: var(--dimmer); letter-spacing: 2px; margin-bottom: 48px; display: block; }
+    h2 { font-family: var(--display); font-size: 22px; color: var(--bright); letter-spacing: 2px; margin: 40px 0 12px; }
+    p { color: var(--white); margin-bottom: 16px; }
+    p:last-child { margin-bottom: 0; }
+    ul { color: var(--dim); padding-left: 20px; margin-bottom: 16px; }
+    ul li { margin-bottom: 8px; line-height: 1.65; }
+    .highlight { background: var(--card); border: var(--border); border-left: 3px solid var(--red); padding: 20px 24px; margin: 24px 0; }
+    .highlight p { color: var(--dim); font-family: var(--mono); font-size: 14px; line-height: 1.8; margin-bottom: 8px; }
+    .highlight p:last-child { margin-bottom: 0; }
+    a { color: var(--white); }
+    footer { padding: 24px var(--pad); border-top: var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-top: 64px; }
+    .footer-mark { height: 20px; opacity: 0.3; }
+    .footer-links { font-family: var(--mono); font-size: 11px; color: var(--dimmer); letter-spacing: 1px; display: flex; gap: 16px; flex-wrap: wrap; }
+    .footer-links a { color: var(--dimmer); text-decoration: none; }
+    .footer-links a:hover { color: var(--dim); }
+    @media (max-width: 500px) { footer { flex-direction: column; align-items: flex-start; } }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="/"><img src="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-wordmark.png" alt="Dead Hand" class="nav-mark" /></a>
+    <a href="/" class="nav-link">← Back</a>
+  </nav>
+
+  <div class="content">
+    <span class="label">Legal</span>
+    <h1>SMS Policy</h1>
+    <span class="updated">Last updated: April 2026</span>
+
+    <p>Dead Hand enables service businesses to respond to inbound leads via SMS. This policy describes how SMS is used on the platform, how consent is obtained and managed, and how recipients can opt out at any time.</p>
+
+    <h2>How SMS Is Used</h2>
+    <p>SMS messages sent through Dead Hand are always in response to inbound contact. A caller leaves a voicemail with a Dead Hand-powered business. The business owner receives a notification, reviews the AI-generated draft, and sends or edits a reply. The reply goes to the caller's number.</p>
+    <p>Dead Hand does not send cold outbound SMS. Every text message sent through the platform is linked to an inbound voicemail, call, or direct message from that recipient. No SMS is ever sent without a prior inbound contact.</p>
+
+    <h2>Consent</h2>
+    <p>Consent is captured at the voicemail level. The voicemail greeting played to callers includes language such as:</p>
+
+    <div class="highlight">
+      <p>"This mailbox is monitored in real time and clear messages receive a response in less than 5 minutes if you consent to receiving text messages for scheduling and service updates. Please leave your name, location, and reason for your call."</p>
+    </div>
+
+    <p>By leaving a message after hearing this greeting, the caller indicates willingness to receive a text response. The AI triage system listens for explicit opt-out language in the voicemail content. If a caller says anything indicating they do not want to receive texts, SMS is locked for that contact and no message is sent.</p>
+    <p>SMS consent defaults to true when a caller leaves a voicemail after hearing the consent-inclusive greeting. SMS consent is set to false — and no text is sent — when the caller explicitly declines.</p>
+
+    <h2>First Message Disclosure</h2>
+    <p>The first SMS sent to any number from a Dead Hand-powered business includes the following opt-out disclosure appended automatically:</p>
+
+    <div class="highlight">
+      <p>Reply STOP to opt out. Msg &amp; data rates may apply.</p>
+    </div>
+
+    <p>This disclosure is added by the platform automatically and cannot be removed by the tenant.</p>
+
+    <h2>Opting Out</h2>
+    <p>Any recipient can opt out of SMS at any time by replying with any of the following:</p>
+    <ul>
+      <li>STOP</li>
+      <li>STOPALL</li>
+      <li>UNSUBSCRIBE</li>
+      <li>CANCEL</li>
+      <li>END</li>
+      <li>QUIT</li>
+    </ul>
+    <p>Opt-out requests are processed immediately — within 60 seconds of receipt. The number is added to a permanent suppression list and will not receive any further SMS from that business through the Dead Hand platform. This suppression cannot be overridden by the tenant.</p>
+    <p>Opt-out records are retained indefinitely to ensure permanent compliance.</p>
+
+    <h2>Message Frequency</h2>
+    <p>Message frequency varies based on the nature of the service inquiry and the business's response pattern. Typically, a lead receives one initial response SMS and subsequent messages only as part of an active scheduling or service conversation initiated by the recipient's continued engagement.</p>
+    <p>Dead Hand enforces per-tenant rate limits to prevent unusual message volume. Tenants who generate abnormal message patterns or complaint rates may have their SMS access suspended pending review.</p>
+
+    <h2>10DLC Registration</h2>
+    <p>Dead Hand's SMS campaigns are registered under 10DLC (10-Digit Long Code) guidelines with The Campaign Registry. Our registered use case is: <em>business lead response — inbound lead acknowledgment and service scheduling for owner-operated trade businesses.</em></p>
+    <p>All messages sent through the platform comply with carrier requirements for registered 10DLC campaigns. Tenants may not use the platform for messaging that deviates from this registered use case.</p>
+
+    <h2>Privacy of SMS Content</h2>
+    <p>SMS message content is stored in encrypted form and accessible only to the tenant business that sent or received it. Message content is not shared with third parties, used for advertising, or used to train AI models. See our <a href="/privacy">Privacy Policy</a> for full details.</p>
+
+    <h2>Carrier Compliance</h2>
+    <p>Dead Hand monitors complaint rates and delivery patterns for all tenants. Any tenant whose messaging generates carrier complaints above accepted thresholds will have their SMS access suspended pending investigation. Dead Hand reserves the right to terminate accounts that repeatedly violate carrier policies.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this SMS policy: <a href="mailto:founder@dead-hand.app">founder@dead-hand.app</a></p>
+    <p>To report unwanted messages received from a Dead Hand-powered business, contact us at the above address with the number that contacted you and the approximate date and time of the message.</p>
+  </div>
+
+  <footer>
+    <img src="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-wordmark.png" alt="Dead Hand" class="footer-mark" />
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+      <a href="/sms-policy">SMS Policy</a>
+      <span>&copy; 2026</span>
+    </div>
+  </footer>
+
+</body>
+</html>

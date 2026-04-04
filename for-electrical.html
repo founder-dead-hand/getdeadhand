@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dead Hand for electricians. Every service call captured, triaged by urgency, and responded to before you've put your tools away." />
+  <meta name="robots" content="index, follow" />
+  <title>Dead Hand for Electricians — Never Miss Another Service Call</title>
+  <link rel="icon" type="image/png" href="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-icon.png" />
+  <link rel="canonical" href="https://getdeadhand.com/for-electrical" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #0a0a0a; --card: #111111; --raised: #1a1a1a;
+      --red: #c0392b; --white: #e8e8e8; --bright: #ffffff;
+      --dim: #666666; --dimmer: #333333; --border: 1px solid #2a2a2a;
+      --display: 'Bebas Neue', sans-serif;
+      --mono: 'IBM Plex Mono', monospace;
+      --body: 'IBM Plex Sans', sans-serif;
+      --pad: clamp(20px, 5vw, 48px);
+      --max: 680px;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--black); color: var(--white); font-family: var(--body); font-size: 17px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    .nav { padding: 20px var(--pad); border-bottom: var(--border); display: flex; align-items: center; justify-content: space-between; }
+    .nav-mark { height: 28px; width: auto; }
+    .nav-link { font-family: var(--mono); font-size: 11px; color: var(--dim); text-decoration: none; letter-spacing: 2px; }
+    .nav-link:hover { color: var(--white); }
+    .hero { padding: 80px var(--pad) 64px; max-width: var(--max); margin: 0 auto; border-bottom: var(--border); }
+    .label { font-family: var(--mono); font-size: 11px; color: var(--red); letter-spacing: 4px; text-transform: uppercase; display: block; margin-bottom: 24px; }
+    .hero h1 { font-family: var(--display); font-size: clamp(36px, 6vw, 56px); color: var(--bright); letter-spacing: 1px; line-height: 1.05; margin-bottom: 24px; }
+    .hero p { font-size: 18px; color: var(--dim); line-height: 1.75; margin-bottom: 16px; }
+    .section { padding: 64px var(--pad); max-width: var(--max); margin: 0 auto; border-bottom: var(--border); }
+    .section h2 { font-family: var(--display); font-size: clamp(28px, 4vw, 40px); color: var(--bright); letter-spacing: 1px; line-height: 1.1; margin-bottom: 24px; }
+    .section p { color: var(--white); margin-bottom: 16px; }
+    .section p:last-child { margin-bottom: 0; }
+    .scenarios { margin-top: 32px; }
+    .scenario { border-top: var(--border); padding: 24px 0; }
+    .scenario:last-child { border-bottom: var(--border); }
+    .scenario h3 { font-family: var(--display); font-size: 20px; color: var(--bright); letter-spacing: 2px; margin-bottom: 8px; }
+    .scenario p { font-size: 16px; color: var(--dim); line-height: 1.65; }
+    .cta-section { padding: 64px var(--pad); max-width: var(--max); margin: 0 auto; text-align: center; }
+    .cta-section h2 { font-family: var(--display); font-size: clamp(28px, 4vw, 40px); color: var(--bright); letter-spacing: 1px; margin-bottom: 16px; }
+    .cta-section p { color: var(--dim); margin-bottom: 32px; }
+    .form { display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 400px; margin: 0 auto; }
+    .form input[type="email"] { background: var(--raised); border: var(--border); color: var(--white); font-family: var(--mono); font-size: 15px; padding: 15px 18px; width: 100%; outline: none; border-radius: 0; -webkit-appearance: none; }
+    .form input[type="email"]::placeholder { color: var(--dimmer); }
+    .form-honey { display: none; }
+    .form button { background: var(--red); border: none; color: var(--bright); font-family: var(--display); font-size: 20px; letter-spacing: 4px; padding: 15px; width: 100%; cursor: pointer; border-radius: 0; }
+    .form button:hover { opacity: 0.85; }
+    footer { padding: 24px var(--pad); border-top: var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .footer-mark { height: 20px; opacity: 0.3; }
+    .footer-links { font-family: var(--mono); font-size: 11px; color: var(--dimmer); letter-spacing: 1px; display: flex; gap: 16px; flex-wrap: wrap; }
+    .footer-links a { color: var(--dimmer); text-decoration: none; }
+    .footer-links a:hover { color: var(--dim); }
+    @media (max-width: 500px) { footer { flex-direction: column; align-items: flex-start; } }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="/"><img src="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-wordmark.png" alt="Dead Hand" class="nav-mark" /></a>
+    <a href="/" class="nav-link">← Back</a>
+  </nav>
+
+  <div class="hero">
+    <span class="label">For Electricians</span>
+    <h1>Power out, panel hot, sparks behind the outlet — these calls don't leave a second message.</h1>
+    <p>Electrical service calls fall into two categories: the ones that can wait until Tuesday, and the ones that absolutely cannot. The problem is that both get handled the same way when you're on a job — voicemail.</p>
+    <p>Dead Hand reads the difference and handles them accordingly.</p>
+  </div>
+
+  <section class="section">
+    <span class="label">What It Catches</span>
+    <h2>Electrical calls that need a fast answer.</h2>
+
+    <div class="scenarios">
+      <div class="scenario">
+        <h3>Power Loss and Panel Issues</h3>
+        <p>A tripped breaker that won't reset. A panel that's warm to the touch. Partial power loss with no obvious cause. These callers are already concerned — some of them are scared. A text acknowledgment in under five minutes tells them someone is paying attention. That's often enough to keep them from calling the next number.</p>
+      </div>
+      <div class="scenario">
+        <h3>Safety Concerns</h3>
+        <p>Burning smell from an outlet. Sparks when plugging something in. Flickering lights tied to a specific circuit. These are the calls that become insurance claims and worse if nobody responds. Dead Hand flags them emergency tier and makes sure they rise above everything else in your queue.</p>
+      </div>
+      <div class="scenario">
+        <h3>Generator and Backup Power</h3>
+        <p>Generator installs and transfer switch work tend to come in clusters — before a storm season or after a bad outage. These are scheduled jobs, not emergencies, but they're also competitive. The contractor who follows up first books the job. Dead Hand makes sure you follow up first.</p>
+      </div>
+      <div class="scenario">
+        <h3>Renovation and Addition Work</h3>
+        <p>The kitchen remodel that needs a new circuit. The garage that needs a subpanel. The EV charger install. These callers are often comparing quotes from two or three electricians. Response time and professionalism in that first contact matters more than price. A quick, clear text response from a real business sets the tone before anyone else does.</p>
+      </div>
+      <div class="scenario">
+        <h3>Inspection Failures and Code Work</h3>
+        <p>The home inspector found a double-tap. The real estate deal is on the line. Someone needs an electrician before Friday or the sale falls through. Dead Hand reads that urgency from the voicemail and ranks it accordingly. You don't find out about the Friday deadline on Thursday.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <span class="label">Why It Works</span>
+    <h2>Your customers don't want to leave a voicemail. Make it worth their while.</h2>
+    <p>Most service callers who hit voicemail hang up and try the next number. The ones who do leave a message expect to wait — an hour, a day, maybe longer. That expectation is baked in from years of the same experience.</p>
+    <p>Dead Hand breaks that expectation. A text response in under five minutes from the business they just called is surprising. It signals that the business is organized, attentive, and worth waiting for. It's not automation they can feel — it's responsiveness that builds trust before you've spoken a word.</p>
+    <p>The lead that would have called your competitor is now waiting for your callback.</p>
+  </section>
+
+  <section class="cta-section">
+    <h2>Get early access.</h2>
+    <p>No commitment. First notification when the platform opens.</p>
+    <form class="form" name="early-access-electrical" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="early-access-electrical" />
+      <input type="hidden" name="trade" value="electrical" />
+      <p class="form-honey"><label>Skip this: <input name="bot-field" /></label></p>
+      <input type="email" name="email" placeholder="YOUR EMAIL" required autocomplete="email" />
+      <button type="submit">GET EARLY ACCESS</button>
+    </form>
+  </section>
+
+  <footer>
+    <img src="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-wordmark.png" alt="Dead Hand" class="footer-mark" />
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/for-plumbers">Plumbers</a>
+      <a href="/for-hvac">HVAC</a>
+      <a href="/pricing">Pricing</a>
+      <a href="mailto:founder@dead-hand.app">Contact</a>
+      <span>&copy; 2026</span>
+    </div>
+  </footer>
+
+</body>
+</html>
