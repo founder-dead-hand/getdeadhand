@@ -3,15 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Dead Hand — Automatic Response System. AI that works for you. Not in place of you. Built for contractors who answer their own phones." />
+  <meta name="description" content="Automatic Response System. AI that works for you. Not in place of you. Built for contractors who answer their own phones." />
   <meta name="robots" content="index, follow" />
   <title>Dead Hand — Automatic Response System</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-icon.png" />
+  <link rel="apple-touch-icon" href="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-icon.png" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Dead Hand — Automatic Response System" />
   <meta property="og:description" content="When everything is hitting the fan, you're still covering leads." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://getdeadhand.com" />
+  <meta property="og:image" content="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-badge.png" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -60,26 +65,26 @@
 
     .hero-wordmark {
       width: 100%;
-      max-width: 480px;
-      margin-bottom: 40px;
+      max-width: 520px;
+      margin-bottom: 48px;
     }
 
     .hero-headline {
       font-family: var(--font-display);
-      font-size: clamp(28px, 5vw, 52px);
+      font-size: clamp(32px, 5.5vw, 58px);
       color: var(--white-bright);
       letter-spacing: 2px;
       line-height: 1.1;
-      margin-bottom: 16px;
-      max-width: 700px;
+      margin-bottom: 20px;
+      max-width: 760px;
     }
 
     .hero-sub {
       font-family: var(--font-mono);
-      font-size: clamp(12px, 2vw, 15px);
+      font-size: clamp(14px, 2vw, 20px);
       color: var(--dim);
-      letter-spacing: 3px;
-      margin-bottom: 48px;
+      letter-spacing: 4px;
+      margin-bottom: 56px;
     }
 
     /* ── EMAIL FORM ── */
@@ -88,7 +93,7 @@
       flex-direction: column;
       gap: 10px;
       width: 100%;
-      max-width: 400px;
+      max-width: 420px;
     }
 
     .form-input {
@@ -96,8 +101,8 @@
       border: var(--border);
       color: var(--white);
       font-family: var(--font-mono);
-      font-size: 14px;
-      padding: 14px 16px;
+      font-size: 15px;
+      padding: 16px 18px;
       width: 100%;
       outline: none;
       border-radius: 0;
@@ -107,7 +112,6 @@
     .form-input::placeholder { color: var(--dimmer); }
     .form-input:focus { border-color: #444; }
 
-    /* Honeypot — hidden from humans */
     .form-honeypot { display: none; }
 
     .form-btn {
@@ -115,9 +119,9 @@
       border: none;
       color: var(--white-bright);
       font-family: var(--font-display);
-      font-size: 16px;
+      font-size: 20px;
       letter-spacing: 4px;
-      padding: 14px;
+      padding: 16px;
       width: 100%;
       cursor: pointer;
       border-radius: 0;
@@ -128,21 +132,10 @@
 
     .form-note {
       font-family: var(--font-mono);
-      font-size: 10px;
+      font-size: 11px;
       color: var(--dimmer);
       letter-spacing: 1px;
       text-align: center;
-    }
-
-    .form-success {
-      display: none;
-      font-family: var(--font-mono);
-      font-size: 13px;
-      color: var(--white);
-      letter-spacing: 2px;
-      text-align: center;
-      padding: 16px;
-      border: var(--border);
     }
 
     /* ── SECTIONS ── */
@@ -155,7 +148,7 @@
 
     .section-label {
       font-family: var(--font-mono);
-      font-size: 10px;
+      font-size: 11px;
       color: var(--red);
       letter-spacing: 4px;
       margin-bottom: 24px;
@@ -167,16 +160,16 @@
       color: var(--white-bright);
       letter-spacing: 2px;
       line-height: 1.1;
-      margin-bottom: 24px;
+      margin-bottom: 28px;
     }
 
     .section-body {
-      font-size: 17px;
-      line-height: 1.8;
+      font-size: 18px;
+      line-height: 1.85;
       color: var(--white);
     }
 
-    .section-body p + p { margin-top: 16px; }
+    .section-body p + p { margin-top: 18px; }
 
     /* ── HOW IT WORKS ── */
     .steps {
@@ -188,8 +181,8 @@
 
     .step {
       display: flex;
-      gap: 24px;
-      padding: 24px 0;
+      gap: 28px;
+      padding: 32px 0;
       border-top: var(--border);
     }
 
@@ -197,28 +190,26 @@
 
     .step-num {
       font-family: var(--font-display);
-      font-size: 48px;
+      font-size: 52px;
       color: var(--dimmer);
       letter-spacing: 2px;
       line-height: 1;
       flex-shrink: 0;
-      width: 48px;
+      width: 52px;
     }
-
-    .step-content {}
 
     .step-title {
       font-family: var(--font-display);
-      font-size: 20px;
+      font-size: 24px;
       color: var(--white-bright);
       letter-spacing: 2px;
-      margin-bottom: 6px;
+      margin-bottom: 10px;
     }
 
     .step-desc {
-      font-size: 15px;
+      font-size: 17px;
       color: var(--dim);
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     /* ── FOUNDER NOTE ── */
@@ -231,19 +222,19 @@
 
     .founder-label {
       font-family: var(--font-mono);
-      font-size: 10px;
+      font-size: 11px;
       color: var(--dimmer);
       letter-spacing: 4px;
       margin-bottom: 32px;
     }
 
     .founder-text {
-      font-size: 18px;
+      font-size: 19px;
       line-height: 1.9;
       color: var(--white);
     }
 
-    .founder-text p + p { margin-top: 20px; }
+    .founder-text p + p { margin-top: 22px; }
 
     .founder-sig {
       font-family: var(--font-mono);
@@ -259,25 +250,22 @@
       max-width: 720px;
       margin: 0 auto;
       display: flex;
-      gap: 16px;
+      gap: 12px;
       flex-wrap: wrap;
     }
 
     .trade-link {
       font-family: var(--font-display);
-      font-size: 13px;
+      font-size: 14px;
       letter-spacing: 2px;
       color: var(--dim);
       text-decoration: none;
       border: var(--border);
-      padding: 8px 16px;
+      padding: 10px 18px;
       transition: color 120ms ease, border-color 120ms ease;
     }
 
-    .trade-link:hover {
-      color: var(--white);
-      border-color: #444;
-    }
+    .trade-link:hover { color: var(--white); border-color: #444; }
 
     /* ── FOOTER ── */
     footer {
@@ -287,14 +275,12 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 16px;
     }
 
-    .footer-brand {
-      font-family: var(--font-display);
-      font-size: 16px;
-      color: var(--dimmer);
-      letter-spacing: 4px;
+    .footer-wordmark {
+      height: 28px;
+      opacity: 0.35;
     }
 
     .footer-meta {
@@ -314,8 +300,9 @@
     /* ── RESPONSIVE ── */
     @media (max-width: 600px) {
       .step { gap: 16px; }
-      .step-num { font-size: 36px; width: 36px; }
+      .step-num { font-size: 40px; width: 40px; }
       footer { flex-direction: column; align-items: flex-start; }
+      .hero-sub { letter-spacing: 2px; }
     }
   </style>
 </head>
@@ -328,11 +315,9 @@
       alt="Dead Hand — Automatic Response System"
       class="hero-wordmark"
     />
-
     <h1 class="hero-headline">When everything is hitting the fan,<br>you're still covering leads.</h1>
     <p class="hero-sub">THE AI YOUR CUSTOMERS NEVER TALK TO</p>
 
-    <!-- Netlify form — email capture -->
     <form
       class="form-wrap"
       name="early-access"
@@ -378,7 +363,7 @@
         <div class="step-num">01</div>
         <div class="step-content">
           <div class="step-title">CALL COMES IN</div>
-          <p class="step-desc">Dead Hand tries to bridge the call to you. If you're under a sink, it routes to your custom voicemail — recorded in your voice, in your words.</p>
+          <p class="step-desc">The system tries to bridge the call to you. If you're under a sink, it routes to your voicemail — recorded in your voice, in your words.</p>
         </div>
       </div>
       <div class="step">
@@ -392,14 +377,14 @@
         <div class="step-num">03</div>
         <div class="step-content">
           <div class="step-title">YOU GET THE BRIEFING</div>
-          <p class="step-desc">Before you've heard the voicemail, you know who called, what they need, and how urgent it is. The draft is already written. You send it or edit it. Your words go out. Not a robot's.</p>
+          <p class="step-desc">Before you've heard the voicemail, you know who called, what they need, and how urgent it is. The draft is ready. You send it or edit it. Your words go out. Not a robot's.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">04</div>
         <div class="step-content">
           <div class="step-title">LEAD IS YOURS</div>
-          <p class="step-desc">They hear back in minutes. The job is yours before they try anyone else. You close out the lead when it's done. The system moves on.</p>
+          <p class="step-desc">They hear back in minutes. The job is yours before they try anyone else. Close out the lead when it's done. The system moves on.</p>
         </div>
       </div>
     </div>
@@ -409,12 +394,12 @@
   <section class="founder">
     <p class="founder-label">FROM THE FOUNDER</p>
     <div class="founder-text">
-      <p>I built Dead Hand because I was the guy missing the calls. Twenty years running a plumbing and heating operation, answering my own phone, losing jobs to whoever picked up first.</p>
+      <p>I built this because I was the guy missing the calls. Twenty years running a service operation, answering my own phone, losing jobs to whoever picked up first.</p>
       <p>I tried answering services. They cost money and made me sound like a company I'm not. I tried AI operators. They were worse — callers could tell immediately, and I lost the job faster than if I'd just missed the call.</p>
       <p>What I needed wasn't something to answer for me. I needed something that made sure I never forgot to answer. That ranked my queue so I knew which call to return first. That had a reply ready so I wasn't composing texts from a job site at 6pm.</p>
-      <p>Dead Hand is that tool. It doesn't replace you. It makes sure the leads don't disappear while you're working.</p>
+      <p>This is that tool. It doesn't replace you. It makes sure the leads don't disappear while you're working.</p>
     </div>
-    <div class="founder-sig">— TREVOR, FOUNDER / TOM FALK PLUMBING AND HEATING</div>
+    <div class="founder-sig">— THE FOUNDER</div>
   </section>
 
   <!-- TRADE LINKS -->
@@ -427,13 +412,17 @@
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-brand">DEAD HAND</div>
+    <img
+      src="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-wordmark.png"
+      alt="Dead Hand"
+      class="footer-wordmark"
+    />
     <div class="footer-meta">
       <a class="footer-link" href="https://dead-hand.app">SIGN IN</a>
       &nbsp;&nbsp;·&nbsp;&nbsp;
       <a class="footer-link" href="mailto:founder@dead-hand.app">CONTACT</a>
       &nbsp;&nbsp;·&nbsp;&nbsp;
-      &copy; 2026 Dead Hand
+      &copy; 2026
     </div>
   </footer>
 
