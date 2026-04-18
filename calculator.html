@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dead Hand Calculator — the pocket tool for field quoting. Set your rates once. Every job after that is four taps. Quote on the spot, like a pro." />
+  <meta name="robots" content="index, follow" />
+  <title>Dead Hand Calculator — Quote on the spot, like a pro</title>
+  <link rel="icon" type="image/png" href="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-icon.png" />
+  <link rel="apple-touch-icon" href="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-icon.png" />
+  <meta property="og:title" content="Dead Hand Calculator — Quote on the spot, like a pro" />
+  <meta property="og:description" content="Now, if you fumble your quote, you did it on purpose." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://getdeadhand.com/calculator" />
+  <meta property="og:image" content="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-badge.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black:   #0a0a0a;
+      --card:    #111111;
+      --raised:  #1a1a1a;
+      --red:     #c0392b;
+      --white:   #e8e8e8;
+      --bright:  #ffffff;
+      --dim:     #666666;
+      --dimmer:  #333333;
+      --border:  1px solid #2a2a2a;
+
+      --display: 'Bebas Neue', sans-serif;
+      --mono:    'IBM Plex Mono', monospace;
+      --body:    'IBM Plex Sans', sans-serif;
+
+      --space-xs: 8px;
+      --space-sm: 16px;
+      --space-md: 32px;
+      --space-lg: 64px;
+      --space-xl: 80px;
+
+      --max: 960px;
+      --pad: clamp(24px, 6vw, 80px);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--body);
+      font-size: 17px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 48px var(--pad);
+      border-bottom: var(--border);
+    }
+
+    .hero-mark {
+      width: 100%;
+      max-width: 520px;
+      height: auto;
+      margin-bottom: 48px;
+    }
+
+    .hero-headline {
+      font-family: var(--display);
+      font-size: clamp(36px, 5vw, 68px);
+      color: var(--bright);
+      letter-spacing: 1px;
+      line-height: 1.05;
+      margin-bottom: 16px;
+      max-width: 900px;
+    }
+
+    .hero-sub {
+      font-family: var(--mono);
+      font-size: clamp(13px, 1.6vw, 17px);
+      color: var(--dim);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 48px;
+    }
+
+    /* ── HERO CTA ── */
+    .hero-cta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      font-family: var(--display);
+      font-size: 20px;
+      letter-spacing: 4px;
+      padding: 15px 32px;
+      cursor: pointer;
+      border-radius: 0;
+      transition: opacity 120ms, border-color 120ms, color 120ms;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: var(--red);
+      border: none;
+      color: var(--bright);
+    }
+
+    .btn-primary:hover { opacity: 0.85; }
+
+    .btn-ghost {
+      background: transparent;
+      border: var(--border);
+      color: var(--white);
+    }
+
+    .btn-ghost:hover { border-color: #555; color: var(--white); }
+
+    .hero-note {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--dimmer);
+      letter-spacing: 1px;
+      margin-top: 24px;
+    }
+
+    /* ── SECTIONS ── */
+    .section {
+      padding: var(--space-xl) var(--pad);
+      max-width: var(--max);
+      margin: 0 auto;
+      border-bottom: var(--border);
+    }
+
+    .label {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--red);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: var(--space-md);
+      display: block;
+    }
+
+    .section h2 {
+      font-family: var(--display);
+      font-size: clamp(28px, 3.5vw, 48px);
+      color: var(--bright);
+      letter-spacing: 1px;
+      line-height: 1.1;
+      margin-bottom: var(--space-md);
+    }
+
+    .section p { color: var(--white); margin-bottom: var(--space-sm); }
+    .section p:last-child { margin-bottom: 0; }
+
+    /* ── REAL TALK (Problem) ── */
+    .realtalk {
+      padding: var(--space-xl) var(--pad);
+      max-width: var(--max);
+      margin: 0 auto;
+      border-bottom: var(--border);
+    }
+
+    .realtalk p {
+      color: var(--dim);
+      font-size: 17px;
+      line-height: 1.8;
+      margin-bottom: var(--space-sm);
+    }
+
+    .realtalk p:last-child { margin-bottom: 0; }
+
+    /* ── STEPS ── */
+    .steps { margin-top: var(--space-md); }
+
+    .step {
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: var(--space-sm) var(--space-md);
+      padding: var(--space-md) 0;
+      border-top: var(--border);
+    }
+
+    .step:last-child { border-bottom: var(--border); }
+
+    .step-num {
+      font-family: var(--display);
+      font-size: 52px;
+      color: var(--dimmer);
+      line-height: 1;
+      padding-top: 4px;
+    }
+
+    .step h3 {
+      font-family: var(--display);
+      font-size: 22px;
+      color: var(--bright);
+      letter-spacing: 2px;
+      margin-bottom: var(--space-xs);
+    }
+
+    .step p {
+      font-size: 16px;
+      color: var(--dim);
+      line-height: 1.65;
+    }
+
+    /* ── NOT WHAT IT ISN'T ── */
+    .compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-md);
+      margin-top: var(--space-md);
+    }
+
+    .compare .col h4 {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--dim);
+      margin-bottom: var(--space-sm);
+    }
+
+    .compare .col.yes h4 { color: var(--red); }
+
+    .compare ul {
+      list-style: none;
+      font-family: var(--mono);
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .compare .col.no ul li {
+      color: var(--dimmer);
+      text-decoration: line-through;
+      text-decoration-color: var(--dimmer);
+    }
+
+    .compare .col.yes ul li { color: var(--white); }
+
+    .compare .col.yes ul li::before { content: "— "; color: var(--red); }
+
+    @media (max-width: 640px) {
+      .compare { grid-template-columns: 1fr; gap: var(--space-md); }
+    }
+
+    /* ── REVIEW ── */
+    .review {
+      padding: var(--space-xl) var(--pad);
+      max-width: var(--max);
+      margin: 0 auto;
+      border-bottom: var(--border);
+    }
+
+    .review-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--dimmer);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: var(--space-md);
+      display: block;
+    }
+
+    .review blockquote {
+      border-left: 3px solid var(--red);
+      padding-left: var(--space-md);
+      margin-bottom: var(--space-md);
+    }
+
+    .review blockquote p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: var(--white);
+      margin-bottom: var(--space-sm);
+    }
+
+    .review blockquote p:last-child { margin-bottom: 0; }
+
+    .review-sig {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--dim);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: var(--space-md);
+    }
+
+    /* ── PRICING ── */
+    .pricing-strip {
+      padding: var(--space-xl) var(--pad);
+      max-width: var(--max);
+      margin: 0 auto;
+      border-bottom: var(--border);
+    }
+
+    .pricing-strip h2 {
+      font-family: var(--display);
+      font-size: clamp(28px, 3.5vw, 48px);
+      color: var(--bright);
+      letter-spacing: 1px;
+      margin-bottom: var(--space-md);
+    }
+
+    .pricing-subtitle {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: var(--dim);
+      margin-bottom: var(--space-lg);
+      text-transform: uppercase;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-bottom: var(--space-md);
+    }
+
+    .pricing-card {
+      background: var(--card);
+      border: var(--border);
+      padding: 28px;
+      position: relative;
+    }
+
+    .pricing-card.featured { border-color: var(--red); }
+
+    .pricing-card .badge {
+      position: absolute;
+      top: -10px;
+      right: 16px;
+      background: var(--red);
+      color: var(--bright);
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 2px;
+      padding: 3px 10px;
+      text-transform: uppercase;
+    }
+
+    .pricing-tier {
+      font-family: var(--display);
+      font-size: 26px;
+      color: var(--bright);
+      letter-spacing: 3px;
+      margin-bottom: 4px;
+    }
+
+    .pricing-price {
+      font-family: var(--mono);
+      font-size: 30px;
+      color: var(--red);
+      margin-bottom: 4px;
+    }
+
+    .pricing-price span { font-size: 13px; color: var(--dim); }
+
+    .pricing-desc {
+      font-size: 14px;
+      color: var(--dim);
+      line-height: 1.6;
+      margin: 16px 0;
+      padding-top: 16px;
+      border-top: var(--border);
+    }
+
+    .pricing-note {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--dimmer);
+      letter-spacing: 0.5px;
+      line-height: 1.7;
+    }
+
+    .store-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: var(--space-md);
+    }
+
+    /* ── PROMISES ── */
+    .promises-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-md);
+      margin-top: var(--space-md);
+    }
+
+    @media (max-width: 640px) {
+      .promises-grid { grid-template-columns: 1fr; }
+    }
+
+    .promise h3 {
+      font-family: var(--display);
+      font-size: 22px;
+      color: var(--bright);
+      letter-spacing: 2px;
+      margin-bottom: var(--space-xs);
+    }
+
+    .promise p { color: var(--dim); font-size: 15px; line-height: 1.7; }
+
+    /* ── CROSS-PRODUCT LINK ── */
+    .sibling {
+      padding: 48px var(--pad);
+      max-width: var(--max);
+      margin: 0 auto;
+      border-bottom: var(--border);
+      text-align: center;
+    }
+
+    .sibling p {
+      font-family: var(--mono);
+      font-size: 13px;
+      letter-spacing: 2px;
+      color: var(--dim);
+      text-transform: uppercase;
+      margin-bottom: var(--space-sm);
+    }
+
+    .sibling a {
+      font-family: var(--display);
+      font-size: 22px;
+      letter-spacing: 3px;
+      color: var(--white);
+      text-decoration: none;
+      border-bottom: 2px solid var(--red);
+      padding-bottom: 4px;
+      transition: color 120ms;
+    }
+
+    .sibling a:hover { color: var(--red); }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 28px var(--pad);
+      border-top: var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-mark {
+      height: 22px;
+      width: auto;
+      opacity: 0.3;
+    }
+
+    .footer-links {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--dimmer);
+      letter-spacing: 1px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--dimmer);
+      text-decoration: none;
+      transition: color 120ms;
+    }
+
+    .footer-links a:hover { color: var(--dim); }
+
+    @media (max-width: 600px) {
+      .step { grid-template-columns: 40px 1fr; gap: var(--space-xs) var(--space-sm); }
+      .step-num { font-size: 40px; }
+      footer { flex-direction: column; align-items: flex-start; }
+      .hero-mark { max-width: 320px; }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <img
+      src="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-wordmark.png"
+      alt="Dead Hand — Calculator"
+      class="hero-mark"
+    />
+    <h1 class="hero-headline">Now, if you fumble your quote, you did it on purpose.</h1>
+    <p class="hero-sub">The pocket tool for field quoting</p>
+
+    <div class="hero-cta">
+      <a href="#get" class="btn btn-primary">Get Dead Hand</a>
+      <a href="#how" class="btn btn-ghost">How it works</a>
+    </div>
+    <p class="hero-note">Android live. iOS coming.</p>
+  </section>
+
+  <!-- The Problem -->
+  <section class="realtalk">
+    <span class="label">The Problem</span>
+    <h2 style="font-family: var(--display); font-size: clamp(28px, 3.5vw, 48px); color: var(--bright); letter-spacing: 1px; line-height: 1.1; margin-bottom: var(--space-md);">The kitchen table is where jobs get lost.</h2>
+    <p>You're standing there. Customer wants a number. Your truck's full of parts, your head's full of last week's invoices, and the price you quote in the next thirty seconds is the one you're going to honor for six hours of work tomorrow.</p>
+    <p>Quote too high, they call the next guy. Quote too low, you're eating the mistake all week. Write it on a scratch pad and half the time you forget what margin you used by the time you get to the invoice.</p>
+    <p>You've been doing this in your head for years, and you're good at it. But the customer wants to see the breakdown. They want a document, not a guess. And you want to be the guy who hands them something clean, not the guy fumbling in the truck for a clipboard.</p>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section" id="how">
+    <span class="label">How It Works</span>
+    <h2>Four taps from walking in to quote delivered.</h2>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div>
+          <h3>Enter Hours</h3>
+          <p>How long is the job. That's it. Your rates are already set from the first time you opened the app. No dropdown. No "which labor type." No picker.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">02</div>
+        <div>
+          <h3>Add Materials</h3>
+          <p>Tap, type the cost. Tap again, type the next one. Your margin's already applied. The total updates as you go. Reorder or remove with one swipe.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">03</div>
+        <div>
+          <h3>Present to the Customer</h3>
+          <p>Flip the phone around. Presenter mode shows the number big, clean, defensible. Subtotal, tax, total. Done in front of them. No loading screen. No ads. Just the number.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">04</div>
+        <div>
+          <h3>Send the PDF</h3>
+          <p>One button. Their email, your phone's share sheet, sent from your inbox. No login for them. No cloud service you pay for. No data trail you don't control.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What It Isn't -->
+  <section class="section">
+    <span class="label">What It Isn't</span>
+    <h2>This isn't a CRM. It's a tape measure.</h2>
+    <p style="color: var(--dim); margin-bottom: var(--space-md);">Dead Hand Calculator is a single-purpose tool. Quote fast, quote right, send clean. It will never become an invoicing engine, a scheduling app, or a customer database. If you need those, we make a different product.</p>
+
+    <div class="compare">
+      <div class="col no">
+        <h4>What you don't get</h4>
+        <ul>
+          <li>Customer database</li>
+          <li>Invoicing engine</li>
+          <li>Scheduling / dispatch</li>
+          <li>Cloud sync</li>
+          <li>Notifications</li>
+          <li>Ads or upsells</li>
+          <li>Account to create</li>
+        </ul>
+      </div>
+      <div class="col yes">
+        <h4>What you get</h4>
+        <ul>
+          <li>A price in front of the customer</li>
+          <li>A PDF in their inbox</li>
+          <li>Your rates saved forever</li>
+          <li>Works offline, in a basement</li>
+          <li>The same screen every time</li>
+          <li>Your data on your phone only</li>
+          <li>Thirty seconds to set up</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- First Review -->
+  <section class="review">
+    <span class="review-label">First Review</span>
+    <blockquote>
+      <p>I built this because I'm the guy standing in the kitchen. Years in the trades, quoting in my head, losing jobs to guys who wrote better estimates faster.</p>
+      <p>I don't need a CRM. I already know who my customers are. I need to look competent in front of the one standing across the counter. I need the number to be right the first time. And I need to send something that looks like I take my own work seriously, because I do.</p>
+      <p>Every feature I built, I built because I wanted it on a job. Every feature I didn't build, I didn't build because it'd slow me down. If it doesn't help me quote in under a minute, it's not in the app.</p>
+    </blockquote>
+    <p class="review-sig">— The Founder · Pink Flamingo Plumbing &amp; Heating</p>
+  </section>
+
+  <!-- Pricing -->
+  <section class="pricing-strip" id="get">
+    <span class="label">Pricing</span>
+    <h2>Buy it once, or pay like a subscription. Your call.</h2>
+    <p class="pricing-subtitle">No free tier. No trial. No ads. Ever.</p>
+
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pricing-tier">Monthly</div>
+        <div class="pricing-price">$7.99 <span>/ month</span></div>
+        <div class="pricing-desc">Try it month to month. Cancel in the app store any time.</div>
+      </div>
+
+      <div class="pricing-card featured">
+        <span class="badge">Most pick this</span>
+        <div class="pricing-tier">Annual</div>
+        <div class="pricing-price">$49.99 <span>/ year</span></div>
+        <div class="pricing-desc">About $4.17/mo. For the tech who knows this is the tool.</div>
+      </div>
+
+      <div class="pricing-card">
+        <div class="pricing-tier">Lifetime</div>
+        <div class="pricing-price">$79.99 <span>once</span></div>
+        <div class="pricing-desc">Pay once. Own it forever. Future updates included. No renewals ever.</div>
+      </div>
+    </div>
+
+    <div class="store-row">
+      <a href="#" class="btn btn-primary">Google Play — Soon</a>
+      <a href="#" class="btn btn-ghost">App Store — Soon</a>
+    </div>
+    <p class="pricing-note" style="margin-top: var(--space-md);">Sales tax where applicable. All prices in USD. Subscriptions auto-renew; manage or cancel in your app store account.</p>
+  </section>
+
+  <!-- The Promises -->
+  <section class="section">
+    <span class="label">The Promises</span>
+    <h2>Four things this app will never do.</h2>
+
+    <div class="promises-grid">
+      <div class="promise">
+        <h3>Never Send Your Data Anywhere</h3>
+        <p>No backend. No analytics. No cloud. Everything lives on your phone. When you uninstall, it's gone.</p>
+      </div>
+      <div class="promise">
+        <h3>Never Show Ads</h3>
+        <p>You paid for the tool. The tool works for you. That's the whole contract.</p>
+      </div>
+      <div class="promise">
+        <h3>Never Raise Your Price</h3>
+        <p>What you paid is what you pay. Lifetime means lifetime.</p>
+      </div>
+      <div class="promise">
+        <h3>Never Turn Into Something It Isn't</h3>
+        <p>This is a calculator. It will always be a calculator. If you want a CRM, we make one of those too. Different product.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cross-product link -->
+  <section class="sibling">
+    <p>Running a shop? You might also want</p>
+    <a href="/">Dead Hand ARS →</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <img
+      src="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-wordmark.png"
+      alt="Dead Hand"
+      class="footer-mark"
+    />
+    <div class="footer-links">
+      <a href="/">ARS</a>
+      <a href="/calculator">Calculator</a>
+      <a href="/pricing">Pricing</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+      <a href="mailto:support@getdeadhand.com">Contact</a>
+      <span>© 2026 Friendly App LLC, dba Dead Hand</span>
+    </div>
+  </footer>
+
+</body>
+</html>
