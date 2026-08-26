@@ -44,6 +44,11 @@
     .grab .t{font-family:var(--display);font-size:22px;letter-spacing:1px;color:#fff;line-height:1.1}
     .grab .d{font-size:14px;color:var(--dim);margin-top:7px;line-height:1.5}
     .note{font-size:14px;color:var(--dimmer);line-height:1.6}
+    .shots{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(14px,3vw,28px);align-items:start;margin:28px 0 34px}
+    .shot img{width:100%;max-width:430px;height:auto;display:block;border-radius:10px}
+    .shot figcaption{color:var(--dim);font-size:14px;line-height:1.5;margin-top:11px}
+    .shot figcaption strong{color:#fff;font-weight:600}
+    @media(max-width:640px){.shots{grid-template-columns:1fr;gap:28px;justify-items:center}}
     .dl{margin:6px 0 20px}
     .dl div{position:relative;padding-left:22px;margin-bottom:13px;color:var(--dim);font-size:16px;line-height:1.55}
     .dl div:before{content:"";position:absolute;left:0;top:10px;width:7px;height:7px;background:var(--red)}
@@ -61,13 +66,25 @@
   <main class="wrap">
     <span class="eyebrow">For the Counter</span>
     <h1>Something worth handing over.</h1>
-    <p class="standfirst">I'm a plumber. I built a quoting tool for the guys standing at your counter, and I'd like them to know it exists.</p>
+    <p class="standfirst">I kept losing money at the kitchen table &mdash; tired, customer waiting, and the number I said in the next thirty seconds was the one I had to honor in the morning. So I built a quoting tool, and I'd like the guys at your counter to know it exists.</p>
 
     <p>I run Tom Falk Plumbing &amp; Heating. A while back I built Dead Hand because I kept losing money at the kitchen table &mdash; tired, customer waiting, and the number I said in the next thirty seconds was the one I had to honor in the morning.</p>
 
     <p>You know the guys I mean. One truck, maybe three. Good at the work. They price in their head and most of them are better at it than they think, but not at seven on a Friday night. Some of them are underwater on jobs they would swear made money.</p>
 
     <p>Dead Hand fixes the number, not the man. They set their labor rates, their material margin and their overhead once. After that they put in the hours and the parts and the right price comes out with the margin already inside it. Then they turn the phone around and the customer gets a clean estimate with none of that on it. Twelve ninety-nine a month. It runs in a browser, so there is no app store and nothing to install on whatever phone they already carry.</p>
+
+
+    <div class="shots">
+      <figure class="shot">
+        <img src="/deadhand-shot-calculator.webp" alt="The calculator showing cost and margin on every line" width="430" height="861" loading="lazy" decoding="async" />
+        <figcaption><strong>What he sees.</strong> Every line carries what it cost him and what he's making on it.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="/deadhand-shot-estimate.webp" alt="The customer-facing estimate with no cost or margin on it" width="430" height="861" loading="lazy" decoding="async" />
+        <figcaption><strong>What the homeowner sees.</strong> He turns the phone around. A clean number, and none of that on it.</figcaption>
+      </figure>
+    </div>
 
     <h2>Built for the small shop, not the enterprise.</h2>
 
@@ -87,11 +104,17 @@
 
     <p><strong>$12.99 a month</strong> for the calculator, or <strong>$45 to $180</strong> flat by shop size for the whole book of jobs priced and ready. The cheapest per-tech book runs about three times the calculator for a single man, plus a few hundred dollars before he quotes anything.</p>
 
+    <h2>Why it's worth the counter space</h2>
+
+    <p>You carry these guys on terms. <strong>The ones who guess low are the ones who quietly disappear owing you money</strong> &mdash; not because they're bad at the work, but because they priced a job in their head at seven on a Friday and ate the difference all year.</p>
+
+    <p>Someone doing better work and making more money is a better customer for you. That's the whole argument. A shop that prices right stays on the books, keeps the truck full, and keeps buying.</p>
+
     <h2>No spiff, and that's on purpose.</h2>
 
     <p>I'm not offering you a cut. Plenty of houses don't let their people take money from a vendor, and I'm not going to hand you something you'd have to declare or turn down.</p>
 
-    <p>The honest version is simpler: <strong>someone doing better work and making more money is a better customer for you.</strong> The ones who guess low are the ones who quietly disappear owing you money.</p>
+    
 
     <h2>If you want to point someone at it</h2>
 
@@ -107,7 +130,7 @@
     <div class="grabs">
       <a class="grab" href="/deadhand-counter-sheet.pdf">
         <div class="t">Counter sheet</div>
-        <div class="d">One page, scan-to-open code, sized for the board or the counter. Print as many as you like.</div>
+        <div class="d">One page, scan-to-open code, sized for the board or the counter. Print as many as you like &mdash; or email me and I'll put a stack in the mail to the branch, no charge.</div>
       </a>
       <a class="grab" href="/deadhand-for-the-counter.pdf">
         <div class="t">This page as a PDF</div>
