@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Margin and markup are not the same number, and confusing them is how trade shops lose profit on every job. Plain-English math, worked examples, and the divisor that fixes it." />
+  <meta name="robots" content="index, follow" />
+  <title>Margin vs. Markup, in Plain English</title>
+  <link rel="canonical" href="https://getdeadhand.com/pricing-guide/margin-vs-markup/" />
+  <link rel="icon" type="image/png" href="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-icon.png" />
+  <meta property="og:title" content="Margin vs. Markup, in Plain English" />
+  <meta property="og:description" content="The one calculation that decides whether a busy year is a profitable one." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://getdeadhand.com/pricing-guide/margin-vs-markup/" />
+  <meta property="og:image" content="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-badge.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org","@type": "Article",
+    "headline": "Margin vs. Markup, in Plain English",
+    "description": "Why margin and markup are different numbers, and how confusing them drains profit from every trade job.",
+    "image": "https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-badge.png",
+    "author": { "@type": "Organization", "name": "Dead Hand" },
+    "publisher": { "@type": "Organization", "name": "Dead Hand", "alternateName": "Friendly App LLC" },
+    "mainEntityOfPage": "https://getdeadhand.com/pricing-guide/margin-vs-markup/"
+  }
+  </script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--black:#0a0a0a;--card:#111214;--raised:#191b1e;--line:#2a2d31;--red:#c0392b;--white:#e8e8e8;--dim:#90969d;--dimmer:#5a5f66;--display:'Bebas Neue',sans-serif;--mono:'IBM Plex Mono',monospace;--body:'IBM Plex Sans',system-ui,sans-serif;--measure:680px}
+    html{scroll-behavior:smooth}
+    body{background:var(--black);color:var(--white);font-family:var(--body);font-size:18px;line-height:1.75;-webkit-font-smoothing:antialiased}
+    .wrap{max-width:var(--measure);margin:0 auto;padding:0 clamp(20px,5vw,28px)}
+    header.top{border-bottom:1px solid var(--line);background:#000}
+    header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;max-width:900px}
+    .brand{font-family:var(--display);font-size:24px;letter-spacing:2px;color:#fff;text-decoration:none;display:flex;align-items:center;gap:7px}
+    .brand .star{color:var(--red);font-size:15px}
+    .top nav a{font-family:var(--mono);font-size:12px;letter-spacing:1px;color:var(--dim);text-decoration:none;text-transform:uppercase}
+    .top nav a:hover{color:#fff}
+    .crumb{font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--dimmer);margin:28px 0 14px}
+    .crumb a{color:var(--dim);text-decoration:none}.crumb a:hover{color:#fff}
+    h1{font-family:var(--display);font-size:clamp(40px,7vw,64px);line-height:.98;letter-spacing:1px;color:#fff;margin-bottom:18px;text-wrap:balance}
+    .standfirst{font-size:20px;color:var(--dim);line-height:1.6;margin-bottom:14px;border-left:3px solid var(--red);padding-left:20px}
+    .byline{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--dimmer);margin:22px 0 40px}
+    article h2{font-family:var(--display);font-size:clamp(28px,4.5vw,40px);letter-spacing:.5px;line-height:1.05;color:#fff;margin:48px 0 16px;text-wrap:balance}
+    article p{margin-bottom:18px;color:var(--white)}article p.mut{color:var(--dim)}
+    article strong{color:#fff;font-weight:600}
+    article a.inline{color:#e0745f;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--red)}article a.inline:hover{color:#fff}
+    .callout{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--red);border-radius:10px;padding:22px 24px;margin:28px 0}
+    .callout .lbl{font-family:var(--mono);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--red);display:block;margin-bottom:10px}.callout p:last-child{margin-bottom:0}
+    .mathcard{background:linear-gradient(180deg,#141619,#0f1113);border:1px solid var(--line);border-radius:12px;padding:24px;margin:28px 0;font-family:var(--mono);font-size:15px;line-height:1.9}
+    .mathcard .row{display:flex;justify-content:space-between;gap:16px;padding:6px 0;border-bottom:1px solid var(--line);color:var(--dim)}.mathcard .row:last-child{border-bottom:none}
+    .mathcard .row b{color:#fff;font-weight:500;font-variant-numeric:tabular-nums}.mathcard .row.tot b{color:var(--red)}
+    table.mm{width:100%;border-collapse:collapse;margin:28px 0;font-family:var(--mono);font-size:14px}
+    table.mm th,table.mm td{text-align:right;padding:11px 10px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+    table.mm th{color:var(--red);font-weight:500;letter-spacing:.5px;text-transform:uppercase;font-size:11px}
+    table.mm td:first-child,table.mm th:first-child{text-align:left;color:var(--white)}
+    table.mm td{color:var(--dim)}
+    .pull{font-family:var(--display);font-size:clamp(26px,4vw,36px);line-height:1.1;letter-spacing:.5px;color:#fff;margin:40px 0;padding-left:20px;border-left:3px solid var(--red)}
+    .cta{background:linear-gradient(180deg,#141619,#0d0e10);border:1px solid var(--line);border-radius:14px;padding:34px 28px;margin:52px 0;text-align:center}
+    .cta h2{margin:0 0 10px}.cta p{color:var(--dim);margin-bottom:22px}
+    .cta a{display:inline-block;background:var(--red);color:#fff;font-family:var(--display);font-size:20px;letter-spacing:3px;padding:14px 34px;text-decoration:none;border-radius:2px}.cta a:hover{filter:brightness(1.08)}
+    .related{border-top:1px solid var(--line);margin-top:56px;padding-top:32px}
+    .related .lbl{font-family:var(--mono);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:18px;display:block}
+    .related a{display:block;text-decoration:none;padding:16px 0;border-bottom:1px solid var(--line)}.related a:hover .rt{color:#fff}
+    .related .rt{font-family:var(--display);font-size:24px;letter-spacing:1px;color:var(--white);transition:color .15s}.related .rd{font-size:14px;color:var(--dim);margin-top:2px}
+    footer{border-top:1px solid var(--line);margin-top:60px;padding:30px 0;background:#000}
+    footer .wrap{max-width:900px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
+    footer .fl{font-family:var(--mono);font-size:11px;letter-spacing:1px;color:var(--dimmer);display:flex;gap:16px;flex-wrap:wrap}
+    footer .fl a{color:var(--dimmer);text-decoration:none}footer .fl a:hover{color:var(--dim)}
+  </style>
+</head>
+<body>
+  <header class="top"><div class="wrap"><a class="brand" href="/"><span class="star">&#9733;</span> DEAD HAND</a><nav><a href="/pricing-guide/">Guide</a></nav></div></header>
+  <main class="wrap">
+    <div class="crumb"><a href="/">Dead Hand</a> &nbsp;/&nbsp; <a href="/pricing-guide/">Pricing Guide</a> &nbsp;/&nbsp; Margin vs. Markup</div>
+    <h1>Margin vs. markup, in plain English</h1>
+    <p class="standfirst">They sound like the same thing. They are not the same number. And the gap between them is coming straight out of your pocket.</p>
+    <p class="byline">Pricing Guide &middot; Dead Hand</p>
+    <article>
+      <p>Here's a question that decides whether a busy year is a profitable one: when you "add 40%" to a part, are you making a 40% profit? Almost every tradesman says yes. Almost every tradesman is wrong, and the mistake is costing them real money on every ticket.</p>
+
+      <h2>The two words, defined once</h2>
+      <p><strong>Markup</strong> is the amount you add on top of what something cost you, measured against the <em>cost</em>. <strong>Margin</strong> is the amount of profit in the sale, measured against the <em>price the customer pays</em>. Same dollars of profit — measured against two different starting points, which is why the percentages never match.</p>
+      <p>A $100 part sold for $140 has $40 of profit in it either way. As markup, that $40 is measured against the $100 cost: 40%. As margin, that same $40 is measured against the $140 the customer paid: 28.6%. Nothing changed but the yardstick.</p>
+
+      <div class="mathcard">
+        <div class="row"><span>Cost</span><b>$100.00</b></div>
+        <div class="row"><span>Profit added</span><b>$40.00</b></div>
+        <div class="row"><span>Price</span><b>$140.00</b></div>
+        <div class="row"><span>As markup ($40 / $100)</span><b>40%</b></div>
+        <div class="row tot"><span>As margin ($40 / $140)</span><b>28.6%</b></div>
+      </div>
+
+      <p class="pull">Every markup number is a bigger-sounding version of a smaller real margin.</p>
+
+      <h2>The table worth taping to the truck</h2>
+      <p>Because the two drift further apart as the numbers climb, a markup that feels generous can leave you with a margin that doesn't cover your overhead. Here's the conversion:</p>
+
+      <table class="mm">
+        <thead><tr><th>If your markup is</th><th>Your real margin is</th></tr></thead>
+        <tbody>
+          <tr><td>20%</td><td>16.7%</td></tr>
+          <tr><td>30%</td><td>23.1%</td></tr>
+          <tr><td>40%</td><td>28.6%</td></tr>
+          <tr><td>50%</td><td>33.3%</td></tr>
+          <tr><td>66.7%</td><td>40.0%</td></tr>
+          <tr><td>100%</td><td>50.0%</td></tr>
+        </tbody>
+      </table>
+
+      <h2>How to price for the margin you actually want</h2>
+      <p>Stop adding a percentage. Start dividing. If you want a job to carry a real <strong>40% margin</strong>, take your cost and divide it by <strong>0.60</strong> — that's 1 minus your target margin. The part that cost you $100 has to bill at $166.67. Want 50% margin? Divide by 0.50. Want 35%? Divide by 0.65.</p>
+
+      <div class="callout">
+        <span class="lbl">The one formula</span>
+        <p>Price = Cost &divide; (1 &minus; margin). For a 40% margin: $100 &divide; 0.60 = <strong>$166.67</strong>. Add-40%-markup would have charged $140 and quietly handed back eleven points of profit.</p>
+      </div>
+
+      <p>On one part, eleven points is a few bucks. Across a year of jobs, on every part you touch, it's the difference between a shop that pays you and a shop you pay to keep open.</p>
+
+      <div class="cta">
+        <h2>Set the margin once. Never do this math on a job again.</h2>
+        <p>Dead Hand holds your margin and applies it to every part automatically — the price comes out right whether you did the division in your head or not.</p>
+        <a href="/">Get Dead Hand</a>
+      </div>
+
+      <div class="related">
+        <span class="lbl">More from the guide</span>
+        <a href="/pricing-guide/"><div class="rt">How to Price a Trade Job Without Losing Money</div><div class="rd">The full picture — labor, materials, and the overhead number most shops forget.</div></a>
+        <a href="/pricing-guide/shop-rate/"><div class="rt">What Should My Shop Rate Actually Be?</div><div class="rd">Building a billable hourly rate from your real overhead, not the competition's.</div></a>
+      </div>
+    </article>
+  </main>
+  <footer><div class="wrap"><a class="brand" href="/" style="font-size:20px"><span class="star">&#9733;</span> DEAD HAND</a><div class="fl"><a href="/">The App</a><a href="/pricing-guide/">Pricing Guide</a><a href="/calculator-privacy">Privacy</a><a href="/calculator-terms">Terms</a><span>&copy; 2026 Friendly App LLC</span></div></div></footer>
+</body>
+</html>

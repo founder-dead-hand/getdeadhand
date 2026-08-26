@@ -3,19 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Automatic response system for contractors. Every inbound call triaged, ranked, and ready to handle before you've listened to a single voicemail." />
+  <meta name="description" content="Dead Hand — the pocket tool for field quoting. Set your rates once. Every job after that, the right number comes out on its own. Quote on the spot, send a clean PDF, look like a pro. No app store." />
   <meta name="robots" content="index, follow" />
-  <title>Dead Hand — Automatic Response System</title>
+  <title>Dead Hand — Quote on the spot, like a pro</title>
+  <link rel="canonical" href="https://getdeadhand.com/" />
   <link rel="icon" type="image/png" href="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-icon.png" />
   <link rel="apple-touch-icon" href="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-icon.png" />
-  <meta property="og:title" content="Dead Hand — Automatic Response System" />
-  <meta property="og:description" content="When everything is hitting the fan, you're still covering leads." />
+  <meta property="og:title" content="Dead Hand — Quote on the spot, like a pro" />
+  <meta property="og:description" content="Set your rates once. The right number comes out on its own, every time." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://getdeadhand.com" />
   <meta property="og:image" content="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-badge.png" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Dead Hand",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web browser (iOS, Android, desktop)",
+    "description": "The pocket tool for field quoting. Set your rates once. Every job after that, the right number — margin, markup, and overhead already built in — comes out automatically. Runs in the browser, adds to your home screen, no app store.",
+    "url": "https://getdeadhand.com/",
+    "image": "https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-badge.png",
+    "offers": [
+      {
+        "@type": "Offer",
+        "price": "12.99",
+        "priceCurrency": "USD",
+        "description": "Monthly plan, billed monthly"
+      },
+      {
+        "@type": "Offer",
+        "price": "99.00",
+        "priceCurrency": "USD",
+        "description": "Annual plan, billed yearly"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "Friendly App LLC",
+      "alternateName": "Dead Hand"
+    }
+  }
+  </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -26,8 +59,8 @@
       --red:     #c0392b;
       --white:   #e8e8e8;
       --bright:  #ffffff;
-      --dim:     #666666;
-      --dimmer:  #333333;
+      --dim:     #8a8a8a;
+      --dimmer:  #555555;
       --border:  1px solid #2a2a2a;
 
       --display: 'Bebas Neue', sans-serif;
@@ -40,7 +73,6 @@
       --space-lg: 64px;
       --space-xl: 80px;
 
-      /* Wider content column — fills screen properly on desktop */
       --max: 960px;
       --pad: clamp(24px, 6vw, 80px);
     }
@@ -77,14 +109,12 @@
 
     .hero-headline {
       font-family: var(--display);
-      /* Wide enough range that "fan," never orphans */
       font-size: clamp(36px, 5vw, 68px);
       color: var(--bright);
       letter-spacing: 1px;
       line-height: 1.05;
       margin-bottom: 16px;
       max-width: 900px;
-      /* Remove the <br> at this width — handled by natural flow */
     }
 
     .hero-sub {
@@ -96,56 +126,36 @@
       margin-bottom: 48px;
     }
 
-    /* ── FORM ── */
-    .form {
+    .hero-cta {
       display: flex;
-      flex-direction: column;
-      gap: 10px;
-      width: 100%;
-      max-width: 420px;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
-    .form input[type="email"] {
-      background: var(--raised);
-      border: var(--border);
-      color: var(--white);
-      font-family: var(--mono);
-      font-size: 15px;
-      padding: 15px 18px;
-      width: 100%;
-      outline: none;
-      border-radius: 0;
-      -webkit-appearance: none;
-      transition: border-color 120ms;
-    }
-
-    .form input[type="email"]::placeholder { color: var(--dimmer); }
-    .form input[type="email"]:focus { border-color: #555; }
-
-    .form-honey { display: none; }
-
-    .form button {
-      background: var(--red);
-      border: none;
-      color: var(--bright);
+    .btn {
       font-family: var(--display);
       font-size: 20px;
       letter-spacing: 4px;
-      padding: 15px;
-      width: 100%;
+      padding: 15px 32px;
       cursor: pointer;
       border-radius: 0;
-      transition: opacity 120ms;
+      transition: opacity 120ms, border-color 120ms, color 120ms;
+      text-decoration: none;
+      display: inline-block;
     }
 
-    .form button:hover { opacity: 0.85; }
+    .btn-primary { background: var(--red); border: none; color: var(--bright); }
+    .btn-primary:hover { opacity: 0.85; }
+    .btn-ghost { background: transparent; border: var(--border); color: var(--white); }
+    .btn-ghost:hover { border-color: #777; color: var(--white); }
 
-    .form-note {
+    .hero-note {
       font-family: var(--mono);
       font-size: 11px;
-      color: var(--dimmer);
+      color: var(--dim);
       letter-spacing: 1px;
-      text-align: center;
+      margin-top: 24px;
     }
 
     /* ── SECTIONS ── */
@@ -178,7 +188,45 @@
     .section p { color: var(--white); margin-bottom: var(--space-sm); }
     .section p:last-child { margin-bottom: 0; }
 
-    /* ── REAL TALK ── */
+    /* ── ORIGIN (the name) ── */
+    .origin {
+      padding: var(--space-xl) var(--pad);
+      max-width: var(--max);
+      margin: 0 auto;
+      border-bottom: var(--border);
+    }
+
+    .origin h2 {
+      font-family: var(--display);
+      font-size: clamp(28px, 3.5vw, 48px);
+      color: var(--bright);
+      letter-spacing: 1px;
+      line-height: 1.1;
+      margin-bottom: var(--space-md);
+    }
+
+    .origin p {
+      color: var(--dim);
+      font-size: 17px;
+      line-height: 1.85;
+      margin-bottom: var(--space-sm);
+    }
+
+    .origin p.turn { color: var(--white); }
+    .origin p:last-child { margin-bottom: 0; }
+
+    .origin .kicker {
+      font-family: var(--display);
+      font-size: clamp(22px, 2.6vw, 30px);
+      color: var(--bright);
+      letter-spacing: 1px;
+      line-height: 1.2;
+      margin-top: var(--space-md);
+      border-left: 3px solid var(--red);
+      padding-left: var(--space-md);
+    }
+
+    /* ── REAL TALK (Problem) ── */
     .realtalk {
       padding: var(--space-xl) var(--pad);
       max-width: var(--max);
@@ -224,10 +272,45 @@
       margin-bottom: var(--space-xs);
     }
 
-    .step p {
-      font-size: 16px;
+    .step p { font-size: 16px; color: var(--dim); line-height: 1.65; }
+
+    /* ── COMPARE ── */
+    .compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-md);
+      margin-top: var(--space-md);
+    }
+
+    .compare .col h4 {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
       color: var(--dim);
-      line-height: 1.65;
+      margin-bottom: var(--space-sm);
+    }
+
+    .compare .col.yes h4 { color: var(--red); }
+
+    .compare ul {
+      list-style: none;
+      font-family: var(--mono);
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .compare .col.no ul li {
+      color: var(--dimmer);
+      text-decoration: line-through;
+      text-decoration-color: var(--dimmer);
+    }
+
+    .compare .col.yes ul li { color: var(--white); }
+    .compare .col.yes ul li::before { content: "— "; color: var(--red); }
+
+    @media (max-width: 640px) {
+      .compare { grid-template-columns: 1fr; gap: var(--space-md); }
     }
 
     /* ── REVIEW ── */
@@ -241,7 +324,7 @@
     .review-label {
       font-family: var(--mono);
       font-size: 11px;
-      color: var(--dimmer);
+      color: var(--dim);
       letter-spacing: 4px;
       text-transform: uppercase;
       margin-bottom: var(--space-md);
@@ -288,7 +371,15 @@
       margin-bottom: var(--space-md);
     }
 
-    /* Three-column pricing on desktop */
+    .pricing-subtitle {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: var(--dim);
+      margin-bottom: var(--space-lg);
+      text-transform: uppercase;
+    }
+
     .pricing-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -300,9 +391,23 @@
       background: var(--card);
       border: var(--border);
       padding: 28px;
+      position: relative;
     }
 
     .pricing-card.featured { border-color: var(--red); }
+
+    .pricing-card .badge {
+      position: absolute;
+      top: -10px;
+      right: 16px;
+      background: var(--red);
+      color: var(--bright);
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 2px;
+      padding: 3px 10px;
+      text-transform: uppercase;
+    }
 
     .pricing-tier {
       font-family: var(--display);
@@ -325,57 +430,95 @@
       font-size: 14px;
       color: var(--dim);
       line-height: 1.6;
-      margin: 16px 0;
+      margin: 16px 0 0;
       padding-top: 16px;
       border-top: var(--border);
     }
 
-    .pricing-features {
-      list-style: none;
-      font-family: var(--mono);
-      font-size: 12px;
-      color: var(--dim);
-    }
-
-    .pricing-features li {
-      padding: 5px 0;
-      border-bottom: 1px solid #1a1a1a;
-      line-height: 1.5;
-    }
-
-    .pricing-features li:last-child { border-bottom: none; }
-    .pricing-features li::before { content: "— "; color: var(--red); }
-
     .pricing-note {
       font-family: var(--mono);
       font-size: 12px;
-      color: var(--dimmer);
+      color: var(--dim);
       letter-spacing: 0.5px;
       line-height: 1.7;
     }
 
-    /* ── TRADE LINKS ── */
-    .trades {
-      padding: 48px var(--pad);
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: var(--space-md);
+    }
+
+    /* ── HOW YOU GET IT ── */
+    .getit {
+      padding: var(--space-xl) var(--pad);
       max-width: var(--max);
       margin: 0 auto;
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
+      border-bottom: var(--border);
     }
 
-    .trade-link {
+    .getit h2 {
       font-family: var(--display);
-      font-size: 14px;
+      font-size: clamp(28px, 3.5vw, 48px);
+      color: var(--bright);
+      letter-spacing: 1px;
+      line-height: 1.1;
+      margin-bottom: var(--space-md);
+    }
+
+    .getit p { color: var(--dim); font-size: 16px; line-height: 1.8; margin-bottom: var(--space-sm); }
+    .getit p:last-child { margin-bottom: 0; }
+    .getit strong { color: var(--white); font-weight: 600; }
+
+    /* ── PROMISES ── */
+    .promises-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-md);
+      margin-top: var(--space-md);
+    }
+
+    @media (max-width: 640px) {
+      .promises-grid { grid-template-columns: 1fr; }
+    }
+
+    .promise h3 {
+      font-family: var(--display);
+      font-size: 22px;
+      color: var(--bright);
+      letter-spacing: 2px;
+      margin-bottom: var(--space-xs);
+    }
+
+    .promise p { color: var(--dim); font-size: 15px; line-height: 1.7; }
+
+    /* ── FINAL CTA ── */
+    .final {
+      padding: var(--space-xl) var(--pad);
+      max-width: var(--max);
+      margin: 0 auto;
+      border-bottom: var(--border);
+      text-align: center;
+    }
+
+    .final h2 {
+      font-family: var(--display);
+      font-size: clamp(30px, 4vw, 56px);
+      color: var(--bright);
+      letter-spacing: 1px;
+      line-height: 1.05;
+      margin-bottom: var(--space-md);
+    }
+
+    .final p {
+      font-family: var(--mono);
+      font-size: 12px;
       letter-spacing: 2px;
       color: var(--dim);
-      text-decoration: none;
-      border: var(--border);
-      padding: 10px 18px;
-      transition: color 120ms, border-color 120ms;
+      text-transform: uppercase;
+      margin-top: var(--space-md);
     }
-
-    .trade-link:hover { color: var(--white); border-color: #555; }
 
     /* ── FOOTER ── */
     footer {
@@ -388,29 +531,20 @@
       gap: 16px;
     }
 
-    .footer-mark {
-      height: 22px;
-      width: auto;
-      opacity: 0.3;
-    }
+    .footer-mark { height: 22px; width: auto; opacity: 0.3; }
 
     .footer-links {
       font-family: var(--mono);
       font-size: 11px;
-      color: var(--dimmer);
+      color: var(--dim);
       letter-spacing: 1px;
       display: flex;
       gap: 16px;
       flex-wrap: wrap;
     }
 
-    .footer-links a {
-      color: var(--dimmer);
-      text-decoration: none;
-      transition: color 120ms;
-    }
-
-    .footer-links a:hover { color: var(--dim); }
+    .footer-links a { color: var(--dim); text-decoration: none; transition: color 120ms; }
+    .footer-links a:hover { color: var(--white); }
 
     @media (max-width: 600px) {
       .step { grid-template-columns: 40px 1fr; gap: var(--space-xs) var(--space-sm); }
@@ -422,149 +556,196 @@
 </head>
 <body>
 
+  <!-- HERO -->
   <section class="hero">
     <img
       src="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-wordmark.png"
-      alt="Dead Hand — Automatic Response System"
+      alt="Dead Hand"
       class="hero-mark"
     />
-    <h1 class="hero-headline">When everything is hitting the fan, you're still covering leads.</h1>
-    <p class="hero-sub">Handle the lead like any other text.</p>
+    <h1 class="hero-headline">Set your rates once. Never fumble another quote.</h1>
+    <p class="hero-sub">The pocket tool for field quoting</p>
 
-    <form class="form" name="early-access" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="early-access" />
-      <p class="form-honey"><label>Skip this: <input name="bot-field" /></label></p>
-      <input type="email" name="email" placeholder="YOUR EMAIL" required autocomplete="email" />
-      <button type="submit">GET EARLY ACCESS</button>
-      <p class="form-note">No spam. No newsletter. Just access when it's ready.</p>
-    </form>
+    <div class="hero-cta">
+      <a href="#get" class="btn btn-primary">Get Dead Hand</a>
+      <a href="#how" class="btn btn-ghost">How it works</a>
+    </div>
+    <p class="hero-note">Works on any phone · Adds to your home screen · No app store</p>
   </section>
 
-  <section class="section">
-    <span class="label">The Problem</span>
-    <h2>The phone is your biggest earner and your biggest headache.</h2>
-    <p>You're busy because you're good. But busy means you're on a job, and on a job means you're not on the phone. And when you're not on the phone, someone else is.</p>
-    <p>That water heater call you missed Friday afternoon went to whoever picked up. Not because they're better. Because they answered.</p>
-    <p>Answering services put a stranger between you and your customer. AI operators put a robot on your line. Your customers know the difference immediately, and so do you.</p>
+  <!-- THE NAME / ORIGIN -->
+  <section class="origin">
+    <span class="label">Why It's Called Dead Hand</span>
+    <h2>Built to get it right when you can't.</h2>
+    <p>The name comes from an old fail-safe idea: a system built to respond correctly on its own, at the exact moment the people who'd normally make the call aren't able to. No hesitating, no second-guessing — it just does what it's set up to do.</p>
+    <p class="turn">Your version of that moment is the kitchen table.</p>
+    <p>You're tired, you're moving fast, the customer's waiting, and the number you say in the next thirty seconds is the one you're honoring tomorrow. That's exactly when a good tradesman talks himself into a price that's too low.</p>
+    <p class="turn">Dead Hand takes that off your shoulders.</p>
+    <p>Your rates, your margin, your overhead — set once, then applied automatically to every job after. The right number comes out even when you're too slammed to work it out in your head.</p>
+    <p class="kicker">It gets the number right,<br />so you don't have to be perfect on your worst day.</p>
   </section>
 
+  <!-- THE PROBLEM -->
   <section class="realtalk">
-    <p>The day before a holiday, phones ring fast, you can't answer, and half your callers don't leave a message because they figure you're already closed. Those calls used to disappear.</p>
-    <p>The estimate request that came in by email at 9pm — the one you'd have seen Monday morning after someone else already quoted it. Now it's ranked and waiting before you go to sleep.</p>
-    <p>Leads don't live in your head anymore. They don't pile up in a voicemail box you'll get to eventually. They come in, they get ranked, they get handled. The same way you'd reply to any text.</p>
+    <span class="label">The Problem</span>
+    <h2 style="font-family: var(--display); font-size: clamp(28px, 3.5vw, 48px); color: var(--bright); letter-spacing: 1px; line-height: 1.1; margin-bottom: var(--space-md);">The kitchen table is where jobs get lost.</h2>
+    <p>Quote too high, they call the next guy. Quote too low, you eat the difference all week. Scratch it on a pad and half the time you've forgotten the margin by the time you write the invoice.</p>
+    <p>You've done this in your head for years and you're good at it. But the customer wants to see the breakdown — a document, not a guess. And you'd rather be the one who hands them something clean than the one digging through the truck for a clipboard.</p>
   </section>
 
-  <section class="section">
+  <!-- HOW IT WORKS -->
+  <section class="section" id="how">
     <span class="label">How It Works</span>
-    <h2>A briefing in your hand before you've listened to a single voicemail.</h2>
+    <h2>Four taps from walking in to quote delivered.</h2>
 
     <div class="steps">
       <div class="step">
         <div class="step-num">01</div>
         <div>
-          <h3>Call Comes In</h3>
-          <p>The system tries to bridge the call to you. If you're under a sink, it routes to your voicemail — recorded in your voice, your words, setting the right expectation.</p>
+          <h3>Enter Hours</h3>
+          <p>How long is the job. That's it. Your rates are already set from the first time you opened it. No dropdown, no "which labor type," no picker.</p>
         </div>
       </div>
+
       <div class="step">
         <div class="step-num">02</div>
         <div>
-          <h3>AI Reads the Room</h3>
-          <p>The moment they hang up, the job is classified. Urgency tier. Job type. What they said, extracted cleanly. A reply draft ready to send — in your voice, not a robot's.</p>
+          <h3>Add Materials</h3>
+          <p>Tap, type the cost. Tap again for the next one. Your margin's already applied and the total updates as you go. Reorder or remove with a swipe.</p>
         </div>
       </div>
+
       <div class="step">
         <div class="step-num">03</div>
         <div>
-          <h3>You Get the Briefing</h3>
-          <p>Before you've heard a single voicemail, you know who called, what they need, and how urgent it is. The draft is written. You send it or edit it. Your words go out.</p>
+          <h3>Present to the Customer</h3>
+          <p>Flip the phone around. Presenter mode shows the number big and clean — subtotal, tax, total. Settled right in front of them. No loading screen, no ads.</p>
         </div>
       </div>
+
       <div class="step">
         <div class="step-num">04</div>
         <div>
-          <h3>Lead Is Yours</h3>
-          <p>They hear back in minutes. The job is yours before they try the next number. Close it out when it's done. The system moves on.</p>
+          <h3>Send the PDF</h3>
+          <p>One button. Their email, from your phone's share sheet. No login for them, and the only thing that ever leaves your phone is the quote you chose to send.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="review">
-    <span class="review-label">First Review</span>
-    <blockquote>
-      <p>I built this because I was the guy missing the calls. Years in the trades, answering my own phone, losing jobs to whoever picked up first.</p>
-      <p>Answering services made me sound like a company I'm not. AI operators were worse — callers knew immediately, and I lost the job faster than if I'd just missed the call.</p>
-      <p>What I needed wasn't something to answer for me. I needed something that made sure the lead didn't disappear while I was working. That ranked my queue so I knew which call to return first. That had a reply ready so I wasn't composing texts from a job site at 6pm.</p>
-      <p>The first real job it caught paid for a year of the platform.</p>
-    </blockquote>
-    <div class="review-sig">— The Founder &nbsp;·&nbsp; Active user since day one</div>
-  </section>
+  <!-- WHAT IT ISN'T -->
+  <section class="section">
+    <span class="label">What It Isn't</span>
+    <h2>This isn't a CRM. It's a tape measure.</h2>
+    <p style="color: var(--dim); margin-bottom: var(--space-md);">Dead Hand does one thing: quote fast, quote right, send clean. It won't turn into a dispatch board or a customer database you have to feed. If you ever need those, that's a different product — this one stays sharp.</p>
 
-  <section class="pricing-strip">
-    <span class="label">Pricing</span>
-    <h2>Flat rate. No overages. No surprises.</h2>
-
-    <div class="pricing-grid">
-      <div class="pricing-card featured">
-        <div class="pricing-tier">Starter</div>
-        <div class="pricing-price">$79 <span>/ month</span></div>
-        <p class="pricing-desc">For the owner-operator who answers their own phone. Everything you need, nothing you don't.</p>
-        <ul class="pricing-features">
-          <li>Inbound call capture and voicemail routing</li>
-          <li>AI triage — urgency ranked, job typed, reply drafted</li>
-          <li>SMS response from your dashboard or phone</li>
-          <li>Real-time push notifications by urgency tier</li>
-          <li>Dedicated business number included</li>
-          <li>Voicemail recorded in your voice</li>
-          <li>10DLC compliant SMS</li>
+    <div class="compare">
+      <div class="col no">
+        <h4>What you skip</h4>
+        <ul>
+          <li>Customer database</li>
+          <li>Dispatch and scheduling</li>
+          <li>A store account to manage</li>
+          <li>Ads and upsells</li>
+          <li>A setup that takes a weekend</li>
         </ul>
       </div>
-
-      <div class="pricing-card">
-        <div class="pricing-tier">Pro</div>
-        <div class="pricing-price">$149 <span>/ month</span></div>
-        <p class="pricing-desc">For shops with a second person handling calls, or owners who want more visibility across their pipeline.</p>
-        <ul class="pricing-features">
-          <li>Everything in Starter</li>
-          <li>Multiple team members</li>
-          <li>Email lead capture and triage</li>
-          <li>Google Business Profile messages</li>
-          <li>Lead pipeline reporting</li>
-          <li>Custom AI response tone</li>
-        </ul>
-      </div>
-
-      <div class="pricing-card">
-        <div class="pricing-tier">Team</div>
-        <div class="pricing-price">$249 <span>/ month</span></div>
-        <p class="pricing-desc">For shops running multiple trucks where the scheduler is the bottleneck, not the technicians.</p>
-        <ul class="pricing-features">
-          <li>Everything in Pro</li>
-          <li>Unlimited team members</li>
-          <li>Multi-line support</li>
-          <li>Priority routing by technician or region</li>
-          <li>Admin dashboard with tenant controls</li>
+      <div class="col yes">
+        <h4>What you get</h4>
+        <ul>
+          <li>A clean price in front of the customer</li>
+          <li>A PDF in their inbox</li>
+          <li>Your rates saved and applied every time</li>
+          <li>Works on the spot, basement or not</li>
+          <li>The same simple screen every job</li>
         </ul>
       </div>
     </div>
-
-    <p class="pricing-note">Annual plans at two months free. No contracts. Cancel any time. <a href="/pricing" style="color:var(--dim);">Full pricing details →</a></p>
   </section>
 
-  <!-- Sibling product: Dead Hand Calculator -->
-  <section style="padding: 48px var(--pad); max-width: var(--max); margin: 0 auto; border-bottom: var(--border); text-align: center;">
-    <p style="font-family: var(--mono); font-size: 13px; letter-spacing: 2px; color: var(--dim); text-transform: uppercase; margin-bottom: var(--space-sm);">Still quoting in the kitchen?</p>
-    <a href="/calculator" style="font-family: var(--display); font-size: 26px; letter-spacing: 3px; color: var(--white); text-decoration: none; border-bottom: 2px solid var(--red); padding-bottom: 4px;">Dead Hand Calculator →</a>
-    <p style="font-family: var(--mono); font-size: 12px; letter-spacing: 1px; color: var(--dimmer); margin-top: var(--space-sm);">The pocket tool for field quoting. Android &amp; iOS.</p>
+  <!-- FIRST REVIEW -->
+  <section class="review">
+    <span class="review-label">From the Founder</span>
+    <blockquote>
+      <p>I built this because I'm the guy standing in the kitchen. Years in the trades, quoting in my head, losing jobs to guys who wrote a cleaner estimate faster.</p>
+      <p>I don't need a CRM — I already know my customers. I need to look sharp in front of the one across the counter, get the number right the first time, and hand over something that looks like I take my own work seriously. Because I do.</p>
+      <p>Every feature in here earned its place on a real job. Anything that would slow me down never made it in. If it doesn't help me quote in under a minute, it's not in the app.</p>
+    </blockquote>
+    <p class="review-sig">— The Founder · Pink Flamingo Plumbing &amp; Heating</p>
   </section>
 
-  <div class="trades">
-    <a class="trade-link" href="/for-plumbers">For Plumbers</a>
-    <a class="trade-link" href="/for-hvac">For HVAC</a>
-    <a class="trade-link" href="/for-electrical">For Electrical</a>
-  </div>
+  <!-- PRICING -->
+  <section class="pricing-strip" id="get">
+    <span class="label">Pricing</span>
+    <h2>Pay monthly, or save with the year.</h2>
+    <p class="pricing-subtitle">No free tier. No ads. Cancel anytime, right in the app.</p>
 
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pricing-tier">Monthly</div>
+        <div class="pricing-price">$12.99 <span>/ month</span></div>
+        <div class="pricing-desc">Month to month. Stop whenever you want — the cancel button lives inside the app.</div>
+      </div>
+
+      <div class="pricing-card featured">
+        <span class="badge">Best value</span>
+        <div class="pricing-tier">Annual</div>
+        <div class="pricing-price">$99 <span>/ year</span></div>
+        <div class="pricing-desc">The same tool, about four months free versus paying monthly. Renews yearly, cancel anytime.</div>
+      </div>
+    </div>
+
+    <div class="cta-row">
+      <a href="https://dead-hand.app" class="btn btn-primary">Get Dead Hand</a>
+      <a href="https://dead-hand.app" class="btn btn-ghost">Sign In</a>
+    </div>
+    <p class="pricing-note" style="margin-top: var(--space-md);">Prices in USD, sales tax where it applies. You'll set your rates the first time you open it — takes about thirty seconds.</p>
+  </section>
+
+  <!-- HOW YOU GET IT -->
+  <section class="getit">
+    <span class="label">How You Get It</span>
+    <h2>No app store. No download you forget you're paying for.</h2>
+    <p><strong>Pay on the site</strong> and you're in — no store account, no waiting on a review, no buried subscription.</p>
+    <p><strong>Add it to your home screen.</strong> One tap and Dead Hand sits right next to your other apps and opens the same way. Works on any phone.</p>
+    <p><strong>Stop whenever you want.</strong> The cancel button is inside the app, in plain sight. You'll never dig through a store account to get out — you know exactly where it is because that's where you signed up.</p>
+  </section>
+
+  <!-- THE PROMISES -->
+  <section class="section">
+    <span class="label">The Promises</span>
+    <h2>Four things Dead Hand will always hold to.</h2>
+
+    <div class="promises-grid">
+      <div class="promise">
+        <h3>Your Customers Stay Yours</h3>
+        <p>We don't sell your data or mine your quotes. The only thing that leaves your phone is the PDF you choose to send.</p>
+      </div>
+      <div class="promise">
+        <h3>Never Show Ads</h3>
+        <p>You pay for the tool, so the tool works for you. That's the whole arrangement. No ads, no upsells mid-job.</p>
+      </div>
+      <div class="promise">
+        <h3>Easy In, Easy Out</h3>
+        <p>You sign up on the site and cancel in the app. No phone call, no retention maze, no hunting through a store account.</p>
+      </div>
+      <div class="promise">
+        <h3>Stays Sharp</h3>
+        <p>It's a quoting tool and it stays one. Fast, focused, and finished — it won't bloat into something you have to manage.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final">
+    <h2>Set your rates once.<br />Never fumble another quote.</h2>
+    <div class="hero-cta" style="justify-content:center;">
+      <a href="https://dead-hand.app" class="btn btn-primary">Get Dead Hand</a>
+    </div>
+    <p>Works on any phone · No app store</p>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
     <img
       src="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-wordmark.png"
@@ -573,16 +754,11 @@
     />
     <div class="footer-links">
       <a href="https://dead-hand.app">Sign In</a>
-      <a href="/calculator">Calculator</a>
-      <a href="/pricing">Pricing</a>
-      <a href="/for-plumbers">Plumbers</a>
-      <a href="/for-hvac">HVAC</a>
-      <a href="/for-electrical">Electrical</a>
-      <a href="/privacy">Privacy</a>
-      <a href="/terms">Terms</a>
-      <a href="/sms-policy">SMS Policy</a>
-      <a href="mailto:founder@dead-hand.app">Contact</a>
-      <span>&copy; 2026</span>
+      <a href="/pricing-guide/">Pricing Guide</a>
+      <a href="/calculator-privacy">Privacy</a>
+      <a href="/calculator-terms">Terms</a>
+      <a href="mailto:support@getdeadhand.com">Contact</a>
+      <span>© 2026 Friendly App LLC, dba Dead Hand</span>
     </div>
   </footer>
 
