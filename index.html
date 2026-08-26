@@ -309,6 +309,11 @@
     }
 
     .compare .col.yes ul li { color: var(--white); }
+    .shots{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(16px,4vw,40px);align-items:start}
+    .shot img{width:100%;max-width:430px;height:auto;display:block}
+    .shot figcaption{color:var(--dim);font-size:15px;line-height:1.55;margin-top:14px;max-width:430px}
+    .shot figcaption strong{color:var(--bright);font-weight:600}
+    @media(max-width:640px){.shots{grid-template-columns:1fr;gap:36px;justify-items:center}.shot figcaption{text-align:left}}
     .compare .col.yes ul li::before { content: "\2014\00a0"; color: var(--red); }
 
     @media (max-width: 640px) {
@@ -573,7 +578,7 @@
     <p class="hero-sub">The pocket tool for field quoting</p>
 
     <div class="hero-cta">
-      <a href="/launching/" class="btn btn-primary">Get Dead Hand</a>
+      <a href="https://dead-hand.app" class="btn btn-primary">Get Dead Hand</a>
       <a href="#how" class="btn btn-ghost">How it works</a>
     </div>
     <p class="hero-note">Works on any phone &middot; Adds to your home screen<br />No app store</p>
@@ -636,6 +641,32 @@
           <p>One button. Their email, from your phone's share sheet. No login for them, and the only thing that ever leaves your phone is the quote you chose to send.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT SHOTS -->
+  <section class="section" id="look">
+    <span class="label">What It Looks Like</span>
+    <h2>Your screen, then their screen.</h2>
+    <p style="color: var(--dim); margin-bottom: var(--space-md);">The same job from both sides of the counter &mdash; a fifty-gallon gas water heater, three hours, hauled the old one away.</p>
+
+    <div class="shots">
+      <figure class="shot">
+        <img
+          src="/deadhand-shot-calculator.webp"
+          alt="The Dead Hand calculator on a phone, showing a $2,078 water heater job with each material line broken out by cost and margin tier"
+          width="430" height="861" loading="lazy" decoding="async"
+        />
+        <figcaption><strong>Yours.</strong> Every line carries what it cost you and what you're making on it. The labor's already at your rates, the overhead's already inside the number.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img
+          src="/deadhand-shot-estimate.webp"
+          alt="The customer-facing Dead Hand estimate for the same job: line items and a $2,077.52 total, with no cost or margin anywhere on it"
+          width="430" height="861" loading="lazy" decoding="async"
+        />
+        <figcaption><strong>Theirs.</strong> Turn the phone around. The work, the number, and nothing about your margin anywhere on it.</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -702,8 +733,8 @@
     </div>
 
     <div class="cta-row">
-      <a href="/launching/" class="btn btn-primary">Get Dead Hand</a>
-      <a href="/launching/" class="btn btn-ghost">Sign In</a>
+      <a href="https://dead-hand.app" class="btn btn-primary">Get Dead Hand</a>
+      <a href="https://dead-hand.app" class="btn btn-ghost">Sign In</a>
     </div>
     <p class="pricing-note" style="margin-top: var(--space-md);">Prices in USD, sales tax where it applies. You'll set your rates the first time you open it &mdash; takes about thirty seconds.</p>
   </section>
@@ -756,7 +787,7 @@
   <section class="final">
     <h2>Set your rates once.<br />Never fumble another quote.</h2>
     <div class="hero-cta" style="justify-content:center;">
-      <a href="/launching/" class="btn btn-primary">Get Dead Hand</a>
+      <a href="https://dead-hand.app" class="btn btn-primary">Get Dead Hand</a>
     </div>
     <p>Works on any phone &middot; No app store</p>
   </section>
@@ -772,7 +803,7 @@
       width="1024" height="272"
     />
     <div class="footer-links">
-      <a href="/launching/">Sign In</a>
+      <a href="https://dead-hand.app">Sign In</a>
       <a href="/the-book/">The Book</a>
       <a href="/the-markup/">The Markup</a>
       <a href="/calculator-privacy">Privacy</a>
