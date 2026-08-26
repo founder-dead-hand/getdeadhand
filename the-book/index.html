@@ -26,7 +26,12 @@
     "description":"The Dead Hand pricebook. Build your common jobs once with your own numbers, then pull a priced estimate in one tap. Priced flat by shop size rather than per technician.",
     "url":"https://getdeadhand.com/the-book/",
     "image":"https://getdeadhand.com/deadhand-share.png",
-    "brand":{"@type":"Brand","name":"Dead Hand"}
+    "brand":{"@type":"Brand","name":"Dead Hand"},
+    "offers":[
+      {"@type":"Offer","name":"Solo \u2014 1 tech","price":"45.00","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://getdeadhand.com/the-book/","description":"Flat monthly for a one-tech shop. $450 billed annually."},
+      {"@type":"Offer","name":"Crew \u2014 2 to 5 techs","price":"90.00","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://getdeadhand.com/the-book/","description":"Flat monthly for two to five techs. $900 billed annually."},
+      {"@type":"Offer","name":"Shop \u2014 6 to 12 techs","price":"180.00","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://getdeadhand.com/the-book/","description":"Flat monthly for six to twelve techs. $1,800 billed annually."}
+    ]
   }
   </script>
   <script type="application/ld+json">
@@ -95,7 +100,8 @@
     .signup input[type=email]:focus{outline:2px solid var(--red);outline-offset:1px}
     .signup button{background:var(--red);color:#fff;font-family:var(--display);font-size:20px;letter-spacing:3px;padding:13px 30px;border:none;border-radius:2px;cursor:pointer}
     .signup button:hover{filter:brightness(1.08)}
-    .hp{position:absolute;left:-9999px}
+    .btn{display:inline-block;background:var(--red);color:#fff;font-family:var(--display);font-size:22px;letter-spacing:3px;padding:15px 40px;text-decoration:none;border-radius:2px}
+    .btn:hover{filter:brightness(1.08)}
     .done{display:none;color:#fff;font-family:var(--display);font-size:22px;letter-spacing:1px}
     .faq{border-top:1px solid var(--line);padding:20px 0}
     .faq:last-of-type{border-bottom:1px solid var(--line)}
@@ -116,7 +122,7 @@
     <span class="eyebrow">The Pricebook</span>
     <h1>The Book</h1>
     <p class="standfirst">The jobs you already know how to price, priced once and ready to pull.</p>
-    <p class="status"><strong>Not open yet.</strong> The calculator is live today. The Book itself is built &mdash; we're finishing the billing side before it opens. The pricing on this page is settled. Leave your email below and you'll hear from us when it does.</p>
+    <p class="status"><strong>The Book is open.</strong> You pick your shop size inside Dead Hand and it turns on for everyone on the login. Stepping up from the calculator replaces that subscription rather than adding to it, so you are never paying for both.</p>
 
     <section>
       <p class="lede">A dead-hand system fires a pre-set list of responses. The Book is that list.</p>
@@ -197,7 +203,7 @@
         </div>
       </div>
 
-      <p class="note">Annual is ten months for twelve. You tell us your shop size when you sign up, and hiring inside your band doesn't change the bill. The Book is its own product, on top of the $12.99 calculator subscription.</p>
+      <p class="note">Annual is ten months for twelve. You tell us your shop size when you sign up, and hiring inside your band doesn't change the bill. Stepping up from the $12.99 calculator swaps that subscription over, prorated &mdash; The Book replaces it rather than stacking on top of it.</p>
     </section>
 
     <section>
@@ -222,16 +228,10 @@
     </section>
 
     <div class="cta">
-      <h2>Get the word when it opens.</h2>
-      <p>One email when The Book is ready. Nothing in between.</p>
-      <form name="book-list" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/the-book/?joined=1" class="signup" id="joinForm">
-        <input type="hidden" name="form-name" value="book-list" />
-        <p class="hp"><label>Leave this empty: <input name="bot-field" /></label></p>
-        <input type="email" name="email" required placeholder="you@yourshop.com" aria-label="Email address" />
-        <button type="submit">Tell Me</button>
-      </form>
-      <div class="done" id="joinDone">You're on the list. We'll email you when The Book opens.</div>
-      <p class="note" id="joinNote" style="margin-top:16px">The calculator is live now if you want to <a href="/#get">start there</a>.</p>
+      <h2>Open The Book.</h2>
+      <p>Sign in, pick the band that matches your shop, and it is on for everyone using the login.</p>
+      <a class="btn" href="https://dead-hand.app">Open The Book</a>
+      <p class="note" style="margin-top:18px">New to Dead Hand? <a href="/#get">Start with the calculator</a> at $12.99 and step up whenever you want &mdash; the swap is prorated, so nothing is wasted.</p>
     </div>
 
     <section>
@@ -243,7 +243,7 @@
       </div>
       <div class="faq">
         <h3>Is The Book an add-on to the calculator?</h3>
-        <p>It's its own product on the same login. The calculator prices a job you're working out on the spot. The Book pulls a job you've already priced. Different job, different tool.</p>
+        <p>It's its own product on the same login. The calculator prices a job you're working out on the spot; The Book pulls a job you've already priced. Different job, different tool. Stepping up from the calculator replaces that subscription rather than adding to it, prorated, so you never pay twice.</p>
       </div>
       <div class="faq">
         <h3>Is it priced per technician?</h3>
@@ -261,15 +261,5 @@
 
   </main>
   <footer><div class="wrap"><a class="brand" href="/" style="font-size:20px"><span class="star">&#9733;</span> DEAD HAND</a><div class="fl"><a href="/">The App</a><a href="/the-book/">The Book</a><a href="/the-markup/">The Markup</a><a href="/security/">Security</a><a href="/calculator-privacy/">Privacy</a><a href="/calculator-terms/">Terms</a><span>&copy; 2026 Friendly App LLC</span></div></div></footer>
-  <script>
-    (function(){
-      try{
-        if(new URLSearchParams(location.search).has('joined')){
-          var f=document.getElementById('joinForm'), d=document.getElementById('joinDone');
-          if(f)f.style.display='none'; if(d)d.style.display='inline-block';
-        }
-      }catch(e){}
-    })();
-  </script>
 </body>
 </html>
