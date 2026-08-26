@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Dead Hand">
+  <circle cx="50" cy="50" r="50" fill="#0a0a0a"/>
+  <circle cx="50" cy="50" r="45.5" fill="none" stroke="#ffffff" stroke-width="2.5"/>
+  <path d="M50 16 L57.9 39.1 L82.3 39.5 L62.8 54.2 L70 77.5 L50 63.5 L30 77.5 L37.2 54.2 L17.7 39.5 L42.1 39.1 Z"
+        fill="#c0392b" stroke="#ffffff" stroke-width="2.2" stroke-linejoin="round"/>
+</svg>
