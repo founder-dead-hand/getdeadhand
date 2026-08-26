@@ -39,16 +39,6 @@
     ]
   }
   </script>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org","@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"Is a 40% markup the same as a 40% margin?","acceptedAnswer":{"@type":"Answer","text":"No. A 40% markup is only a 28.6% margin. Markup is measured against your cost; margin is measured against the price the customer pays. The same dollars of profit produce two different percentages."}},
-      {"@type":"Question","name":"How do I price for a specific margin?","acceptedAnswer":{"@type":"Answer","text":"Divide your cost by (1 minus the margin you want). For a 40% margin, divide cost by 0.60. A $100 part must bill at $166.67. Adding 40% markup would only charge $140 and leave you at a 28.6% margin."}},
-      {"@type":"Question","name":"Why does confusing margin and markup cost money?","acceptedAnswer":{"@type":"Answer","text":"If you add a markup percentage while believing it's your margin, every job earns less profit than you think. On a 40% markup you keep 28.6%, giving back more than eleven points of profit on every part, all year long."}}
-    ]
-  }
-  </script>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{--black:#0a0a0a;--card:#111214;--line:#2a2d31;--red:#c0392b;--white:#e8e8e8;--dim:#90969d;--dimmer:#5a5f66;--display:'Bebas Neue',sans-serif;--mono:'IBM Plex Mono',monospace;--body:'IBM Plex Sans',system-ui,sans-serif;--measure:680px}
@@ -59,6 +49,7 @@
     header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;max-width:900px}
     .brand{font-family:var(--display);font-size:24px;letter-spacing:2px;color:#fff;text-decoration:none;display:flex;align-items:center;gap:7px}
     .brand .star{color:var(--red);font-size:15px}
+    .top nav{display:flex;gap:18px}
     .top nav a{font-family:var(--mono);font-size:12px;letter-spacing:1px;color:var(--dim);text-decoration:none;text-transform:uppercase}.top nav a:hover{color:#fff}
     .crumb{font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--dimmer);margin:28px 0 14px}
     .crumb a{color:var(--dim);text-decoration:none}.crumb a:hover{color:#fff}
@@ -80,7 +71,7 @@
     table.mm td:first-child,table.mm th:first-child{text-align:left;color:var(--white)}
     table.mm td{color:var(--dim)}
     .pull{font-family:var(--display);font-size:clamp(26px,4vw,36px);line-height:1.1;letter-spacing:.5px;color:#fff;margin:40px 0;padding-left:20px;border-left:3px solid var(--red)}
-    .cta{background:linear-gradient(180deg,#141619,#0d0e10);border:1px solid var(--line);border-radius:14px;padding:34px 28px;margin:52px 0;text-align:center}
+    .faqs{border-top:1px solid var(--line);margin-top:52px;padding-top:8px}.faq{border-bottom:1px solid var(--line);padding:20px 0}.faq h3{font-family:var(--body);font-size:17px;font-weight:600;color:var(--white);margin:0 0 6px;line-height:1.35}.faq p{color:var(--dim);font-size:16px;margin:0;line-height:1.6}.cta{background:linear-gradient(180deg,#141619,#0d0e10);border:1px solid var(--line);border-radius:14px;padding:34px 28px;margin:52px 0;text-align:center}
     .cta h2{font-family:var(--display);font-size:clamp(26px,3.6vw,38px);letter-spacing:.5px;color:#fff;margin:0 0 10px}.cta p{color:var(--dim);margin-bottom:22px}
     .cta a{display:inline-block;background:var(--red);color:#fff;font-family:var(--display);font-size:20px;letter-spacing:3px;padding:14px 34px;text-decoration:none;border-radius:2px}.cta a:hover{filter:brightness(1.08)}
     .related{border-top:1px solid var(--line);margin-top:56px;padding-top:32px}
@@ -94,7 +85,7 @@
   </style>
 </head>
 <body>
-  <header class="top"><div class="wrap"><a class="brand" href="/"><span class="star">&#9733;</span> DEAD HAND</a><nav><a href="/the-markup/">The Markup</a></nav></div></header>
+  <header class="top"><div class="wrap"><a class="brand" href="/"><span class="star">&#9733;</span> DEAD HAND</a><nav><a href="/">The App</a><a href="/the-book/">The Book</a></nav></div></header>
   <main class="wrap">
     <div class="crumb"><a href="/">Dead Hand</a> &nbsp;/&nbsp; <a href="/the-markup/">The Markup</a> &nbsp;/&nbsp; Margin vs. Markup</div>
     <h1>Margin vs. markup, in plain English</h1>
@@ -142,6 +133,13 @@
 
       <p>On one part, eleven points is a few bucks. Across a year of jobs, on every part you touch, it's the difference between a shop that pays you and a shop you pay to keep open. It's the same overhead logic behind <a class="inline" href="/the-markup/shop-rate/">setting your shop rate</a> &mdash; the money's real, it's just quiet.</p>
 
+      <section class="faqs">
+        <h2>Questions</h2>
+        <div class="faq"><h3>Is a 40% markup the same as a 40% margin?</h3><p>No. A 40% markup is only a 28.6% margin. Markup is measured against your cost; margin is measured against the price the customer pays. The same dollars of profit produce two different percentages.</p></div>
+        <div class="faq"><h3>How do I price for a specific margin?</h3><p>Divide your cost by (1 minus the margin you want). For a 40% margin, divide cost by 0.60. A $100 part must bill at $166.67. Adding 40% markup would only charge $140 and leave you at a 28.6% margin.</p></div>
+        <div class="faq"><h3>Why does confusing margin and markup cost money?</h3><p>If you add a markup percentage while believing it's your margin, every job earns less profit than you think. On a 40% markup you keep 28.6%, giving back more than eleven points of profit on every part, all year long.</p></div>
+      </section>
+
       <div class="cta">
         <h2>Set the margin once. Never do this math on a job again.</h2>
         <p>Dead Hand holds your margin and applies it to every part automatically &mdash; the price comes out right whether you did the division in your head or not.</p>
@@ -155,6 +153,6 @@
       </div>
     </article>
   </main>
-  <footer><div class="wrap"><a class="brand" href="/" style="font-size:20px"><span class="star">&#9733;</span> DEAD HAND</a><div class="fl"><a href="/">The App</a><a href="/the-markup/">The Markup</a><a href="/calculator-privacy">Privacy</a><a href="/calculator-terms">Terms</a><span>&copy; 2026 Friendly App LLC</span></div></div></footer>
+  <footer><div class="wrap"><a class="brand" href="/" style="font-size:20px"><span class="star">&#9733;</span> DEAD HAND</a><div class="fl"><a href="/">The App</a><a href="/the-book/">The Book</a><a href="/the-markup/">The Markup</a><a href="/calculator-privacy">Privacy</a><a href="/calculator-terms">Terms</a><span>&copy; 2026 Friendly App LLC</span></div></div></footer>
 </body>
 </html>

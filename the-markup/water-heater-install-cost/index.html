@@ -39,16 +39,6 @@
     ]
   }
   </script>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org","@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"How much does it cost to install a water heater in 2026?","acceptedAnswer":{"@type":"Answer","text":"Nationally in 2026, a standard tank water heater replacement typically runs about $880 to $1,825 installed, averaging near $1,350. Tankless installs run higher, roughly $1,400 to $3,900, because of the extra gas, venting, and electrical work. The wide range comes down to unit type, code upgrades, and how hard the swap is."}},
-      {"@type":"Question","name":"How long does it take to install a water heater?","acceptedAnswer":{"@type":"Answer","text":"A straightforward tank swap is usually two to three hours of labor. Tankless conversions take much longer, often most of a day, because they add gas line, venting, and sometimes electrical work. Price the labor at your billable rate, not a flat guess."}},
-      {"@type":"Question","name":"Should I charge flat rate for a water heater install?","acceptedAnswer":{"@type":"Answer","text":"Yes, for a standard swap you can see the whole job, so a flat price wins more work and protects your margin. Price it once from your real rate, parts margin, and code items, then keep that number ready for the next one. Bill hourly only when there are true unknowns."}}
-    ]
-  }
-  </script>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{--black:#0a0a0a;--card:#111214;--line:#2a2d31;--red:#c0392b;--white:#e8e8e8;--dim:#90969d;--dimmer:#5a5f66;--display:'Bebas Neue',sans-serif;--mono:'IBM Plex Mono',monospace;--body:'IBM Plex Sans',system-ui,sans-serif;--measure:680px}
@@ -59,6 +49,7 @@
     header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;max-width:900px}
     .brand{font-family:var(--display);font-size:24px;letter-spacing:2px;color:#fff;text-decoration:none;display:flex;align-items:center;gap:7px}
     .brand .star{color:var(--red);font-size:15px}
+    .top nav{display:flex;gap:18px}
     .top nav a{font-family:var(--mono);font-size:12px;letter-spacing:1px;color:var(--dim);text-decoration:none;text-transform:uppercase}.top nav a:hover{color:#fff}
     .crumb{font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--dimmer);margin:28px 0 14px}
     .crumb a{color:var(--dim);text-decoration:none}.crumb a:hover{color:#fff}
@@ -81,7 +72,7 @@
     table.mm td:first-child,table.mm th:first-child{text-align:left;color:var(--white)}
     table.mm td{color:var(--dim)}
     .pull{font-family:var(--display);font-size:clamp(26px,4vw,36px);line-height:1.1;letter-spacing:.5px;color:#fff;margin:40px 0;padding-left:20px;border-left:3px solid var(--red)}
-    .cta{background:linear-gradient(180deg,#141619,#0d0e10);border:1px solid var(--line);border-radius:14px;padding:34px 28px;margin:52px 0;text-align:center}
+    .faqs{border-top:1px solid var(--line);margin-top:52px;padding-top:8px}.faq{border-bottom:1px solid var(--line);padding:20px 0}.faq h3{font-family:var(--body);font-size:17px;font-weight:600;color:var(--white);margin:0 0 6px;line-height:1.35}.faq p{color:var(--dim);font-size:16px;margin:0;line-height:1.6}.cta{background:linear-gradient(180deg,#141619,#0d0e10);border:1px solid var(--line);border-radius:14px;padding:34px 28px;margin:52px 0;text-align:center}
     .cta h2{font-family:var(--display);font-size:clamp(26px,3.6vw,38px);letter-spacing:.5px;color:#fff;margin:0 0 10px}.cta p{color:var(--dim);margin-bottom:22px}
     .cta a{display:inline-block;background:var(--red);color:#fff;font-family:var(--display);font-size:20px;letter-spacing:3px;padding:14px 34px;text-decoration:none;border-radius:2px}.cta a:hover{filter:brightness(1.08)}
     .related{border-top:1px solid var(--line);margin-top:56px;padding-top:32px}
@@ -95,7 +86,7 @@
   </style>
 </head>
 <body>
-  <header class="top"><div class="wrap"><a class="brand" href="/"><span class="star">&#9733;</span> DEAD HAND</a><nav><a href="/the-markup/">The Markup</a></nav></div></header>
+  <header class="top"><div class="wrap"><a class="brand" href="/"><span class="star">&#9733;</span> DEAD HAND</a><nav><a href="/">The App</a><a href="/the-book/">The Book</a></nav></div></header>
   <main class="wrap">
     <div class="crumb"><a href="/">Dead Hand</a> &nbsp;/&nbsp; <a href="/the-markup/">The Markup</a> &nbsp;/&nbsp; Water Heater Install Cost</div>
     <h1>What to charge to install a water heater</h1>
@@ -145,6 +136,13 @@
       <h2>Price it once. Keep it. Pull it up.</h2>
       <p>Here's the move the sharpest shops make, and it's the whole reason a water heater should never be quoted from memory again. You price it <em>right</em> one time &mdash; rate, parts, margin, code items, cushion &mdash; and then you don't throw that work away. You keep it. The next water heater that comes up, the number's already built and sitting there, ready before you pull into the driveway. Do that across your regular calls &mdash; the water heater, the disposal, the capacitor, the flush, the toilet reset &mdash; and quoting stops being something you sweat at the table and becomes something you already have in your pocket. That's the difference between a shop that reprices the same job forever and one that priced it once, correctly, and moved on.</p>
 
+      <section class="faqs">
+        <h2>Questions</h2>
+        <div class="faq"><h3>How much does it cost to install a water heater in 2026?</h3><p>Nationally in 2026, a standard tank water heater replacement typically runs about $880 to $1,825 installed, averaging near $1,350. Tankless installs run higher, roughly $1,400 to $3,900, because of the extra gas, venting, and electrical work. The wide range comes down to unit type, code upgrades, and how hard the swap is.</p></div>
+        <div class="faq"><h3>How long does it take to install a water heater?</h3><p>A straightforward tank swap is usually two to three hours of labor. Tankless conversions take much longer, often most of a day, because they add gas line, venting, and sometimes electrical work. Price the labor at your billable rate, not a flat guess.</p></div>
+        <div class="faq"><h3>Should I charge flat rate for a water heater install?</h3><p>Yes, for a standard swap you can see the whole job, so a flat price wins more work and protects your margin. Price it once from your real rate, parts margin, and code items, then keep that number ready for the next one. Bill hourly only when there are true unknowns.</p></div>
+      </section>
+
       <div class="cta">
         <h2>Your water heater number, ready before you knock.</h2>
         <p>Set your rates and margin once. Dead Hand builds the flat price on the spot &mdash; and the pieces you price often are right there when you need them again.</p>
@@ -158,6 +156,6 @@
       </div>
     </article>
   </main>
-  <footer><div class="wrap"><a class="brand" href="/" style="font-size:20px"><span class="star">&#9733;</span> DEAD HAND</a><div class="fl"><a href="/">The App</a><a href="/the-markup/">The Markup</a><a href="/calculator-privacy">Privacy</a><a href="/calculator-terms">Terms</a><span>&copy; 2026 Friendly App LLC</span></div></div></footer>
+  <footer><div class="wrap"><a class="brand" href="/" style="font-size:20px"><span class="star">&#9733;</span> DEAD HAND</a><div class="fl"><a href="/">The App</a><a href="/the-book/">The Book</a><a href="/the-markup/">The Markup</a><a href="/calculator-privacy">Privacy</a><a href="/calculator-terms">Terms</a><span>&copy; 2026 Friendly App LLC</span></div></div></footer>
 </body>
 </html>

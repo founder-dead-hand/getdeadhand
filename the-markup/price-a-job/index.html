@@ -39,16 +39,6 @@
     ]
   }
   </script>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org","@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"What's the difference between margin and markup?","acceptedAnswer":{"@type":"Answer","text":"Markup is a percentage added on top of your cost. Margin is the percentage of the final price that is profit. A 40% markup is only a 28.6% margin. Pricing on markup when you think you're getting margin is how shops quietly lose money on every job."}},
-      {"@type":"Question","name":"How do I calculate overhead per hour?","acceptedAnswer":{"@type":"Answer","text":"Add up your yearly fixed costs (truck, insurance, phone, software, rent, admin time) and divide by your billable field hours in a year. Most one- to three-truck shops land between $80 and $150 per hour before they've paid themselves a dime. That number has to live inside every quote."}},
-      {"@type":"Question","name":"What should my hourly rate be?","acceptedAnswer":{"@type":"Answer","text":"Your billable rate has to cover your labor cost, your overhead per hour, and your profit margin, in that order. Working backward from what the other guy charges is how you end up busy and broke. Start from your real overhead and build up."}}
-    ]
-  }
-  </script>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{--black:#0a0a0a;--card:#111214;--line:#2a2d31;--red:#c0392b;--white:#e8e8e8;--dim:#90969d;--dimmer:#5a5f66;--display:'Bebas Neue',sans-serif;--mono:'IBM Plex Mono',monospace;--body:'IBM Plex Sans',system-ui,sans-serif;--measure:680px}
@@ -59,6 +49,7 @@
     header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;max-width:900px}
     .brand{font-family:var(--display);font-size:24px;letter-spacing:2px;color:#fff;text-decoration:none;display:flex;align-items:center;gap:7px}
     .brand .star{color:var(--red);font-size:15px}
+    .top nav{display:flex;gap:18px}
     .top nav a{font-family:var(--mono);font-size:12px;letter-spacing:1px;color:var(--dim);text-decoration:none;text-transform:uppercase}.top nav a:hover{color:#fff}
     .crumb{font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--dimmer);margin:28px 0 14px}
     .crumb a{color:var(--dim);text-decoration:none}.crumb a:hover{color:#fff}
@@ -76,7 +67,7 @@
     .mathcard .row{display:flex;justify-content:space-between;gap:16px;padding:6px 0;border-bottom:1px solid var(--line);color:var(--dim)}.mathcard .row:last-child{border-bottom:none}
     .mathcard .row b{color:#fff;font-weight:500;font-variant-numeric:tabular-nums}.mathcard .row.tot b{color:var(--red)}
     .pull{font-family:var(--display);font-size:clamp(26px,4vw,36px);line-height:1.1;letter-spacing:.5px;color:#fff;margin:40px 0;padding-left:20px;border-left:3px solid var(--red)}
-    .cta{background:linear-gradient(180deg,#141619,#0d0e10);border:1px solid var(--line);border-radius:14px;padding:34px 28px;margin:52px 0;text-align:center}
+    .faqs{border-top:1px solid var(--line);margin-top:52px;padding-top:8px}.faq{border-bottom:1px solid var(--line);padding:20px 0}.faq h3{font-family:var(--body);font-size:17px;font-weight:600;color:var(--white);margin:0 0 6px;line-height:1.35}.faq p{color:var(--dim);font-size:16px;margin:0;line-height:1.6}.cta{background:linear-gradient(180deg,#141619,#0d0e10);border:1px solid var(--line);border-radius:14px;padding:34px 28px;margin:52px 0;text-align:center}
     .cta h2{margin:0 0 10px}.cta p{color:var(--dim);margin-bottom:22px}
     .cta a{display:inline-block;background:var(--red);color:#fff;font-family:var(--display);font-size:20px;letter-spacing:3px;padding:14px 34px;text-decoration:none;border-radius:2px}.cta a:hover{filter:brightness(1.08)}
     .related{border-top:1px solid var(--line);margin-top:56px;padding-top:32px}
@@ -90,7 +81,7 @@
   </style>
 </head>
 <body>
-  <header class="top"><div class="wrap"><a class="brand" href="/"><span class="star">&#9733;</span> DEAD HAND</a><nav><a href="/the-markup/">The Markup</a></nav></div></header>
+  <header class="top"><div class="wrap"><a class="brand" href="/"><span class="star">&#9733;</span> DEAD HAND</a><nav><a href="/">The App</a><a href="/the-book/">The Book</a></nav></div></header>
   <main class="wrap">
     <div class="crumb"><a href="/">Dead Hand</a> &nbsp;/&nbsp; <a href="/the-markup/">The Markup</a> &nbsp;/&nbsp; Pricing a Job</div>
     <h1>How to price a trade job without losing money</h1>
@@ -141,6 +132,13 @@
       </div>
       <p>Quoted in your head at the kitchen table, that same job becomes "call it nine hundred" &mdash; and you just gave away a hundred bucks and most of your parts margin because the math was faster than you were. The number isn't hard. It's just hard to do <em>right</em>, on the spot, with someone watching. Once you've got the number, the next job is handing it over well &mdash; that's <a class="inline" href="/the-markup/present-your-price/">presenting your price</a>.</p>
 
+      <section class="faqs">
+        <h2>Questions</h2>
+        <div class="faq"><h3>What's the difference between margin and markup?</h3><p>Markup is a percentage added on top of your cost. Margin is the percentage of the final price that is profit. A 40% markup is only a 28.6% margin. Pricing on markup when you think you're getting margin is how shops quietly lose money on every job.</p></div>
+        <div class="faq"><h3>How do I calculate overhead per hour?</h3><p>Add up your yearly fixed costs (truck, insurance, phone, software, rent, admin time) and divide by your billable field hours in a year. Most one- to three-truck shops land between $80 and $150 per hour before they've paid themselves a dime. That number has to live inside every quote.</p></div>
+        <div class="faq"><h3>What should my hourly rate be?</h3><p>Your billable rate has to cover your labor cost, your overhead per hour, and your profit margin, in that order. Working backward from what the other guy charges is how you end up busy and broke. Start from your real overhead and build up.</p></div>
+      </section>
+
       <div class="cta">
         <h2>That's the whole reason we built the app.</h2>
         <p>Set your rates, margin, and overhead once. Every job after that, the right number comes out on its own.</p>
@@ -155,6 +153,6 @@
       </div>
     </article>
   </main>
-  <footer><div class="wrap"><a class="brand" href="/" style="font-size:20px"><span class="star">&#9733;</span> DEAD HAND</a><div class="fl"><a href="/">The App</a><a href="/the-markup/">The Markup</a><a href="/calculator-privacy">Privacy</a><a href="/calculator-terms">Terms</a><span>&copy; 2026 Friendly App LLC</span></div></div></footer>
+  <footer><div class="wrap"><a class="brand" href="/" style="font-size:20px"><span class="star">&#9733;</span> DEAD HAND</a><div class="fl"><a href="/">The App</a><a href="/the-book/">The Book</a><a href="/the-markup/">The Markup</a><a href="/calculator-privacy">Privacy</a><a href="/calculator-terms">Terms</a><span>&copy; 2026 Friendly App LLC</span></div></div></footer>
 </body>
 </html>

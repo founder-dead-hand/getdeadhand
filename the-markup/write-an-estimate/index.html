@@ -39,16 +39,6 @@
     ]
   }
   </script>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org","@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"What's the difference between an estimate and a quote?","acceptedAnswer":{"@type":"Answer","text":"An estimate is your best-considered guess at the cost and can move if the job changes. A quote is a firm price you commit to honor. Both are fine, but you should say clearly which one you're handing the customer so there's no argument later about whether the number was binding."}},
-      {"@type":"Question","name":"Should an estimate be itemized or a lump sum?","acceptedAnswer":{"@type":"Answer","text":"Show enough detail to justify the price without inviting the customer to shop each line. Group labor into one figure, list major materials or bundle them, and never itemize your margin. The goal is a number they trust, not a spreadsheet they can pick apart."}},
-      {"@type":"Question","name":"How long should an estimate be valid?","acceptedAnswer":{"@type":"Answer","text":"Put an expiration on every estimate, commonly 14 to 30 days. Material prices move, and an expiration protects you from being held to a number you gave months ago while also nudging the customer to decide."}}
-    ]
-  }
-  </script>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{--black:#0a0a0a;--card:#111214;--line:#2a2d31;--red:#c0392b;--white:#e8e8e8;--dim:#90969d;--dimmer:#5a5f66;--display:'Bebas Neue',sans-serif;--mono:'IBM Plex Mono',monospace;--body:'IBM Plex Sans',system-ui,sans-serif;--measure:680px}
@@ -59,6 +49,7 @@
     header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;max-width:900px}
     .brand{font-family:var(--display);font-size:24px;letter-spacing:2px;color:#fff;text-decoration:none;display:flex;align-items:center;gap:7px}
     .brand .star{color:var(--red);font-size:15px}
+    .top nav{display:flex;gap:18px}
     .top nav a{font-family:var(--mono);font-size:12px;letter-spacing:1px;color:var(--dim);text-decoration:none;text-transform:uppercase}.top nav a:hover{color:#fff}
     .crumb{font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--dimmer);margin:28px 0 14px}
     .crumb a{color:var(--dim);text-decoration:none}.crumb a:hover{color:#fff}
@@ -78,7 +69,7 @@
     .checklist li b{color:#fff;font-weight:600}
     .checklist li span{color:var(--dim);display:block;font-size:14px;margin-top:3px}
     .pull{font-family:var(--display);font-size:clamp(26px,4vw,36px);line-height:1.1;letter-spacing:.5px;color:#fff;margin:40px 0;padding-left:20px;border-left:3px solid var(--red)}
-    .cta{background:linear-gradient(180deg,#141619,#0d0e10);border:1px solid var(--line);border-radius:14px;padding:34px 28px;margin:52px 0;text-align:center}
+    .faqs{border-top:1px solid var(--line);margin-top:52px;padding-top:8px}.faq{border-bottom:1px solid var(--line);padding:20px 0}.faq h3{font-family:var(--body);font-size:17px;font-weight:600;color:var(--white);margin:0 0 6px;line-height:1.35}.faq p{color:var(--dim);font-size:16px;margin:0;line-height:1.6}.cta{background:linear-gradient(180deg,#141619,#0d0e10);border:1px solid var(--line);border-radius:14px;padding:34px 28px;margin:52px 0;text-align:center}
     .cta h2{font-family:var(--display);font-size:clamp(26px,3.6vw,38px);letter-spacing:.5px;color:#fff;margin:0 0 10px}.cta p{color:var(--dim);margin-bottom:22px}
     .cta a{display:inline-block;background:var(--red);color:#fff;font-family:var(--display);font-size:20px;letter-spacing:3px;padding:14px 34px;text-decoration:none;border-radius:2px}.cta a:hover{filter:brightness(1.08)}
     .related{border-top:1px solid var(--line);margin-top:56px;padding-top:32px}
@@ -92,7 +83,7 @@
   </style>
 </head>
 <body>
-  <header class="top"><div class="wrap"><a class="brand" href="/"><span class="star">&#9733;</span> DEAD HAND</a><nav><a href="/the-markup/">The Markup</a></nav></div></header>
+  <header class="top"><div class="wrap"><a class="brand" href="/"><span class="star">&#9733;</span> DEAD HAND</a><nav><a href="/">The App</a><a href="/the-book/">The Book</a></nav></div></header>
   <main class="wrap">
     <div class="crumb"><a href="/">Dead Hand</a> &nbsp;/&nbsp; <a href="/the-markup/">The Markup</a> &nbsp;/&nbsp; Writing an Estimate</div>
     <h1>How to write an estimate that wins the job</h1>
@@ -136,6 +127,13 @@
       <h2>Make it look like you take your own work seriously</h2>
       <p>None of this means fancy. It means finished. A tidy, consistent estimate with your name at the top and a total they can act on tells the customer exactly one thing: this person is organized, and organized people don't botch your water heater. That impression is doing real work on the price. Getting the number right is <a class="inline" href="/the-markup/price-a-job/">step one</a>; putting it on a page that looks like you mean it is step two.</p>
 
+      <section class="faqs">
+        <h2>Questions</h2>
+        <div class="faq"><h3>What's the difference between an estimate and a quote?</h3><p>An estimate is your best-considered guess at the cost and can move if the job changes. A quote is a firm price you commit to honor. Both are fine, but you should say clearly which one you're handing the customer so there's no argument later about whether the number was binding.</p></div>
+        <div class="faq"><h3>Should an estimate be itemized or a lump sum?</h3><p>Show enough detail to justify the price without inviting the customer to shop each line. Group labor into one figure, list major materials or bundle them, and never itemize your margin. The goal is a number they trust, not a spreadsheet they can pick apart.</p></div>
+        <div class="faq"><h3>How long should an estimate be valid?</h3><p>Put an expiration on every estimate, commonly 14 to 30 days. Material prices move, and an expiration protects you from being held to a number you gave months ago while also nudging the customer to decide.</p></div>
+      </section>
+
       <div class="cta">
         <h2>Hand them something clean, from your phone.</h2>
         <p>Dead Hand turns your rates and parts into a tidy estimate and sends it as a PDF, on the spot &mdash; no clipboard, no torn pad, no "I'll email it tonight."</p>
@@ -149,6 +147,6 @@
       </div>
     </article>
   </main>
-  <footer><div class="wrap"><a class="brand" href="/" style="font-size:20px"><span class="star">&#9733;</span> DEAD HAND</a><div class="fl"><a href="/">The App</a><a href="/the-markup/">The Markup</a><a href="/calculator-privacy">Privacy</a><a href="/calculator-terms">Terms</a><span>&copy; 2026 Friendly App LLC</span></div></div></footer>
+  <footer><div class="wrap"><a class="brand" href="/" style="font-size:20px"><span class="star">&#9733;</span> DEAD HAND</a><div class="fl"><a href="/">The App</a><a href="/the-book/">The Book</a><a href="/the-markup/">The Markup</a><a href="/calculator-privacy">Privacy</a><a href="/calculator-terms">Terms</a><span>&copy; 2026 Friendly App LLC</span></div></div></footer>
 </body>
 </html>

@@ -309,7 +309,7 @@
     }
 
     .compare .col.yes ul li { color: var(--white); }
-    .compare .col.yes ul li::before { content: "&mdash; "; color: var(--red); }
+    .compare .col.yes ul li::before { content: "\2014\00a0"; color: var(--red); }
 
     @media (max-width: 640px) {
       .compare { grid-template-columns: 1fr; gap: var(--space-md); }
@@ -708,6 +708,16 @@
     <p class="pricing-note" style="margin-top: var(--space-md);">Prices in USD, sales tax where it applies. You'll set your rates the first time you open it &mdash; takes about thirty seconds.</p>
   </section>
 
+  <!-- THE BOOK -->
+  <section class="section" id="book">
+    <span class="label">Coming Next</span>
+    <h2>The Book, for the jobs you already know.</h2>
+    <p style="color: var(--dim); margin-bottom: var(--space-md);">The calculator prices the job you're working out at the table. The Book is the other kind &mdash; the changeouts and service calls you've done four hundred times. You build one once with your own numbers and pull it in a tap after that. It's its own product, priced flat by the size of your shop instead of by the tech.</p>
+    <div class="hero-cta" style="justify-content:flex-start;">
+      <a href="/the-book/" class="btn btn-ghost">See The Book</a>
+    </div>
+  </section>
+
   <!-- HOW YOU GET IT -->
   <section class="getit">
     <span class="label">How You Get It</span>
@@ -763,6 +773,7 @@
     />
     <div class="footer-links">
       <a href="/launching/">Sign In</a>
+      <a href="/the-book/">The Book</a>
       <a href="/the-markup/">The Markup</a>
       <a href="/calculator-privacy">Privacy</a>
       <a href="/calculator-terms">Terms</a>
