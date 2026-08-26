@@ -158,23 +158,22 @@
   force = true
 
 # Legal pages moved to trailing-slash form to match the rest of the site.
+# NOT forced: a forced rule also matches the normalised /calculator-privacy/ request
+# and 301s it to itself. Without force, the directory index serves and these only
+# catch the slashless and .html forms.
 [[redirects]]
   from = "/calculator-privacy"
   to = "/calculator-privacy/"
   status = 301
-  force = true
 [[redirects]]
   from = "/calculator-privacy.html"
   to = "/calculator-privacy/"
   status = 301
-  force = true
 [[redirects]]
   from = "/calculator-terms"
   to = "/calculator-terms/"
   status = 301
-  force = true
 [[redirects]]
   from = "/calculator-terms.html"
   to = "/calculator-terms/"
   status = 301
-  force = true
