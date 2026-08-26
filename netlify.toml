@@ -138,21 +138,43 @@
   force = true
 [[redirects]]
   from = "/privacy"
-  to = "/calculator-privacy"
+  to = "/calculator-privacy/"
   status = 301
   force = true
 [[redirects]]
   from = "/privacy.html"
-  to = "/calculator-privacy"
+  to = "/calculator-privacy/"
   status = 301
   force = true
 [[redirects]]
   from = "/terms"
-  to = "/calculator-terms"
+  to = "/calculator-terms/"
   status = 301
   force = true
 [[redirects]]
   from = "/terms.html"
-  to = "/calculator-terms"
+  to = "/calculator-terms/"
+  status = 301
+  force = true
+
+# Legal pages moved to trailing-slash form to match the rest of the site.
+[[redirects]]
+  from = "/calculator-privacy"
+  to = "/calculator-privacy/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/calculator-privacy.html"
+  to = "/calculator-privacy/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/calculator-terms"
+  to = "/calculator-terms/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/calculator-terms.html"
+  to = "/calculator-terms/"
   status = 301
   force = true

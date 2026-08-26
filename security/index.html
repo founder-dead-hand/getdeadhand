@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="How Dead Hand is built and kept secure, what it never holds, and how to report a vulnerability. Plain answers for anyone checking before they sign up." />
+  <meta name="robots" content="index, follow" />
+  <title>Security &mdash; Dead Hand</title>
+  <link rel="canonical" href="https://getdeadhand.com/security/" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta property="og:title" content="Security &mdash; Dead Hand" />
+  <meta property="og:description" content="How Dead Hand is built and kept secure, and how to report a vulnerability." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://getdeadhand.com/security/" />
+  <meta property="og:image" content="https://getdeadhand.com/deadhand-share.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="/fonts.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="/fonts.css" /></noscript>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org","@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Dead Hand","item":"https://getdeadhand.com/"},
+      {"@type":"ListItem","position":2,"name":"Security","item":"https://getdeadhand.com/security/"}
+    ]
+  }
+  </script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--black:#0a0a0a;--card:#111214;--line:#2a2d31;--red:#c0392b;--white:#e8e8e8;--dim:#90969d;--dimmer:#5a5f66;--display:'Bebas Neue',sans-serif;--mono:'IBM Plex Mono',monospace;--body:'IBM Plex Sans',system-ui,sans-serif;--measure:720px}
+    body{background:var(--black);color:var(--white);font-family:var(--body);font-size:18px;line-height:1.75;-webkit-font-smoothing:antialiased}
+    .wrap{max-width:var(--measure);margin:0 auto;padding:0 clamp(20px,5vw,28px)}
+    header.top{border-bottom:1px solid var(--line);background:#000}
+    header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;max-width:900px}
+    .brand{font-family:var(--display);font-size:24px;letter-spacing:2px;color:#fff;text-decoration:none;display:flex;align-items:center;gap:7px}
+    .brand .star{color:var(--red);font-size:15px}
+    .top nav{display:flex;gap:18px}
+    .top nav a{font-family:var(--mono);font-size:12px;letter-spacing:1px;color:var(--dim);text-decoration:none;text-transform:uppercase}
+    .top nav a:hover{color:#fff}
+    .crumb{font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--dimmer);margin:28px 0 14px}
+    .crumb a{color:var(--dim);text-decoration:none}.crumb a:hover{color:#fff}
+    h1{font-family:var(--display);font-size:clamp(44px,9vw,80px);line-height:.95;letter-spacing:1px;color:#fff;margin-bottom:16px}
+    h2{font-family:var(--display);font-size:clamp(24px,3.6vw,34px);line-height:1.06;letter-spacing:1px;color:#fff;margin:44px 0 14px}
+    .standfirst{font-size:20px;color:var(--dim);line-height:1.6;margin-bottom:10px;border-left:3px solid var(--red);padding-left:20px}
+    p{margin-bottom:18px}
+    a{color:var(--white)}
+    ul{padding-left:20px;margin-bottom:18px}
+    li{margin-bottom:9px;line-height:1.6}
+    li strong{color:#fff}
+    .report{background:linear-gradient(180deg,#141619,#0d0e10);border:1px solid var(--line);border-left:3px solid var(--red);border-radius:12px;padding:24px 26px;margin:28px 0}
+    .report p:last-child{margin-bottom:0}
+    .note{font-size:15px;color:var(--dimmer);line-height:1.6}
+    footer{border-top:1px solid var(--line);margin-top:60px;padding:30px 0;background:#000}
+    footer .wrap{max-width:900px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
+    footer .fl{font-family:var(--mono);font-size:11px;letter-spacing:1px;color:var(--dimmer);display:flex;gap:16px;flex-wrap:wrap}
+    footer .fl a{color:var(--dimmer);text-decoration:none}footer .fl a:hover{color:var(--dim)}
+  </style>
+</head>
+<body>
+  <header class="top"><div class="wrap"><a class="brand" href="/"><span class="star">&#9733;</span> DEAD HAND</a><nav><a href="/">The App</a><a href="/the-book/">The Book</a></nav></div></header>
+  <main class="wrap">
+    <div class="crumb"><a href="/">Dead Hand</a> &nbsp;/&nbsp; Security</div>
+    <h1>Security</h1>
+    <p class="standfirst">Your rates and your job history are the private numbers of your business. Here is how they are kept, and how to tell us if something looks wrong.</p>
+
+    <h2>Reporting something</h2>
+
+    <div class="report">
+      <p>If you think you have found a vulnerability, email <a href="mailto:support@getdeadhand.com">support@getdeadhand.com</a> and put <strong>SECURITY</strong> in the subject line.</p>
+      <p>Tell us what you found and how to reproduce it. You will get a reply from a person, usually within two business days. We will not send you a lawyer for reporting a real problem in good faith, and we will tell you when it is fixed.</p>
+      <p class="note">The machine-readable version of this is at <a href="/.well-known/security.txt">/.well-known/security.txt</a>.</p>
+    </div>
+
+    <h2>How it is built</h2>
+
+    <p>Dead Hand is a small web app with a deliberately short list of moving parts. Fewer pieces is itself a security decision.</p>
+
+    <ul>
+      <li><strong>Sign-in is passwordless.</strong> We email you a link. There is no password to guess, reuse, leak, or for us to store badly.</li>
+      <li><strong>Every table is row-level secured.</strong> A signed-in account can only ever read and write its own rows. Your rates and your estimates are not reachable from another account, and that is enforced by the database rather than by application code remembering to check.</li>
+      <li><strong>Card details never reach us.</strong> Payment happens on Stripe's own checkout. We hold a Stripe customer ID and a subscription status, and no card number has ever touched our systems.</li>
+      <li><strong>The owner PIN is hashed on your device</strong> before it is sent, so the PIN itself never leaves your phone and we could not tell you what it is.</li>
+      <li><strong>The app makes no third-party requests.</strong> No analytics, no trackers, no advertising, no session recording. Nothing in the app phones anywhere except our own database and Stripe.</li>
+      <li><strong>Everything is served over HTTPS</strong> with HSTS, a tight Content Security Policy, and the usual frame, sniffing and referrer protections.</li>
+    </ul>
+
+    <h2>What we do not hold</h2>
+
+    <p>The shortest way to keep something safe is to not have it. Dead Hand holds no card numbers, no bank details, no tax information, no location history, no contacts, no photos, and no customer email addresses. When you send an estimate it goes out through your own mail app, so the recipient's address never reaches us.</p>
+
+    <p>What we do hold is set out in full on the <a href="/calculator-privacy/">privacy page</a>.</p>
+
+    <h2>The honest part</h2>
+
+    <p>This is a one-person operation, not a company with a security department. That cuts both ways. There is nobody to hide behind if something goes wrong, and there is also nobody to lose your report in a queue. If something is broken, the person who wrote it will read your email.</p>
+
+    <p>We do not run a paid bug bounty. If you find something real, we will fix it, credit you if you want the credit, and say thank you properly.</p>
+
+    <h2>If something happens</h2>
+
+    <p>If shop data is ever exposed, we will email everyone affected with what happened, what was in it, and what we did about it &mdash; without waiting to be asked, and without the word "unauthorized third party" doing all the work.</p>
+
+  </main>
+  <footer><div class="wrap"><a class="brand" href="/" style="font-size:20px"><span class="star">&#9733;</span> DEAD HAND</a><div class="fl"><a href="/">The App</a><a href="/the-book/">The Book</a><a href="/the-markup/">The Markup</a><a href="/security/">Security</a><a href="/calculator-privacy/">Privacy</a><a href="/calculator-terms/">Terms</a><span>&copy; 2026 Friendly App LLC</span></div></div></footer>
+</body>
+</html>
