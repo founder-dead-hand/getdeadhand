@@ -17,7 +17,8 @@
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600&display=swap" /></noscript>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -59,8 +60,9 @@
       --red:     #c0392b;
       --white:   #e8e8e8;
       --bright:  #ffffff;
-      --dim:     #8a8a8a;
-      --dimmer:  #555555;
+      --dim:     #9a9a9a;
+      --dimmer:  #8a8a8a;
+      --label:   #e2624c;
       --border:  1px solid #2a2a2a;
 
       --display: 'Bebas Neue', sans-serif;
@@ -169,7 +171,7 @@
     .label {
       font-family: var(--mono);
       font-size: 11px;
-      color: var(--red);
+      color: var(--label);
       letter-spacing: 4px;
       text-transform: uppercase;
       margin-bottom: var(--space-md);
@@ -282,16 +284,17 @@
       margin-top: var(--space-md);
     }
 
-    .compare .col h4 {
+    .compare .col h3 {
       font-family: var(--mono);
       font-size: 11px;
+      font-weight: 400;
       letter-spacing: 3px;
       text-transform: uppercase;
       color: var(--dim);
       margin-bottom: var(--space-sm);
     }
 
-    .compare .col.yes h4 { color: var(--red); }
+    .compare .col.yes h3 { color: var(--label); }
 
     .compare ul {
       list-style: none;
@@ -555,19 +558,21 @@
   </style>
 </head>
 <body>
+  <main>
 
   <!-- HERO -->
   <section class="hero">
     <img
-      src="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-wordmark.png"
+      src="/deadhand-wordmark.png"
       alt="Dead Hand"
       class="hero-mark"
+      width="1024" height="272"
     />
     <h1 class="hero-headline">Set your rates once. Never fumble another quote.</h1>
     <p class="hero-sub">The pocket tool for field quoting</p>
 
     <div class="hero-cta">
-      <a href="#get" class="btn btn-primary">Get Dead Hand</a>
+      <a href="https://dead-hand.app" class="btn btn-primary">Get Dead Hand</a>
       <a href="#how" class="btn btn-ghost">How it works</a>
     </div>
     <p class="hero-note">Works on any phone · Adds to your home screen · No app store</p>
@@ -641,7 +646,7 @@
 
     <div class="compare">
       <div class="col no">
-        <h4>What you skip</h4>
+        <h3>What you skip</h3>
         <ul>
           <li>Customer database</li>
           <li>Dispatch and scheduling</li>
@@ -651,7 +656,7 @@
         </ul>
       </div>
       <div class="col yes">
-        <h4>What you get</h4>
+        <h3>What you get</h3>
         <ul>
           <li>A clean price in front of the customer</li>
           <li>A PDF in their inbox</li>
@@ -745,12 +750,15 @@
     <p>Works on any phone · No app store</p>
   </section>
 
+  </main>
+
   <!-- FOOTER -->
   <footer>
     <img
-      src="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-wordmark.png"
+      src="/deadhand-wordmark.png"
       alt="Dead Hand"
       class="footer-mark"
+      width="1024" height="272"
     />
     <div class="footer-links">
       <a href="https://dead-hand.app">Sign In</a>
