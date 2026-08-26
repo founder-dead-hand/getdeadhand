@@ -53,37 +53,75 @@
   [headers.values]
     Cache-Control = "public, max-age=604800"
 
+# Retired ARS pages — 301 to home / current legal so no orphan old pages stay live (§I).
+# force=true shadows the still-present .html files.
 [[redirects]]
   from = "/for-plumbers"
-  to = "/for-plumbers.html"
-  status = 200
-
+  to = "/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/for-plumbers.html"
+  to = "/"
+  status = 301
+  force = true
 [[redirects]]
   from = "/for-hvac"
-  to = "/for-hvac.html"
-  status = 200
-
+  to = "/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/for-hvac.html"
+  to = "/"
+  status = 301
+  force = true
 [[redirects]]
   from = "/for-electrical"
-  to = "/for-electrical.html"
-  status = 200
-
+  to = "/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/for-electrical.html"
+  to = "/"
+  status = 301
+  force = true
 [[redirects]]
   from = "/pricing"
-  to = "/pricing.html"
-  status = 200
-
+  to = "/"
+  status = 301
+  force = true
 [[redirects]]
-  from = "/privacy"
-  to = "/privacy.html"
-  status = 200
-
-[[redirects]]
-  from = "/terms"
-  to = "/terms.html"
-  status = 200
-
+  from = "/pricing.html"
+  to = "/"
+  status = 301
+  force = true
 [[redirects]]
   from = "/sms-policy"
-  to = "/sms-policy.html"
-  status = 200
+  to = "/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/sms-policy.html"
+  to = "/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/privacy"
+  to = "/calculator-privacy"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/privacy.html"
+  to = "/calculator-privacy"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/terms"
+  to = "/calculator-terms"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/terms.html"
+  to = "/calculator-terms"
+  status = 301
+  force = true
