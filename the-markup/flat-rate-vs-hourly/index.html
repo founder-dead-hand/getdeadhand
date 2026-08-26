@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Flat rate vs. time and materials for trade work: which one wins more jobs and protects more margin, when hourly still makes sense, and why flat rate is really just T&amp;M with the math done early." />
+  <meta name="robots" content="index, follow" />
+  <title>Flat Rate vs. Time and Materials: Which Should You Charge?</title>
+  <link rel="canonical" href="https://getdeadhand.com/the-markup/flat-rate-vs-hourly/" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta property="og:title" content="Flat Rate vs. Time and Materials: Which Should You Charge?" />
+  <meta property="og:description" content="Which way of quoting wins more jobs and protects more margin &mdash; and why flat rate is just T&amp;M with the math done early." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://getdeadhand.com/the-markup/flat-rate-vs-hourly/" />
+  <meta property="og:image" content="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-badge.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="/fonts.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="/fonts.css" /></noscript>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org","@type":"Article",
+    "headline":"Flat Rate vs. Time and Materials: Which Should You Charge?",
+    "description":"A plain comparison of flat-rate and time-and-materials pricing for trade shops, and how to move to flat rate without guessing.",
+    "image":"https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-badge.png",
+    "author":{"@type":"Organization","name":"Dead Hand"},
+    "publisher":{"@type":"Organization","name":"Dead Hand","alternateName":"Friendly App LLC"},
+    "mainEntityOfPage":"https://getdeadhand.com/the-markup/flat-rate-vs-hourly/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org","@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Dead Hand","item":"https://getdeadhand.com/"},
+      {"@type":"ListItem","position":2,"name":"The Markup","item":"https://getdeadhand.com/the-markup/"},
+      {"@type":"ListItem","position":3,"name":"Flat Rate vs. Time and Materials","item":"https://getdeadhand.com/the-markup/flat-rate-vs-hourly/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org","@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Is flat rate better than time and materials?","acceptedAnswer":{"@type":"Answer","text":"For most residential trade work, flat rate wins more jobs and protects more margin. The customer gets one certain price instead of a running meter, and you get paid for the result instead of the clock, so being fast and skilled no longer costs you money. Time and materials still fits true unknowns like diagnostics, demo, and open-ended commercial work."}},
+      {"@type":"Question","name":"How do I set a flat-rate price?","acceptedAnswer":{"@type":"Answer","text":"Build it the same way you'd build a time-and-materials quote: labor at your billable rate, materials at your target margin, overhead folded in. Then add a cushion for the unknowns, because on flat rate an overrun is on you. Flat rate isn't a different pricing system, it's the same math done before you say the number."}},
+      {"@type":"Question","name":"Why do customers prefer flat rate?","acceptedAnswer":{"@type":"Answer","text":"Certainty. A flat price is a number they can say yes to. An hourly quote is a risk they have to agree to, and no one likes agreeing to a bill they can't see the end of. Flat rate also stops the customer from watching the clock and second-guessing how long the work took."}}
+    ]
+  }
+  </script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--black:#0a0a0a;--card:#111214;--line:#2a2d31;--red:#c0392b;--white:#e8e8e8;--dim:#90969d;--dimmer:#5a5f66;--display:'Bebas Neue',sans-serif;--mono:'IBM Plex Mono',monospace;--body:'IBM Plex Sans',system-ui,sans-serif;--measure:680px}
+    html{scroll-behavior:smooth}
+    body{background:var(--black);color:var(--white);font-family:var(--body);font-size:18px;line-height:1.75;-webkit-font-smoothing:antialiased}
+    .wrap{max-width:var(--measure);margin:0 auto;padding:0 clamp(20px,5vw,28px)}
+    header.top{border-bottom:1px solid var(--line);background:#000}
+    header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;max-width:900px}
+    .brand{font-family:var(--display);font-size:24px;letter-spacing:2px;color:#fff;text-decoration:none;display:flex;align-items:center;gap:7px}
+    .brand .star{color:var(--red);font-size:15px}
+    .top nav a{font-family:var(--mono);font-size:12px;letter-spacing:1px;color:var(--dim);text-decoration:none;text-transform:uppercase}.top nav a:hover{color:#fff}
+    .crumb{font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--dimmer);margin:28px 0 14px}
+    .crumb a{color:var(--dim);text-decoration:none}.crumb a:hover{color:#fff}
+    h1{font-family:var(--display);font-size:clamp(40px,7vw,64px);line-height:.98;letter-spacing:1px;color:#fff;margin-bottom:18px;text-wrap:balance}
+    .standfirst{font-size:20px;color:var(--dim);line-height:1.6;margin-bottom:14px;border-left:3px solid var(--red);padding-left:20px}
+    .byline{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--dimmer);margin:22px 0 40px}
+    article h2{font-family:var(--display);font-size:clamp(28px,4.5vw,40px);letter-spacing:.5px;line-height:1.05;color:#fff;margin:48px 0 16px;text-wrap:balance}
+    article p{margin-bottom:18px;color:var(--white)}article p.mut{color:var(--dim)}
+    article strong{color:#fff;font-weight:600}
+    article a.inline{color:#e0745f;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--red)}article a.inline:hover{color:#fff}
+    .callout{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--red);border-radius:10px;padding:22px 24px;margin:28px 0}
+    .callout .lbl{font-family:var(--mono);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--red);display:block;margin-bottom:10px}.callout p:last-child{margin-bottom:0}
+    .vs{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0}
+    .vs .card{background:linear-gradient(180deg,#141619,#0f1113);border:1px solid var(--line);border-radius:12px;padding:22px}
+    .vs .card h3{font-family:var(--display);font-size:24px;letter-spacing:1px;color:#fff;margin-bottom:4px}
+    .vs .card .sub{font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--red);margin-bottom:14px}
+    .vs .card ul{list-style:none;font-size:14px;line-height:1.5;color:var(--dim)}
+    .vs .card li{padding:8px 0;border-top:1px solid var(--line)}.vs .card li:first-child{border-top:none}
+    @media(max-width:600px){.vs{grid-template-columns:1fr}}
+    .pull{font-family:var(--display);font-size:clamp(26px,4vw,36px);line-height:1.1;letter-spacing:.5px;color:#fff;margin:40px 0;padding-left:20px;border-left:3px solid var(--red)}
+    .cta{background:linear-gradient(180deg,#141619,#0d0e10);border:1px solid var(--line);border-radius:14px;padding:34px 28px;margin:52px 0;text-align:center}
+    .cta h2{font-family:var(--display);font-size:clamp(26px,3.6vw,38px);letter-spacing:.5px;color:#fff;margin:0 0 10px}.cta p{color:var(--dim);margin-bottom:22px}
+    .cta a{display:inline-block;background:var(--red);color:#fff;font-family:var(--display);font-size:20px;letter-spacing:3px;padding:14px 34px;text-decoration:none;border-radius:2px}.cta a:hover{filter:brightness(1.08)}
+    .related{border-top:1px solid var(--line);margin-top:56px;padding-top:32px}
+    .related .lbl{font-family:var(--mono);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:18px;display:block}
+    .related a{display:block;text-decoration:none;padding:16px 0;border-bottom:1px solid var(--line)}.related a:hover .rt{color:#fff}
+    .related .rt{font-family:var(--display);font-size:24px;letter-spacing:1px;color:var(--white);transition:color .15s}.related .rd{font-size:14px;color:var(--dim);margin-top:2px}
+    footer{border-top:1px solid var(--line);margin-top:60px;padding:30px 0;background:#000}
+    footer .wrap{max-width:900px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
+    footer .fl{font-family:var(--mono);font-size:11px;letter-spacing:1px;color:var(--dimmer);display:flex;gap:16px;flex-wrap:wrap}
+    footer .fl a{color:var(--dimmer);text-decoration:none}footer .fl a:hover{color:var(--dim)}
+  </style>
+</head>
+<body>
+  <header class="top"><div class="wrap"><a class="brand" href="/"><span class="star">&#9733;</span> DEAD HAND</a><nav><a href="/the-markup/">The Markup</a></nav></div></header>
+  <main class="wrap">
+    <div class="crumb"><a href="/">Dead Hand</a> &nbsp;/&nbsp; <a href="/the-markup/">The Markup</a> &nbsp;/&nbsp; Flat Rate vs. T&amp;M</div>
+    <h1>Flat rate vs. time and materials</h1>
+    <p class="standfirst">One gives the customer a number they can say yes to. The other gives them a meter to watch. That difference decides more jobs than your price does.</p>
+    <p class="byline">The Markup &middot; Dead Hand</p>
+    <article>
+      <p>Every trade shop pricing a repair is really choosing between two ways to say the number. You can bill by the hour plus parts as you go &mdash; time and materials &mdash; or you can hand over one price for the whole job before you start. Same work, same costs underneath. But they land on the customer completely differently, and they treat your margin completely differently, so it's worth knowing exactly what you're choosing.</p>
+
+      <div class="vs">
+        <div class="card">
+          <h3>Time &amp; Materials</h3>
+          <div class="sub">The meter is running</div>
+          <ul>
+            <li>You bill your hours plus parts, tallied at the end.</li>
+            <li>The customer agrees to a rate, not a total.</li>
+            <li>Overruns get passed along &mdash; if they'll pay them.</li>
+            <li>Being fast and skilled earns you less, not more.</li>
+            <li>Every invoice is a small negotiation about the clock.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Flat Rate</h3>
+          <div class="sub">One price, up front</div>
+          <ul>
+            <li>You quote one number for the finished job.</li>
+            <li>The customer says yes to a price, not a risk.</li>
+            <li>Overruns are on you &mdash; so you price a cushion in.</li>
+            <li>Working faster keeps the profit, not the customer.</li>
+            <li>The number's settled before the wrench comes out.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>Why customers reach for flat rate</h2>
+      <p>Put yourself on their side of the counter. "It's a hundred and eighty an hour plus parts, should be a few hours" is not a price. It's a range with no ceiling, and they're being asked to sign up for it without knowing where it stops. People don't like agreeing to a bill they can't see the end of, so they hesitate, or they call two more guys to feel safer.</p>
+      <p>"It's $840, done" is a price. It's a single number they can weigh against the value and decide on, right now, at the table. Certainty is worth real money to a customer, and flat rate is you selling them certainty along with the work.</p>
+
+      <h2>Why flat rate protects your margin</h2>
+      <p>Time and materials sounds safer for the shop &mdash; you can't lose, you bill whatever it takes. In practice it does the opposite. It punishes you for being good. The tech who's done this repair four hundred times and knocks it out in ninety minutes bills less than the slow guy fumbling through it, even though the fast one is worth more. And when a job runs long, you're stuck choosing between eating the hours or having the "why did it take so long" conversation on the doorstep.</p>
+      <p>Flat rate pays you for the result. You priced the job, you own the risk, and if you're quick and clean you keep the difference &mdash; which is exactly how it should be. The one discipline it demands is that you build a real cushion into the price for the jobs that go sideways, because on flat rate, sideways is on your dime.</p>
+
+      <p class="pull">Time and materials bills your speed. Flat rate rewards it.</p>
+
+      <h2>The reframe: flat rate is T&amp;M with the math done early</h2>
+      <p>Here's the part that makes flat rate stop feeling like guesswork. A flat price isn't pulled out of the air &mdash; it's built from the exact same pieces as a time-and-materials quote. Labor at your billable rate. Materials at your target margin. Overhead folded in. The only thing that changes is <em>when</em> you do the math: before you open your mouth, instead of after the job's done. Add a cushion for the unknowns, and that's your flat price.</p>
+      <p>So the skill isn't inventing prices. It's being able to run your real numbers fast enough to have a solid one ready before you knock. If your rates and margin aren't set in stone, start with <a class="inline" href="/the-markup/shop-rate/">your shop rate</a> and <a class="inline" href="/the-markup/margin-vs-markup/">margin vs. markup</a> &mdash; flat rate only works when the math underneath it is right.</p>
+
+      <div class="callout">
+        <span class="lbl">Where T&amp;M still earns its keep</span>
+        <p>Flat rate isn't always the answer. True unknowns &mdash; a diagnostic before anyone knows what's wrong, demolition behind a wall, insurance work, big commercial jobs that live on change orders &mdash; are honest time-and-materials territory. The rule of thumb: quote flat when you can see the whole job, bill hourly only when you genuinely can't.</p>
+      </div>
+
+      <h2>Moving to flat rate without guessing</h2>
+      <p>The shops that switch cleanly do one thing: they stop rebuilding every price from scratch. The first time they price a water heater swap, a disposal, a capacitor, a flush, they work out the real number &mdash; rate, parts, margin, cushion &mdash; and then they keep it. Next time that job comes up, the price is already there, ready before they pull in the driveway. Do that across your common calls and "flat rate" stops being a leap and becomes a habit. That's the whole idea behind keeping <a class="inline" href="/the-markup/water-heater-install-cost/">a worked price for your regular jobs</a>.</p>
+
+      <div class="cta">
+        <h2>Build the flat number in seconds, not at the table.</h2>
+        <p>Set your rates and margin once. Dead Hand turns hours and parts into one clean flat price, with the math already right &mdash; so you can quote it before you knock.</p>
+        <a href="/launching/">Get Dead Hand</a>
+      </div>
+
+      <div class="related">
+        <span class="lbl">More from The Markup</span>
+        <a href="/the-markup/price-a-job/"><div class="rt">How to Price a Trade Job Without Losing Money</div><div class="rd">The three numbers behind every flat price, worked end to end.</div></a>
+        <a href="/the-markup/present-your-price/"><div class="rt">How to Present Your Price So They Say Yes</div><div class="rd">You've got the flat number. Now hand it over without flinching.</div></a>
+      </div>
+    </article>
+  </main>
+  <footer><div class="wrap"><a class="brand" href="/" style="font-size:20px"><span class="star">&#9733;</span> DEAD HAND</a><div class="fl"><a href="/">The App</a><a href="/the-markup/">The Markup</a><a href="/calculator-privacy">Privacy</a><a href="/calculator-terms">Terms</a><span>&copy; 2026 Friendly App LLC</span></div></div></footer>
+</body>
+</html>

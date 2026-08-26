@@ -3,35 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Margin and markup are not the same number, and confusing them is how trade shops lose profit on every job. Plain-English math, worked examples, and the divisor that fixes it." />
+  <meta name="description" content="Margin and markup are not the same number, and confusing them is how trade shops lose profit on every job. Plain-English math, a conversion table, and the divisor that fixes it." />
   <meta name="robots" content="index, follow" />
   <title>Margin vs. Markup, in Plain English</title>
-  <link rel="canonical" href="https://getdeadhand.com/pricing-guide/margin-vs-markup/" />
+  <link rel="canonical" href="https://getdeadhand.com/the-markup/margin-vs-markup/" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <meta property="og:title" content="Margin vs. Markup, in Plain English" />
   <meta property="og:description" content="The one calculation that decides whether a busy year is a profitable one." />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://getdeadhand.com/pricing-guide/margin-vs-markup/" />
+  <meta property="og:url" content="https://getdeadhand.com/the-markup/margin-vs-markup/" />
   <meta property="og:image" content="https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-badge.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="stylesheet" href="/fonts.css" media="print" onload="this.media='all'" />
   <noscript><link rel="stylesheet" href="/fonts.css" /></noscript>
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org","@type": "Article",
-    "headline": "Margin vs. Markup, in Plain English",
-    "description": "Why margin and markup are different numbers, and how confusing them drains profit from every trade job.",
-    "image": "https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-badge.png",
-    "author": { "@type": "Organization", "name": "Dead Hand" },
-    "publisher": { "@type": "Organization", "name": "Dead Hand", "alternateName": "Friendly App LLC" },
-    "mainEntityOfPage": "https://getdeadhand.com/pricing-guide/margin-vs-markup/"
+    "@context":"https://schema.org","@type":"Article",
+    "headline":"Margin vs. Markup, in Plain English",
+    "description":"Why margin and markup are different numbers, and how confusing them drains profit from every trade job.",
+    "image":"https://lcmfxikfvrxdiznxepoa.supabase.co/storage/v1/object/public/assets/deadhand-badge.png",
+    "author":{"@type":"Organization","name":"Dead Hand"},
+    "publisher":{"@type":"Organization","name":"Dead Hand","alternateName":"Friendly App LLC"},
+    "mainEntityOfPage":"https://getdeadhand.com/the-markup/margin-vs-markup/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org","@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Dead Hand","item":"https://getdeadhand.com/"},
+      {"@type":"ListItem","position":2,"name":"The Markup","item":"https://getdeadhand.com/the-markup/"},
+      {"@type":"ListItem","position":3,"name":"Margin vs. Markup","item":"https://getdeadhand.com/the-markup/margin-vs-markup/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org","@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Is a 40% markup the same as a 40% margin?","acceptedAnswer":{"@type":"Answer","text":"No. A 40% markup is only a 28.6% margin. Markup is measured against your cost; margin is measured against the price the customer pays. The same dollars of profit produce two different percentages."}},
+      {"@type":"Question","name":"How do I price for a specific margin?","acceptedAnswer":{"@type":"Answer","text":"Divide your cost by (1 minus the margin you want). For a 40% margin, divide cost by 0.60. A $100 part must bill at $166.67. Adding 40% markup would only charge $140 and leave you at a 28.6% margin."}},
+      {"@type":"Question","name":"Why does confusing margin and markup cost money?","acceptedAnswer":{"@type":"Answer","text":"If you add a markup percentage while believing it's your margin, every job earns less profit than you think. On a 40% markup you keep 28.6%, giving back more than eleven points of profit on every part, all year long."}}
+    ]
   }
   </script>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{--black:#0a0a0a;--card:#111214;--raised:#191b1e;--line:#2a2d31;--red:#c0392b;--white:#e8e8e8;--dim:#90969d;--dimmer:#5a5f66;--display:'Bebas Neue',sans-serif;--mono:'IBM Plex Mono',monospace;--body:'IBM Plex Sans',system-ui,sans-serif;--measure:680px}
+    :root{--black:#0a0a0a;--card:#111214;--line:#2a2d31;--red:#c0392b;--white:#e8e8e8;--dim:#90969d;--dimmer:#5a5f66;--display:'Bebas Neue',sans-serif;--mono:'IBM Plex Mono',monospace;--body:'IBM Plex Sans',system-ui,sans-serif;--measure:680px}
     html{scroll-behavior:smooth}
     body{background:var(--black);color:var(--white);font-family:var(--body);font-size:18px;line-height:1.75;-webkit-font-smoothing:antialiased}
     .wrap{max-width:var(--measure);margin:0 auto;padding:0 clamp(20px,5vw,28px)}
@@ -39,8 +59,7 @@
     header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;max-width:900px}
     .brand{font-family:var(--display);font-size:24px;letter-spacing:2px;color:#fff;text-decoration:none;display:flex;align-items:center;gap:7px}
     .brand .star{color:var(--red);font-size:15px}
-    .top nav a{font-family:var(--mono);font-size:12px;letter-spacing:1px;color:var(--dim);text-decoration:none;text-transform:uppercase}
-    .top nav a:hover{color:#fff}
+    .top nav a{font-family:var(--mono);font-size:12px;letter-spacing:1px;color:var(--dim);text-decoration:none;text-transform:uppercase}.top nav a:hover{color:#fff}
     .crumb{font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--dimmer);margin:28px 0 14px}
     .crumb a{color:var(--dim);text-decoration:none}.crumb a:hover{color:#fff}
     h1{font-family:var(--display);font-size:clamp(40px,7vw,64px);line-height:.98;letter-spacing:1px;color:#fff;margin-bottom:18px;text-wrap:balance}
@@ -62,7 +81,7 @@
     table.mm td{color:var(--dim)}
     .pull{font-family:var(--display);font-size:clamp(26px,4vw,36px);line-height:1.1;letter-spacing:.5px;color:#fff;margin:40px 0;padding-left:20px;border-left:3px solid var(--red)}
     .cta{background:linear-gradient(180deg,#141619,#0d0e10);border:1px solid var(--line);border-radius:14px;padding:34px 28px;margin:52px 0;text-align:center}
-    .cta h2{margin:0 0 10px}.cta p{color:var(--dim);margin-bottom:22px}
+    .cta h2{font-family:var(--display);font-size:clamp(26px,3.6vw,38px);letter-spacing:.5px;color:#fff;margin:0 0 10px}.cta p{color:var(--dim);margin-bottom:22px}
     .cta a{display:inline-block;background:var(--red);color:#fff;font-family:var(--display);font-size:20px;letter-spacing:3px;padding:14px 34px;text-decoration:none;border-radius:2px}.cta a:hover{filter:brightness(1.08)}
     .related{border-top:1px solid var(--line);margin-top:56px;padding-top:32px}
     .related .lbl{font-family:var(--mono);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:18px;display:block}
@@ -75,17 +94,17 @@
   </style>
 </head>
 <body>
-  <header class="top"><div class="wrap"><a class="brand" href="/"><span class="star">&#9733;</span> DEAD HAND</a><nav><a href="/pricing-guide/">Guide</a></nav></div></header>
+  <header class="top"><div class="wrap"><a class="brand" href="/"><span class="star">&#9733;</span> DEAD HAND</a><nav><a href="/the-markup/">The Markup</a></nav></div></header>
   <main class="wrap">
-    <div class="crumb"><a href="/">Dead Hand</a> &nbsp;/&nbsp; <a href="/pricing-guide/">Pricing Guide</a> &nbsp;/&nbsp; Margin vs. Markup</div>
+    <div class="crumb"><a href="/">Dead Hand</a> &nbsp;/&nbsp; <a href="/the-markup/">The Markup</a> &nbsp;/&nbsp; Margin vs. Markup</div>
     <h1>Margin vs. markup, in plain English</h1>
     <p class="standfirst">They sound like the same thing. They are not the same number. And the gap between them is coming straight out of your pocket.</p>
-    <p class="byline">Pricing Guide &middot; Dead Hand</p>
+    <p class="byline">The Markup &middot; Dead Hand</p>
     <article>
       <p>Here's a question that decides whether a busy year is a profitable one: when you "add 40%" to a part, are you making a 40% profit? Almost every tradesman says yes. Almost every tradesman is wrong, and the mistake is costing them real money on every ticket.</p>
 
       <h2>The two words, defined once</h2>
-      <p><strong>Markup</strong> is the amount you add on top of what something cost you, measured against the <em>cost</em>. <strong>Margin</strong> is the amount of profit in the sale, measured against the <em>price the customer pays</em>. Same dollars of profit — measured against two different starting points, which is why the percentages never match.</p>
+      <p><strong>Markup</strong> is the amount you add on top of what something cost you, measured against the <em>cost</em>. <strong>Margin</strong> is the amount of profit in the sale, measured against the <em>price the customer pays</em>. Same dollars of profit &mdash; measured against two different starting points, which is why the percentages never match.</p>
       <p>A $100 part sold for $140 has $40 of profit in it either way. As markup, that $40 is measured against the $100 cost: 40%. As margin, that same $40 is measured against the $140 the customer paid: 28.6%. Nothing changed but the yardstick.</p>
 
       <div class="mathcard">
@@ -114,28 +133,28 @@
       </table>
 
       <h2>How to price for the margin you actually want</h2>
-      <p>Stop adding a percentage. Start dividing. If you want a job to carry a real <strong>40% margin</strong>, take your cost and divide it by <strong>0.60</strong> — that's 1 minus your target margin. The part that cost you $100 has to bill at $166.67. Want 50% margin? Divide by 0.50. Want 35%? Divide by 0.65.</p>
+      <p>Stop adding a percentage. Start dividing. If you want a job to carry a real <strong>40% margin</strong>, take your cost and divide it by <strong>0.60</strong> &mdash; that's 1 minus your target margin. The part that cost you $100 has to bill at $166.67. Want 50% margin? Divide by 0.50. Want 35%? Divide by 0.65.</p>
 
       <div class="callout">
         <span class="lbl">The one formula</span>
         <p>Price = Cost &divide; (1 &minus; margin). For a 40% margin: $100 &divide; 0.60 = <strong>$166.67</strong>. Add-40%-markup would have charged $140 and quietly handed back eleven points of profit.</p>
       </div>
 
-      <p>On one part, eleven points is a few bucks. Across a year of jobs, on every part you touch, it's the difference between a shop that pays you and a shop you pay to keep open.</p>
+      <p>On one part, eleven points is a few bucks. Across a year of jobs, on every part you touch, it's the difference between a shop that pays you and a shop you pay to keep open. It's the same overhead logic behind <a class="inline" href="/the-markup/shop-rate/">setting your shop rate</a> &mdash; the money's real, it's just quiet.</p>
 
       <div class="cta">
         <h2>Set the margin once. Never do this math on a job again.</h2>
-        <p>Dead Hand holds your margin and applies it to every part automatically — the price comes out right whether you did the division in your head or not.</p>
-        <a href="/">Get Dead Hand</a>
+        <p>Dead Hand holds your margin and applies it to every part automatically &mdash; the price comes out right whether you did the division in your head or not.</p>
+        <a href="/launching/">Get Dead Hand</a>
       </div>
 
       <div class="related">
-        <span class="lbl">More from the guide</span>
-        <a href="/pricing-guide/"><div class="rt">How to Price a Trade Job Without Losing Money</div><div class="rd">The full picture — labor, materials, and the overhead number most shops forget.</div></a>
-        <a href="/pricing-guide/shop-rate/"><div class="rt">What Should My Shop Rate Actually Be?</div><div class="rd">Building a billable hourly rate from your real overhead, not the competition's.</div></a>
+        <span class="lbl">More from The Markup</span>
+        <a href="/the-markup/price-a-job/"><div class="rt">How to Price a Trade Job Without Losing Money</div><div class="rd">The full picture &mdash; labor, materials, and the overhead most shops forget.</div></a>
+        <a href="/the-markup/shop-rate/"><div class="rt">What Should My Shop Rate Actually Be?</div><div class="rd">Building a billable hourly rate from your real overhead, not the competition's.</div></a>
       </div>
     </article>
   </main>
-  <footer><div class="wrap"><a class="brand" href="/" style="font-size:20px"><span class="star">&#9733;</span> DEAD HAND</a><div class="fl"><a href="/">The App</a><a href="/pricing-guide/">Pricing Guide</a><a href="/calculator-privacy">Privacy</a><a href="/calculator-terms">Terms</a><span>&copy; 2026 Friendly App LLC</span></div></div></footer>
+  <footer><div class="wrap"><a class="brand" href="/" style="font-size:20px"><span class="star">&#9733;</span> DEAD HAND</a><div class="fl"><a href="/">The App</a><a href="/the-markup/">The Markup</a><a href="/calculator-privacy">Privacy</a><a href="/calculator-terms">Terms</a><span>&copy; 2026 Friendly App LLC</span></div></div></footer>
 </body>
 </html>

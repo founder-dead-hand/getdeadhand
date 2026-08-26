@@ -53,8 +53,34 @@
   [headers.values]
     Cache-Control = "public, max-age=604800"
 
-# Retired ARS pages — 301 to home / current legal so no orphan old pages stay live (§I).
-# force=true shadows the still-present .html files.
+# The Markup: the pricing-guide SEO cluster was rebranded and moved under /the-markup/.
+# 301 the old URLs so link equity and any bookmarks follow to the new homes.
+[[redirects]]
+  from = "/pricing-guide/"
+  to = "/the-markup/price-a-job/"
+  status = 301
+[[redirects]]
+  from = "/pricing-guide"
+  to = "/the-markup/price-a-job/"
+  status = 301
+[[redirects]]
+  from = "/pricing-guide/margin-vs-markup/"
+  to = "/the-markup/margin-vs-markup/"
+  status = 301
+[[redirects]]
+  from = "/pricing-guide/margin-vs-markup"
+  to = "/the-markup/margin-vs-markup/"
+  status = 301
+[[redirects]]
+  from = "/pricing-guide/shop-rate/"
+  to = "/the-markup/shop-rate/"
+  status = 301
+[[redirects]]
+  from = "/pricing-guide/shop-rate"
+  to = "/the-markup/shop-rate/"
+  status = 301
+
+# Retired ARS pages -- 301 to home / current legal so no orphan old pages stay live (section I).
 [[redirects]]
   from = "/for-plumbers"
   to = "/"
