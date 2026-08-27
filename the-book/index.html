@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="The Dead Hand pricebook: the jobs you already know, priced once and ready to pull. Flat by shop size &mdash; $45, $90, $180 &mdash; never per tech." />
+  <meta name="description" content="The Dead Hand pricebook: the jobs you already know, priced once and ready to pull. Flat by shop size &mdash; $30 for one truck, $80 for two to five &mdash; never per tech." />
   <meta name="robots" content="index, follow" />
   <title>The Book &mdash; Your Pricebook, Priced Once | Dead Hand</title>
   <link rel="canonical" href="https://getdeadhand.com/the-book/" />
@@ -28,9 +28,8 @@
     "image":"https://getdeadhand.com/deadhand-share.png",
     "brand":{"@type":"Brand","name":"Dead Hand"},
     "offers":[
-      {"@type":"Offer","name":"Solo \u2014 1 tech","price":"45.00","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://getdeadhand.com/the-book/","description":"Flat monthly for a one-tech shop. $450 billed annually."},
-      {"@type":"Offer","name":"Crew \u2014 2 to 5 techs","price":"90.00","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://getdeadhand.com/the-book/","description":"Flat monthly for two to five techs. $900 billed annually."},
-      {"@type":"Offer","name":"Shop \u2014 6 to 12 techs","price":"180.00","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://getdeadhand.com/the-book/","description":"Flat monthly for six to twelve techs. $1,800 billed annually."}
+      {"@type":"Offer","name":"Solo \u2014 1 truck","price":"30.00","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://getdeadhand.com/the-book/","description":"Flat monthly for a one-truck shop. $300 billed annually."},
+      {"@type":"Offer","name":"Crew \u2014 2 to 5 trucks","price":"80.00","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://getdeadhand.com/the-book/","description":"Flat monthly for two to five trucks. $800 billed annually."}
     ]
   }
   </script>
@@ -73,14 +72,19 @@
     .feat:last-of-type{border-bottom:1px solid var(--line)}
     .feat .n{font-family:var(--mono);font-size:12px;color:var(--red);letter-spacing:1px;padding-top:3px}
     .feat p{color:var(--dim);font-size:16px;line-height:1.6;margin:0}
-    .price-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:26px 0 18px}
+    .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:26px 0 18px}
     .pc{background:linear-gradient(180deg,#141619,#0d0e10);border:1px solid var(--line);border-radius:12px;padding:20px 15px}
     .pc.feat-band{border-color:var(--red)}
     .pc .tier{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--red);margin-bottom:10px}
-    .pc .amt{font-family:var(--display);font-size:clamp(32px,4.6vw,42px);letter-spacing:1px;color:#fff;line-height:1}
+    .pc .amt{font-family:var(--display);font-size:clamp(34px,5vw,46px);letter-spacing:1px;color:#fff;line-height:1}
+    .pc.away{border-style:dashed}
+    .pc.away .amt{font-size:clamp(28px,4vw,36px)}
+    .pc.away .amt a{color:#fff;text-decoration:none;border-bottom:2px solid var(--red)}
     .pc .amt span{font-family:var(--body);font-size:14px;letter-spacing:0;color:var(--dim);font-weight:400}
     .pc .yr{font-size:14px;color:var(--dim);margin-top:8px;line-height:1.45}
     .pc .who{font-size:14px;color:var(--white);margin-top:10px;font-weight:600}
+    p a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+    p a:hover{color:var(--red)}
     .note{font-size:15px;color:var(--dimmer);line-height:1.6}
     .note a{color:var(--white);text-decoration:underline;text-underline-offset:3px}.note a:hover{color:var(--red)}
     .compare{background:#0e0f11;border:1px solid var(--line);border-radius:12px;padding:24px 22px;margin:24px 0;overflow-x:auto;-webkit-overflow-scrolling:touch}
@@ -107,7 +111,7 @@
     .faq:last-of-type{border-bottom:1px solid var(--line)}
     .faq h3{margin-bottom:6px}
     .faq p{color:var(--dim);font-size:16px;margin:0;line-height:1.6}
-    @media(max-width:660px){.price-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:660px){.price-grid{grid-template-columns:1fr}}
     footer{border-top:1px solid var(--line);margin-top:60px;padding:30px 0;background:#000}
     footer .wrap{max-width:900px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
     footer .fl{font-family:var(--mono);font-size:11px;letter-spacing:1px;color:var(--dimmer);display:flex;gap:16px;flex-wrap:wrap}
@@ -156,7 +160,7 @@
 
       <div class="feat"><div class="n">05</div><div>
         <h3>One login for the shop</h3>
-        <p>Priced by how many techs you run, not by the seat. Your guys pull from the same book you set up, so the price a customer hears is the same one no matter who's standing there.</p>
+        <p>Priced by how many trucks you run, not by the seat. Your guys pull from the same book you set up, so the price a customer hears is the same one no matter who's standing there.</p>
       </div></div>
 
       <div class="feat"><div class="n">06</div><div>
@@ -179,31 +183,29 @@
       <div class="price-grid">
         <div class="pc">
           <div class="tier">Solo</div>
-          <div class="amt">$45 <span>/ mo</span></div>
-          <div class="who">1 tech</div>
-          <div class="yr">or $450 a year</div>
+          <div class="amt">$30 <span>/ mo</span></div>
+          <div class="who">1 truck</div>
+          <div class="yr">or $300 a year</div>
         </div>
         <div class="pc feat-band">
           <div class="tier">Crew</div>
-          <div class="amt">$90 <span>/ mo</span></div>
-          <div class="who">2&ndash;5 techs</div>
-          <div class="yr">or $900 a year</div>
+          <div class="amt">$80 <span>/ mo</span></div>
+          <div class="who">2&ndash;5 trucks</div>
+          <div class="yr">or $800 a year</div>
         </div>
-        <div class="pc">
-          <div class="tier">Shop</div>
-          <div class="amt">$180 <span>/ mo</span></div>
-          <div class="who">6&ndash;12 techs</div>
-          <div class="yr">or $1,800 a year</div>
-        </div>
-        <div class="pc">
+        <div class="pc away">
           <div class="tier">Bigger</div>
-          <div class="amt">Call us</div>
-          <div class="who">13+ techs</div>
-          <div class="yr">Above twelve it's worth an actual conversation.</div>
+          <div class="amt"><a href="https://hifriendly.app">Friendly</a></div>
+          <div class="who">6 trucks and up</div>
+          <div class="yr">A different app of ours, and the right one at that size.</div>
         </div>
       </div>
 
-      <p class="note">Annual is ten months for twelve. You tell us your shop size when you sign up, and hiring inside your band doesn't change the bill. Stepping up from the $12.99 calculator swaps that subscription over, prorated &mdash; The Book replaces it rather than stacking on top of it.</p>
+      <p class="note">Annual is ten months for twelve. You tell us how many trucks you run when you sign up, and hiring inside your band doesn't change the bill. Stepping up from the $15 calculator swaps that subscription over, prorated &mdash; The Book replaces it rather than stacking on top of it.</p>
+
+      <h2 style="margin-top:44px">Past five trucks, we&rsquo;d rather send you somewhere else.</h2>
+      <p>At six trucks and up the pricebook is not what is slowing you down. It is the schedule, the dispatch, and the paper that comes back off the truck at the end of the day. A quoting tool will not fix any of that, and selling you a bigger one would just be us taking your money.</p>
+      <p><a href="https://hifriendly.app">Friendly</a> is the field-service app for that size of shop. It is ours as well, built out of the same plumbing company, so this is not a hand-off to a stranger. There is no larger Book waiting behind a phone call &mdash; we do not make one.</p>
     </section>
 
     <section>
@@ -217,13 +219,13 @@
             <tr><td>Profit Rhino &mdash; SmartPrice Starter</td><td>$35 / mo per tech, plus $299 setup</td><td>$140 / mo</td></tr>
             <tr><td>Profit Rhino &mdash; SmartPrice Pro</td><td>$55 / mo per tech, plus $1,499 implementation</td><td>$220 / mo</td></tr>
             <tr><td>The New Flat Rate</td><td>from $99 / mo, the rest quoted on a call</td><td>Not published</td></tr>
-            <tr class="us"><td>The Book</td><td>$90 / mo flat, 2&ndash;5 techs, no setup fee</td><td>$90 / mo</td></tr>
+            <tr class="us"><td>The Book</td><td>$80 / mo flat, 2&ndash;5 trucks, no setup fee</td><td>$80 / mo</td></tr>
           </tbody>
         </table>
       </div>
 
       <p>Per-tech pricing means growing costs you more for the same book &mdash; a book your shop typed in itself. Put a fourth guy on and the bill goes up again, for nothing you didn't already have.</p>
-      <p>The Book is $90 a month for that shop whether it's two guys or five. And the number is on this page, so you don't have to sit through a call to find out what it costs.</p>
+      <p>The Book is $80 a month for that shop whether it's two trucks or five. One truck is $30, which is less than a single seat of the cheapest per-tech book before its setup fee. And the number is on this page, so you don't have to sit through a call to find out what it costs.</p>
       <p class="note">Competitor prices as published on their own sites, checked August 2026. If any of them have changed, tell us and we'll fix this page.</p>
     </section>
 
@@ -231,7 +233,7 @@
       <h2>Open The Book.</h2>
       <p>Sign in, pick the band that matches your shop, and it is on for everyone using the login.</p>
       <a class="btn" href="https://dead-hand.app">Open The Book</a>
-      <p class="note" style="margin-top:18px">New to Dead Hand? <a href="/#get">Start with the calculator</a> at $12.99 and step up whenever you want &mdash; the swap is prorated, so nothing is wasted.</p>
+      <p class="note" style="margin-top:18px">New to Dead Hand? <a href="/#get">Start with the calculator</a> at $15 and step up whenever you want &mdash; the swap is prorated, so nothing is wasted.</p>
     </div>
 
     <section>
@@ -246,12 +248,12 @@
         <p>It's its own product on the same login. The calculator prices a job you're working out on the spot; The Book pulls a job you've already priced. Different job, different tool. Stepping up from the calculator replaces that subscription rather than adding to it, prorated, so you never pay twice.</p>
       </div>
       <div class="faq">
-        <h3>Is it priced per technician?</h3>
-        <p>No. Flat by shop size: $45 solo, $90 for two to five, $180 for six to twelve, and a conversation above thirteen. Adding a tech inside your band doesn't change the price.</p>
+        <h3>Is it priced per truck?</h3>
+        <p>No. Flat by shop size: $30 for one truck, $80 for two to five. Adding a tech inside your band doesn&rsquo;t change the price. Above five trucks we do not sell a bigger Book &mdash; that is what <a href="https://hifriendly.app">Friendly</a> is for.</p>
       </div>
       <div class="faq">
         <h3>Can my techs use the same book?</h3>
-        <p>Yes. One login for the shop, priced by the number of techs you run. Your crew pulls from the book you set up.</p>
+        <p>Yes. One login for the shop, priced by the number of trucks you run. Your crew pulls from the book you set up.</p>
       </div>
       <div class="faq">
         <h3>Does it produce an invoice?</h3>
