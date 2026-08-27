@@ -20,16 +20,16 @@
   <noscript><link rel="stylesheet" href="/fonts.css" /></noscript>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{--black:#0a0a0a;--card:#111214;--line:#2a2d31;--red:#c0392b;--white:#e8e8e8;--dim:#90969d;--dimmer:#5a5f66;--display:'Bebas Neue',sans-serif;--mono:'IBM Plex Mono',monospace;--body:'IBM Plex Sans',system-ui,sans-serif;--measure:720px}
+    :root{--black:#0a0a0a;--card:#111214;--line:#2a2d31;--red:#c0392b;--red-ink:#e05a48;--white:#e8e8e8;--dim:#90969d;--dimmer:#80868e;--display:'Bebas Neue',sans-serif;--mono:'IBM Plex Mono',monospace;--body:'IBM Plex Sans',system-ui,sans-serif;--measure:720px}
     body{background:var(--black);color:var(--white);font-family:var(--body);font-size:18px;line-height:1.75;-webkit-font-smoothing:antialiased}
     .wrap{max-width:var(--measure);margin:0 auto;padding:0 clamp(20px,5vw,28px)}
     header.top{border-bottom:1px solid var(--line);background:#000}
     header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;max-width:900px}
     .brand{font-family:var(--display);font-size:24px;letter-spacing:2px;color:#fff;text-decoration:none;display:flex;align-items:center;gap:7px}
-    .brand .star{color:var(--red);font-size:15px}
+    .brand .star{color:var(--red-ink);font-size:15px}
     .top nav a{font-family:var(--mono);font-size:12px;letter-spacing:1px;color:var(--dim);text-decoration:none;text-transform:uppercase}
     .top nav a:hover{color:#fff}
-    .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:block;margin:30px 0 10px}
+    .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--red-ink);display:block;margin:30px 0 10px}
     h1{font-family:var(--display);font-size:clamp(44px,9vw,82px);line-height:.95;letter-spacing:1px;color:#fff;margin-bottom:16px;text-wrap:balance}
     h2{font-family:var(--display);font-size:clamp(24px,3.6vw,34px);line-height:1.06;letter-spacing:1px;color:#fff;margin:46px 0 14px;text-wrap:balance}
     .standfirst{font-size:20px;color:var(--dim);line-height:1.6;margin-bottom:12px;border-left:3px solid var(--red);padding-left:20px}
@@ -40,7 +40,7 @@
     .say p{font-family:var(--display);font-size:clamp(22px,3.4vw,30px);letter-spacing:.5px;line-height:1.15;color:#fff;margin:0}
     .grabs{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin:26px 0}
     .grab{display:block;background:#111214;border:1px solid var(--line);border-radius:12px;padding:20px;text-decoration:none}
-    .grab:hover{border-color:var(--red)}
+    .grab:hover{border-color:var(--red-ink)}
     .grab .t{font-family:var(--display);font-size:22px;letter-spacing:1px;color:#fff;line-height:1.1}
     .grab .d{font-size:14px;color:var(--dim);margin-top:7px;line-height:1.5}
     .note{font-size:14px;color:var(--dimmer);line-height:1.6}
@@ -62,7 +62,7 @@
   </style>
 </head>
 <body>
-  <header class="top"><div class="wrap"><a class="brand" href="/"><span class="star">&#9733;</span> DEAD HAND</a><nav><a href="/">The App</a></nav></div></header>
+  <header class="top"><div class="wrap"><a class="brand" href="/"><span class="star" aria-hidden="true">&#9733;</span> DEAD HAND</a><nav><a href="/">The App</a></nav></div></header>
   <main class="wrap">
     <span class="eyebrow">For the Counter</span>
     <h1>Something worth handing over.</h1>
@@ -152,6 +152,6 @@
     </div>
 
   </main>
-  <footer><div class="wrap"><a class="brand" href="/" style="font-size:20px"><span class="star">&#9733;</span> DEAD HAND</a><div class="fl"><a href="/">The App</a><a href="/the-book/">The Book</a><a href="/the-markup/">The Markup</a><a href="/security/">Security</a><a href="/calculator-privacy/">Privacy</a><a href="/calculator-terms/">Terms</a><span>&copy; 2026 Friendly App LLC</span></div></div></footer>
+  <footer><div class="wrap"><a class="brand" href="/" style="font-size:20px"><span class="star" aria-hidden="true">&#9733;</span> DEAD HAND</a><div class="fl"><a href="/">The App</a><a href="/the-book/">The Book</a><a href="/the-markup/">The Markup</a><a href="/security/">Security</a><a href="/calculator-privacy/">Privacy</a><a href="/calculator-terms/">Terms</a><span>&copy; 2026 Friendly App LLC</span></div></div></footer>
 </body>
 </html>

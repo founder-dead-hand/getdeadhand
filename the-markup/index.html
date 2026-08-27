@@ -38,14 +38,14 @@
   </script>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{--black:#0a0a0a;--card:#111214;--line:#2a2d31;--red:#c0392b;--white:#e8e8e8;--dim:#90969d;--dimmer:#5a5f66;--display:'Bebas Neue',sans-serif;--mono:'IBM Plex Mono',monospace;--body:'IBM Plex Sans',system-ui,sans-serif;--measure:720px}
+    :root{--black:#0a0a0a;--card:#111214;--line:#2a2d31;--red:#c0392b;--red-ink:#e05a48;--white:#e8e8e8;--dim:#90969d;--dimmer:#80868e;--display:'Bebas Neue',sans-serif;--mono:'IBM Plex Mono',monospace;--body:'IBM Plex Sans',system-ui,sans-serif;--measure:720px}
     html{scroll-behavior:smooth}
     body{background:var(--black);color:var(--white);font-family:var(--body);font-size:18px;line-height:1.75;-webkit-font-smoothing:antialiased}
     .wrap{max-width:var(--measure);margin:0 auto;padding:0 clamp(20px,5vw,28px)}
     header.top{border-bottom:1px solid var(--line);background:#000}
     header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;max-width:900px}
     .brand{font-family:var(--display);font-size:24px;letter-spacing:2px;color:#fff;text-decoration:none;display:flex;align-items:center;gap:7px}
-    .brand .star{color:var(--red);font-size:15px}
+    .brand .star{color:var(--red-ink);font-size:15px}
     .top nav{display:flex;gap:18px}
     .top nav a{font-family:var(--mono);font-size:12px;letter-spacing:1px;color:var(--dim);text-decoration:none;text-transform:uppercase}
     .top nav a:hover{color:#fff}
@@ -59,7 +59,7 @@
     .list a{display:block;text-decoration:none;padding:22px 0;border-top:1px solid var(--line)}
     .list a:last-child{border-bottom:1px solid var(--line)}
     .list a:hover .rt{color:#fff}
-    .list .tag{font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--red);display:block;margin-bottom:8px}
+    .list .tag{font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--red-ink);display:block;margin-bottom:8px}
     .list .rt{font-family:var(--display);font-size:clamp(26px,4vw,34px);letter-spacing:1px;line-height:1.05;color:var(--white);transition:color .15s}
     .list .rd{font-size:15px;color:var(--dim);margin-top:6px;line-height:1.5}
     .cta{background:linear-gradient(180deg,#141619,#0d0e10);border:1px solid var(--line);border-radius:14px;padding:34px 28px;margin:52px 0;text-align:center}
@@ -73,7 +73,7 @@
   </style>
 </head>
 <body>
-  <header class="top"><div class="wrap"><a class="brand" href="/"><span class="star">&#9733;</span> DEAD HAND</a><nav><a href="/">The App</a><a href="/the-book/">The Book</a></nav></div></header>
+  <header class="top"><div class="wrap"><a class="brand" href="/"><span class="star" aria-hidden="true">&#9733;</span> DEAD HAND</a><nav><a href="/">The App</a><a href="/the-book/">The Book</a></nav></div></header>
   <main class="wrap">
     <div class="crumb"><a href="/">Dead Hand</a> &nbsp;/&nbsp; The Markup</div>
     <h1>The Markup</h1>
@@ -124,6 +124,6 @@
       <a href="https://dead-hand.app">Get Dead Hand</a>
     </div>
   </main>
-  <footer><div class="wrap"><a class="brand" href="/" style="font-size:20px"><span class="star">&#9733;</span> DEAD HAND</a><div class="fl"><a href="/">The App</a><a href="/the-book/">The Book</a><a href="/the-markup/">The Markup</a><a href="/security/">Security</a><a href="/calculator-privacy/">Privacy</a><a href="/calculator-terms/">Terms</a><span>&copy; 2026 Friendly App LLC</span></div></div></footer>
+  <footer><div class="wrap"><a class="brand" href="/" style="font-size:20px"><span class="star" aria-hidden="true">&#9733;</span> DEAD HAND</a><div class="fl"><a href="/">The App</a><a href="/the-book/">The Book</a><a href="/the-markup/">The Markup</a><a href="/security/">Security</a><a href="/calculator-privacy/">Privacy</a><a href="/calculator-terms/">Terms</a><span>&copy; 2026 Friendly App LLC</span></div></div></footer>
 </body>
 </html>

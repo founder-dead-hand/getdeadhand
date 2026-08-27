@@ -41,14 +41,14 @@
   </script>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{--black:#0a0a0a;--card:#111214;--line:#2a2d31;--red:#c0392b;--white:#e8e8e8;--dim:#90969d;--dimmer:#5a5f66;--display:'Bebas Neue',sans-serif;--mono:'IBM Plex Mono',monospace;--body:'IBM Plex Sans',system-ui,sans-serif;--measure:680px}
+    :root{--black:#0a0a0a;--card:#111214;--line:#2a2d31;--red:#c0392b;--red-ink:#e05a48;--white:#e8e8e8;--dim:#90969d;--dimmer:#80868e;--display:'Bebas Neue',sans-serif;--mono:'IBM Plex Mono',monospace;--body:'IBM Plex Sans',system-ui,sans-serif;--measure:680px}
     html{scroll-behavior:smooth}
     body{background:var(--black);color:var(--white);font-family:var(--body);font-size:18px;line-height:1.75;-webkit-font-smoothing:antialiased}
     .wrap{max-width:var(--measure);margin:0 auto;padding:0 clamp(20px,5vw,28px)}
     header.top{border-bottom:1px solid var(--line);background:#000}
     header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;max-width:900px}
     .brand{font-family:var(--display);font-size:24px;letter-spacing:2px;color:#fff;text-decoration:none;display:flex;align-items:center;gap:7px}
-    .brand .star{color:var(--red);font-size:15px}
+    .brand .star{color:var(--red-ink);font-size:15px}
     .top nav{display:flex;gap:18px}
     .top nav a{font-family:var(--mono);font-size:12px;letter-spacing:1px;color:var(--dim);text-decoration:none;text-transform:uppercase}.top nav a:hover{color:#fff}
     .crumb{font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--dimmer);margin:28px 0 14px}
@@ -60,18 +60,18 @@
     article h3{font-family:var(--body);font-weight:600;font-size:20px;color:#fff;margin:32px 0 10px}
     article p{margin-bottom:18px;color:var(--white)}article p.mut{color:var(--dim)}
     article strong{color:#fff;font-weight:600}
-    article a.inline{color:#e0745f;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--red)}article a.inline:hover{color:#fff}
+    article a.inline{color:#e0745f;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--red-ink)}article a.inline:hover{color:#fff}
     .callout{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--red);border-radius:10px;padding:22px 24px;margin:28px 0}
-    .callout .lbl{font-family:var(--mono);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--red);display:block;margin-bottom:10px}.callout p:last-child{margin-bottom:0}
+    .callout .lbl{font-family:var(--mono);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--red-ink);display:block;margin-bottom:10px}.callout p:last-child{margin-bottom:0}
     .mathcard{background:linear-gradient(180deg,#141619,#0f1113);border:1px solid var(--line);border-radius:12px;padding:24px;margin:28px 0;font-family:var(--mono);font-size:15px;line-height:1.9}
     .mathcard .row{display:flex;justify-content:space-between;gap:16px;padding:6px 0;border-bottom:1px solid var(--line);color:var(--dim)}.mathcard .row:last-child{border-bottom:none}
-    .mathcard .row b{color:#fff;font-weight:500;font-variant-numeric:tabular-nums}.mathcard .row.tot b{color:var(--red)}
+    .mathcard .row b{color:#fff;font-weight:500;font-variant-numeric:tabular-nums}.mathcard .row.tot b{color:var(--red-ink)}
     .pull{font-family:var(--display);font-size:clamp(26px,4vw,36px);line-height:1.1;letter-spacing:.5px;color:#fff;margin:40px 0;padding-left:20px;border-left:3px solid var(--red)}
     .faqs{border-top:1px solid var(--line);margin-top:52px;padding-top:8px}.faq{border-bottom:1px solid var(--line);padding:20px 0}.faq h3{font-family:var(--body);font-size:17px;font-weight:600;color:var(--white);margin:0 0 6px;line-height:1.35}.faq p{color:var(--dim);font-size:16px;margin:0;line-height:1.6}.cta{background:linear-gradient(180deg,#141619,#0d0e10);border:1px solid var(--line);border-radius:14px;padding:34px 28px;margin:52px 0;text-align:center}
     .cta h2{margin:0 0 10px}.cta p{color:var(--dim);margin-bottom:22px}
     .cta a{display:inline-block;background:var(--red);color:#fff;font-family:var(--display);font-size:20px;letter-spacing:3px;padding:14px 34px;text-decoration:none;border-radius:2px}.cta a:hover{filter:brightness(1.08)}
     .related{border-top:1px solid var(--line);margin-top:56px;padding-top:32px}
-    .related .lbl{font-family:var(--mono);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:18px;display:block}
+    .related .lbl{font-family:var(--mono);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--red-ink);margin-bottom:18px;display:block}
     .related a{display:block;text-decoration:none;padding:16px 0;border-bottom:1px solid var(--line)}.related a:hover .rt{color:#fff}
     .related .rt{font-family:var(--display);font-size:24px;letter-spacing:1px;color:var(--white);transition:color .15s}.related .rd{font-size:14px;color:var(--dim);margin-top:2px}
     footer{border-top:1px solid var(--line);margin-top:60px;padding:30px 0;background:#000}
@@ -81,7 +81,7 @@
   </style>
 </head>
 <body>
-  <header class="top"><div class="wrap"><a class="brand" href="/"><span class="star">&#9733;</span> DEAD HAND</a><nav><a href="/">The App</a><a href="/the-book/">The Book</a></nav></div></header>
+  <header class="top"><div class="wrap"><a class="brand" href="/"><span class="star" aria-hidden="true">&#9733;</span> DEAD HAND</a><nav><a href="/">The App</a><a href="/the-book/">The Book</a></nav></div></header>
   <main class="wrap">
     <div class="crumb"><a href="/">Dead Hand</a> &nbsp;/&nbsp; <a href="/the-markup/">The Markup</a> &nbsp;/&nbsp; Pricing a Job</div>
     <h1>How to price a trade job without losing money</h1>
@@ -153,6 +153,6 @@
       </div>
     </article>
   </main>
-  <footer><div class="wrap"><a class="brand" href="/" style="font-size:20px"><span class="star">&#9733;</span> DEAD HAND</a><div class="fl"><a href="/">The App</a><a href="/the-book/">The Book</a><a href="/the-markup/">The Markup</a><a href="/security/">Security</a><a href="/calculator-privacy/">Privacy</a><a href="/calculator-terms/">Terms</a><span>&copy; 2026 Friendly App LLC</span></div></div></footer>
+  <footer><div class="wrap"><a class="brand" href="/" style="font-size:20px"><span class="star" aria-hidden="true">&#9733;</span> DEAD HAND</a><div class="fl"><a href="/">The App</a><a href="/the-book/">The Book</a><a href="/the-markup/">The Markup</a><a href="/security/">Security</a><a href="/calculator-privacy/">Privacy</a><a href="/calculator-terms/">Terms</a><span>&copy; 2026 Friendly App LLC</span></div></div></footer>
 </body>
 </html>
