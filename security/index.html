@@ -81,8 +81,9 @@
       <li><strong>Sign-in is passwordless.</strong> We email you a link. There is no password to guess, reuse, leak, or for us to store badly.</li>
       <li><strong>Every table is row-level secured.</strong> A signed-in account can only ever read and write its own rows. Your rates and your estimates are not reachable from another account, and that is enforced by the database rather than by application code remembering to check.</li>
       <li><strong>Card details never reach us.</strong> Payment happens on Stripe's own checkout. We hold a Stripe customer ID and a subscription status, and no card number has ever touched our systems.</li>
-      <li><strong>The owner PIN is hashed on your device</strong> before it is sent, so the PIN itself never leaves your phone and we could not tell you what it is.</li>
+      <li><strong>The owner PIN is hashed on your device before it is stored.</strong> What sits in the database is the hash, never the PIN itself, so we could not tell you what yours is even if you asked. It is a guardrail that stops a tech overwriting a price on a shared login &mdash; not a second login, and not built to hold off someone determined.</li>
       <li><strong>The app makes no third-party requests.</strong> No analytics, no trackers, no advertising, no session recording. Nothing in the app phones anywhere except our own database and Stripe.</li>
+      <li><strong>This website is not the app, and it is not as clean.</strong> getdeadhand.com sits behind Cloudflare, and Cloudflare&rsquo;s own page counter loads on it &mdash; including on this page. It is a hosting setting rather than something we built in, it sets no cookie and it does not follow you anywhere else, but the line above is about the app and we would rather say that out loud than let it cover both.</li>
       <li><strong>Everything is served over HTTPS</strong> with HSTS, a tight Content Security Policy, and the usual frame, sniffing and referrer protections.</li>
     </ul>
 
