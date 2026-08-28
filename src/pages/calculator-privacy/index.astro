@@ -1,0 +1,104 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import pageStyle from "../../styles/pages/calculator-privacy.css?raw";
+const jsonld = [];
+const meta = {
+  title: "Dead Hand &mdash; Privacy Policy",
+  description: "What Dead Hand stores under your account, what it never collects, who processes it, and how to have all of it deleted.",
+  robots: "index, follow",
+  canonical: "https://getdeadhand.com/calculator-privacy/",
+};
+---
+
+<Layout
+  {...meta}
+  jsonld={jsonld}
+  pageStyle={pageStyle}
+>
+<div class="content">
+    <span class="label">Legal &middot; Dead Hand</span>
+    <h1>Privacy Policy</h1>
+    <span class="updated">Last updated: August 2026</span>
+
+    <p>This policy covers <strong>Dead Hand</strong>, the field-quoting web app at dead-hand.app, and the website at getdeadhand.com. Both are run by Friendly App LLC, dba Dead Hand.</p>
+
+    <p>Dead Hand is a paid tool for trade contractors. You sign in, and your rates and your saved work are stored under your account so they are there on whatever device you pick up next. This is what that means for your information, and for the information of the customers you quote.</p>
+
+    <h2>What We Collect</h2>
+
+    <p><strong>Your account.</strong> Your email address. Signing in is passwordless &mdash; we email you a link &mdash; so there is no password for us to store. If you fill them in, we also keep your business name, your name, and a business email you want estimates to come from.</p>
+
+    <p><strong>Your pricing setup.</strong> Your labor rates, your material margin tiers, and your overhead figure. These are the numbers the calculator runs on.</p>
+
+    <p><strong>The work you save.</strong> Saved estimates: the customer or job name you type, the hours, the labor type, the material lines and their costs, any fees, and the total. If you have The Book, the jobs you build in it &mdash; their names, hours and line items. Anything you type into a saved estimate or a Book job is stored under your account.</p>
+
+    <p><strong>Billing.</strong> We use Stripe. When you subscribe, Stripe creates a customer record using your email address, and we store the Stripe customer and subscription IDs, your plan, its status, and when the current period ends. <strong>Your card details go to Stripe directly and never reach us.</strong> We never see or store a card number.</p>
+
+    <p><strong>A device count, if you have The Book.</strong> The Book is priced by shop size, so the app keeps a rough count of how many devices use your login. Each device makes up a random identifier the first time it is used and keeps it in that browser. Alongside it we store the device's operating system family &mdash; iOS, Android, Mac, Windows or Other &mdash; and when it was first and last seen. That is the entire record. It is not a hardware fingerprint, we have no idea whose device it is, and it is used for one thing: showing you a nudge if your shop looks bigger than the plan you picked. It never stops anyone from working.</p>
+
+    <p><strong>On getdeadhand.com.</strong> If you leave your email on a sign-up form, we keep that email so we can write to you when the thing you asked about opens. The site is served through Cloudflare, which collects anonymous page-view counts on our behalf.</p>
+
+    <h2>What We Don't Collect</h2>
+
+    <ul>
+      <li>No analytics, tracking or telemetry inside the app. The app makes no third-party requests at all.</li>
+      <li>No advertising and no ad networks. We do not sell or rent your information to anyone.</li>
+      <li>No card numbers, bank details or tax information.</li>
+      <li>No location, contacts, camera, photos or microphone.</li>
+      <li>No reading of your quotes for our own ends. We do not mine your pricing.</li>
+    </ul>
+
+    <h2>Your Customers' Information</h2>
+
+    <p>When you save an estimate you usually type a customer or job name. That is your customer's information, and you are the one who decided to put it there. We store it under your account, we use it for nothing except showing you your own history, and we never contact your customers.</p>
+
+    <p>When you email an estimate it goes out through your own phone or computer's mail app. Dead Hand does not send it. We do not see who you sent it to and we do not keep their address.</p>
+
+    <p>What you type about your customers is yours to be responsible for. If one of them asks you to take their details out of your records, you can delete the estimate yourself, or ask us and we will.</p>
+
+    <h2>Who Else Touches It</h2>
+
+    <p>The list is short, so here it is by name:</p>
+
+    <ul>
+      <li><strong>Supabase</strong> &mdash; the database and the sign-in system. Your account, rates, estimates, Book jobs and your parts list live here.</li>
+      <li><strong>Netlify</strong> &mdash; hosting for the site and the app, and the sign-up forms on the site.</li>
+      <li><strong>Stripe</strong> &mdash; payments and subscriptions.</li>
+      <li><strong>Cloudflare</strong> &mdash; serves getdeadhand.com and counts its page views.</li>
+    </ul>
+
+    <p>That is all of them. We do not hand your information to anyone else, except where the law requires it, or if the business were ever sold or transferred &mdash; in which case this policy goes with it and you would be told.</p>
+
+    <h2>How It's Kept</h2>
+
+    <p>Everything travels over an encrypted connection. Every table is protected by row-level security, so a signed-in account can only ever read and write its own rows &mdash; your rates and your estimates are not reachable by another account. If you set an owner PIN for The Book, it is hashed on your device before it is sent, so we never hold the PIN itself.</p>
+
+    <p>The app also keeps a copy of your rates and recent work in your browser's own storage, so it still works in a basement with no signal. Clearing your browser data clears that copy.</p>
+
+    <h2>How Long We Keep It</h2>
+
+    <p>Your account and everything in it stays until you ask us to remove it. You can delete individual estimates yourself. If you want the whole account and everything under it gone, email <a href="mailto:founder@getdeadhand.com">founder@getdeadhand.com</a> and we will do it and tell you when it is done.</p>
+
+    <p>Cancelling a subscription does not delete anything. You keep the account and the data; you lose access to the paid screens. Say so if you want it deleted as well.</p>
+
+    <p>We keep billing records after deletion for as long as tax and accounting rules require, and backups roll off on their own schedule, so a copy can persist for a short period after you have deleted something.</p>
+
+    <h2>Your Rights</h2>
+
+    <p>Depending on where you live you may have the right to see what we hold about you, get a copy of it, correct it, or have it deleted. We will honor any of those for anyone who asks, wherever you live, because it is a short list and it is your information. Email <a href="mailto:founder@getdeadhand.com">founder@getdeadhand.com</a>.</p>
+
+    <p>We do not sell personal information, and we do not share it for cross-context behavioral advertising.</p>
+
+    <h2>Children</h2>
+
+    <p>Dead Hand is a tool for running a business and is not meant for anyone under 16. We do not knowingly collect anything from anyone under 16.</p>
+
+    <h2>Changes</h2>
+
+    <p>If this policy changes in a way that matters we will change the date at the top, and for anything significant we will email the address on your account.</p>
+
+    <h2>Contact</h2>
+
+    <p>Friendly App LLC, dba Dead Hand<br /><a href="mailto:founder@getdeadhand.com">founder@getdeadhand.com</a></p>
+  </div>
+</Layout>

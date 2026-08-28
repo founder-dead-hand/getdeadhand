@@ -1,0 +1,99 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import pageStyle from "../../styles/pages/calculator-terms.css?raw";
+const jsonld = [];
+const meta = {
+  title: "Dead Hand &mdash; Terms of Service",
+  description: "The terms for using Dead Hand: your account, subscriptions and auto-renewal, cancelling, and the limits of what the tool does.",
+  robots: "index, follow",
+  canonical: "https://getdeadhand.com/calculator-terms/",
+};
+---
+
+<Layout
+  {...meta}
+  jsonld={jsonld}
+  pageStyle={pageStyle}
+>
+<div class="content">
+    <span class="label">Legal &middot; Dead Hand</span>
+    <h1>Terms of Service</h1>
+    <span class="updated">Last updated: August 2026</span>
+
+    <p>These terms cover your use of <strong>Dead Hand</strong> &mdash; the web app at dead-hand.app and the site at getdeadhand.com &mdash; operated by Friendly App LLC, dba Dead Hand. Using Dead Hand means you accept them.</p>
+
+    <h2>Your Account</h2>
+
+    <p>You need an account to use the app. Signing in is passwordless: we email you a link. Keep that email address secure, because anyone who can read it can get into your account. One account is meant for one shop, and you are responsible for what happens under yours.</p>
+
+    <p>You need to be 16 or older and able to enter into a contract.</p>
+
+    <h2>What It Does, And What It Doesn't</h2>
+
+    <p>Dead Hand does arithmetic on numbers you give it. You set your labor rates, your material margins and your overhead; it applies them and produces a price.</p>
+
+    <p><strong>It produces an estimate, not an invoice.</strong> It is not accounting software, it does not collect money, and it does not track what you are owed. Whatever you bill on stays in whatever system you already bill from.</p>
+
+    <p><strong>The numbers are yours.</strong> We do not supply prices, rates, or a parts catalog, and we do not intend to. Every figure in your account is one you typed. You are responsible for whether your prices are right for your market, your costs, your licensing and your local law, including anything you are required to disclose to a customer. We do not check your math against anything, because there is nothing to check it against except your own numbers.</p>
+
+    <p>If a number comes out wrong because a number went in wrong, that is not something we can carry for you.</p>
+
+    <h2>Paying For It</h2>
+
+    <p>The calculator is <strong>$15 a month or $150 a year</strong>. Prices are in US dollars and do not include sales tax where it applies.</p>
+
+    <p><strong>Subscriptions renew automatically</strong> &mdash; monthly plans on the same day each month, annual plans on the same date each year &mdash; at the price then in effect, until you cancel. Billing runs through Stripe and is charged to the payment method you give them.</p>
+
+    <p>If we change the price, we will tell you by email before it takes effect on your account, and you can cancel before it does.</p>
+
+    <h2>Cancelling</h2>
+
+    <p>Cancel any time from inside the app. The button is in your account settings and it takes you straight to the billing portal. You do not have to call anyone, email anyone, or explain yourself.</p>
+
+    <p>Cancelling stops the next charge. It does not refund the period you have already paid for, and you keep access until that period ends. We do not do partial refunds as a rule, but if something has genuinely gone wrong, email us &mdash; we would rather sort it out than argue about it.</p>
+
+    <h2>The Book</h2>
+
+    <p>The Book is a separate, higher tier priced by the size of your shop: <strong>$30 a month for one truck and $80 for two to five</strong>. Annual is ten months for twelve. Above five trucks we do not sell a larger Book &mdash; we point you to Friendly, our field-service app, at hifriendly.app. Everything above about auto-renewal and cancelling applies to it in the same way.</p>
+
+    <p>Stepping up from the calculator <strong>replaces</strong> that subscription rather than adding to it. The old one is cancelled and prorated automatically, so you are never billed for both at once.</p>
+
+    <h2>What You Put In</h2>
+
+    <p>Your rates, your estimates, your pricebook and your Book jobs are yours. We claim no ownership of them and we do not use them for anything except running the service for you.</p>
+
+    <p>You are responsible for having the right to enter whatever you enter, including any details about your own customers. Do not put anything into Dead Hand that you are not allowed to hold.</p>
+
+    <h2>Using It Sensibly</h2>
+
+    <p>Do not resell or sublicense access, share one login across shops that should be paying separately, try to get into other accounts, scrape the service, or use it for anything illegal.</p>
+
+    <p>The Book counts devices and may nudge you if your shop looks bigger than the plan you picked. That nudge does not lock anything, but consistently under-declaring your shop size is a reason we could ask you to move to the right plan.</p>
+
+    <h2>It's Software, So</h2>
+
+    <p>We work to keep it up and correct, but we do not promise it will never be down, never lose a byte, or never have a bug. It is provided as it is, without warranties of any kind, as far as the law allows.</p>
+
+    <p>Keep your own record of anything you cannot afford to lose. The app copies and exports estimates for exactly that reason.</p>
+
+    <p><strong>Our liability to you is limited to what you paid us in the twelve months before whatever went wrong.</strong> We are not liable for lost profits, lost jobs, or a price you quoted and had to honor. Some states do not allow limits like that, and in those states they apply as far as the state allows.</p>
+
+    <h2>Ending It</h2>
+
+    <p>You can stop using Dead Hand whenever you like. We can suspend or close an account that is breaking these terms or not paying, and we will tell you why. If we ever shut the service down, we will give notice and a way to get your data out.</p>
+
+    <h2>The Legal Bit</h2>
+
+    <p>These terms are governed by the laws of the Commonwealth of Pennsylvania, without regard to conflict-of-law rules, and any dispute goes to the state or federal courts of Pennsylvania.</p>
+
+    <p>If part of these terms turns out to be unenforceable, the rest still stands.</p>
+
+    <h2>Changes</h2>
+
+    <p>We may update these terms. If a change matters we will change the date at the top and email the address on your account. Carrying on using Dead Hand after that means you accept the new version.</p>
+
+    <h2>Contact</h2>
+
+    <p>Friendly App LLC, dba Dead Hand<br /><a href="mailto:founder@getdeadhand.com">founder@getdeadhand.com</a></p>
+  </div>
+</Layout>

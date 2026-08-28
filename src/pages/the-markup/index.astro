@@ -1,0 +1,89 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import pageStyle from "../../styles/pages/the-markup.css?raw";
+const jsonld = [
+String.raw`{
+    "@context":"https://schema.org","@type":"Blog",
+    "name":"The Markup",
+    "description":"Field notes on pricing, estimating, and presenting quotes for trade shops.",
+    "url":"https://getdeadhand.com/the-markup/",
+    "publisher":{"@type":"Organization","name":"Dead Hand","alternateName":"Friendly App LLC"}
+  }`,
+String.raw`{
+    "@context":"https://schema.org","@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Dead Hand","item":"https://getdeadhand.com/"},
+      {"@type":"ListItem","position":2,"name":"The Markup","item":"https://getdeadhand.com/the-markup/"}
+    ]
+  }`,
+];
+const meta = {
+  title: "The Markup &mdash; Pricing &amp; Estimating Field Notes | Dead Hand",
+  description: "The Markup: field notes on pricing, estimating, and presenting quotes for trade shops. Plain math and straight talk from the people who built Dead Hand.",
+  robots: "index, follow",
+  canonical: "https://getdeadhand.com/the-markup/",
+  ogTitle: "The Markup &mdash; Pricing &amp; Estimating Field Notes",
+  ogDescription: "Plain math and straight talk on pricing, estimating, and presenting quotes for trade shops.",
+  ogType: "website",
+  ogUrl: "https://getdeadhand.com/the-markup/",
+  ogImage: "https://getdeadhand.com/deadhand-share.png",
+  twitterCard: "summary_large_image",
+};
+---
+
+<Layout
+  {...meta}
+  jsonld={jsonld}
+  pageStyle={pageStyle}
+>
+<main class="wrap">
+    <div class="crumb"><a href="/">Dead Hand</a> &nbsp;/&nbsp; The Markup</div>
+    <h1>The Markup</h1>
+    <p class="standfirst">Field notes on pricing, estimating, and presenting quotes &mdash; the part of the trade nobody teaches you.</p>
+    <p class="intro">Most shops don't lose money because they can't do the work. They lose it at the kitchen table, in the thirty seconds it takes to say a number. <strong>The Markup is where we work that part out in plain math</strong> &mdash; what to charge, how to build an estimate, and how to hand it over so the customer says yes. No fluff, no filler. Just the numbers, done right.</p>
+
+    <div class="list">
+      <a href="/the-markup/price-a-job/">
+        <span class="tag">Start Here</span>
+        <div class="rt">How to Price a Trade Job Without Losing Money</div>
+        <div class="rd">The three numbers behind every honest quote &mdash; labor, materials, and the overhead most shops forget to charge for.</div>
+      </a>
+      <a href="/the-markup/margin-vs-markup/">
+        <span class="tag">Pricing</span>
+        <div class="rt">Margin vs. Markup, in Plain English</div>
+        <div class="rd">They sound the same. They're not the same number. The gap is coming straight out of your pocket.</div>
+      </a>
+      <a href="/the-markup/shop-rate/">
+        <span class="tag">Pricing</span>
+        <div class="rt">What Should My Shop Rate Actually Be?</div>
+        <div class="rd">Build a billable hourly rate from your own overhead, not the guy across town's guess at his.</div>
+      </a>
+      <a href="/the-markup/flat-rate-vs-hourly/">
+        <span class="tag">Pricing</span>
+        <div class="rt">Flat Rate vs. Time and Materials</div>
+        <div class="rd">Which one wins you more jobs and protects more margin &mdash; and why flat rate is really just T&amp;M with the math done early.</div>
+      </a>
+      <a href="/the-markup/write-an-estimate/">
+        <span class="tag">Estimating</span>
+        <div class="rt">How to Write an Estimate That Wins the Job</div>
+        <div class="rd">What goes on the page, how much to show, and the details that make a customer trust your number over the next guy's.</div>
+      </a>
+      <a href="/the-markup/present-your-price/">
+        <span class="tag">Presentation</span>
+        <div class="rt">How to Present Your Price So They Say Yes</div>
+        <div class="rd">The number matters less than the moment you say it. How to hand over a price without flinching &mdash; or discounting.</div>
+      </a>
+      <a href="/the-markup/water-heater-install-cost/">
+        <span class="tag">Worked Example</span>
+        <div class="rt">What to Charge to Install a Water Heater</div>
+        <div class="rd">Real 2026 price ranges, what actually drives the number, and how to quote one in seconds without leaving money on the table.</div>
+      </a>
+    </div>
+
+    <div class="cta">
+      <h2>The tool behind the math.</h2>
+      <p>Set your rates, margin, and overhead once. Every job after that, the right number comes out on its own.</p>
+      <a href="https://dead-hand.app">Get Dead Hand</a>
+    </div>
+  </main>
+</Layout>

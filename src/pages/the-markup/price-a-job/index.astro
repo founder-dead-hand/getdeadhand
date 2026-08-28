@@ -1,0 +1,113 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import pageStyle from "../../../styles/pages/the-markup-price-a-job.css?raw";
+const jsonld = [
+String.raw`{
+    "@context":"https://schema.org","@type":"Article",
+    "headline":"How to Price a Trade Job Without Losing Money",
+    "description":"The real math behind labor, materials, and overhead, and the margin-vs-markup mistake that quietly drains most trade shops.",
+    "image":"https://getdeadhand.com/deadhand-share.png",
+    "author":{"@type":"Organization","name":"Dead Hand"},
+    "publisher":{"@type":"Organization","name":"Dead Hand","alternateName":"Friendly App LLC"},
+    "mainEntityOfPage":"https://getdeadhand.com/the-markup/price-a-job/"
+  }`,
+String.raw`{
+    "@context":"https://schema.org","@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Dead Hand","item":"https://getdeadhand.com/"},
+      {"@type":"ListItem","position":2,"name":"The Markup","item":"https://getdeadhand.com/the-markup/"},
+      {"@type":"ListItem","position":3,"name":"How to Price a Trade Job","item":"https://getdeadhand.com/the-markup/price-a-job/"}
+    ]
+  }`,
+];
+const meta = {
+  title: "How to Price a Trade Job Without Losing Money",
+  description: "How to price a trade job without losing money: the real math behind labor, materials and overhead, and the markup mistake that drains most shops.",
+  robots: "index, follow",
+  canonical: "https://getdeadhand.com/the-markup/price-a-job/",
+  ogTitle: "How to Price a Trade Job Without Losing Money",
+  ogDescription: "Labor, materials, overhead, and the margin-vs-markup mistake that drains most shops &mdash; the real math, worked out.",
+  ogType: "article",
+  ogUrl: "https://getdeadhand.com/the-markup/price-a-job/",
+  ogImage: "https://getdeadhand.com/deadhand-share.png",
+  twitterCard: "summary_large_image",
+};
+---
+
+<Layout
+  {...meta}
+  jsonld={jsonld}
+  pageStyle={pageStyle}
+>
+<main class="wrap">
+    <div class="crumb"><a href="/">Dead Hand</a> &nbsp;/&nbsp; <a href="/the-markup/">The Markup</a> &nbsp;/&nbsp; Pricing a Job</div>
+    <h1>How to price a trade job without losing money</h1>
+    <p class="standfirst">Most shops don't lose money on the jobs they bid too low. They lose it on the jobs they thought they bid right &mdash; because one number never made it into the quote.</p>
+    <p class="byline">The Markup &middot; Dead Hand</p>
+    <article>
+      <p>You're standing at the kitchen table. The customer wants a number. You run it in your head &mdash; a few hours of labor, a couple hundred in parts, round it up so it feels fair &mdash; and you say it out loud. It sounds right. It even <em>is</em> right, on the parts of the job you can see.</p>
+      <p>The trouble is the part you can't see. There's a whole layer of cost sitting underneath every job that never shows up on the invoice, and if it's not baked into your price, you're paying it out of your own pocket on every single call. Here's the real math, in the order it actually matters.</p>
+
+      <h2>The three numbers that decide your price</h2>
+      <p>Every honest quote is built from three things, not two. Most people price on the first two and forget the third &mdash; and the third is the one that keeps the lights on.</p>
+      <p><strong>Labor</strong> is your time. <strong>Materials</strong> are your parts. <strong>Overhead</strong> is everything it costs to be a business that can show up at all &mdash; the truck, the insurance, the phone, the software, the fuel, the hours you spend quoting and invoicing instead of turning wrenches. Labor and materials are obvious because you can point at them. Overhead is invisible, which is exactly why it's the one that sinks shops.</p>
+
+      <h2>Overhead: the number that quietly drains you</h2>
+      <p>Add up what it costs to run your operation for a year &mdash; truck payment and gas, tools, insurance, phone, licensing, accounting, the field-service or quoting software you use, and the unpaid hours you spend on the phone and at the desk. Divide that by the number of hours you actually bill out in a year. That's your <strong>overhead per hour.</strong></p>
+      <p class="mut">Run it honestly and most one- to three-truck shops land somewhere between $80 and $150 an hour &mdash; before they've paid themselves a single dollar of wage or profit. That's not the number you charge. That's the number you have to <em>cover</em> before you've earned anything. There's a full walkthrough in <a class="inline" href="/the-markup/shop-rate/">what your shop rate should actually be</a>.</p>
+
+      <div class="callout">
+        <span class="lbl">The rule</span>
+        <p>Your billable rate has to cover, in order: your labor cost, your overhead per hour, and then your profit. If you set your rate by matching the guy across town, you've skipped straight to the end and hoped the middle works out. It usually doesn't.</p>
+      </div>
+
+      <h2>Margin vs. markup: the mistake that costs the most</h2>
+      <p>This one is small, it's boring, and it's probably costing you more than any bid you've ever lost. Markup and margin are not the same number, and shops confuse them constantly.</p>
+      <p><strong>Markup</strong> is what you add on top of your cost. <strong>Margin</strong> is how much of the final price is actually profit. If a part costs you $100 and you add 40%, you charge $140 &mdash; that's a 40% markup. But your <em>margin</em> on that sale isn't 40%. The $40 of profit is only 28.6% of the $140 you charged.</p>
+
+      <div class="mathcard">
+        <div class="row"><span>Part cost</span><b>$100.00</b></div>
+        <div class="row"><span>+ 40% markup</span><b>$40.00</b></div>
+        <div class="row"><span>Price charged</span><b>$140.00</b></div>
+        <div class="row tot"><span>Actual margin</span><b>28.6%</b></div>
+      </div>
+
+      <p>If you need a real 40% margin &mdash; meaning 40% of the ticket is profit &mdash; you don't add 40%. You divide your cost by 0.60. That $100 part has to bill at <strong>$166.67</strong>, not $140. Price the whole year on a 40% markup while you thought you were making 40% margin, and you've handed back more than eleven points of profit on every part you've touched. We break that down in <a class="inline" href="/the-markup/margin-vs-markup/">margin vs. markup, in plain English</a>.</p>
+
+      <p class="pull">Busy and broke is almost always a margin problem, not a volume problem.</p>
+
+      <h2>Your hourly rate, built from the bottom up</h2>
+      <p>Now the labor number makes sense. Start from your labor cost &mdash; what an hour of your (or your tech's) time actually costs you. Add your overhead per hour. Then add the profit margin you need the business to make. That stack &mdash; cost, then overhead, then profit &mdash; is your billable rate. Not the other guy's rate. Yours.</p>
+      <p>A lot of shops also split the first hour from the rest: a higher service-call rate to get the truck to the door, then a continuous rate for the hours after. That's fine &mdash; as long as the overhead is riding inside every one of those hours.</p>
+
+      <h2>Put it together on one job</h2>
+      <p>Say it's a three-hour job. Your billable rate is $170 an hour with a $190 first-hour service rate, and you've got $280 in parts you need a 40% margin on.</p>
+      <div class="mathcard">
+        <div class="row"><span>Labor &mdash; 1 hr @ $190 + 2 hrs @ $170</span><b>$530.00</b></div>
+        <div class="row"><span>Parts &mdash; $280 at 40% margin ($280 / 0.60)</span><b>$466.67</b></div>
+        <div class="row tot"><span>Quote</span><b>$996.67</b></div>
+      </div>
+      <p>Quoted in your head at the kitchen table, that same job becomes "call it nine hundred" &mdash; and you just gave away a hundred bucks and most of your parts margin because the math was faster than you were. The number isn't hard. It's just hard to do <em>right</em>, on the spot, with someone watching. Once you've got the number, the next job is handing it over well &mdash; that's <a class="inline" href="/the-markup/present-your-price/">presenting your price</a>.</p>
+
+      <section class="faqs">
+        <h2>Questions</h2>
+        <div class="faq"><h3>What's the difference between margin and markup?</h3><p>Markup is a percentage added on top of your cost. Margin is the percentage of the final price that is profit. A 40% markup is only a 28.6% margin. Pricing on markup when you think you're getting margin is how shops quietly lose money on every job.</p></div>
+        <div class="faq"><h3>How do I calculate overhead per hour?</h3><p>Add up your yearly fixed costs (truck, insurance, phone, software, rent, admin time) and divide by your billable field hours in a year. Most one- to three-truck shops land between $80 and $150 per hour before they've paid themselves a dime. That number has to live inside every quote.</p></div>
+        <div class="faq"><h3>What should my hourly rate be?</h3><p>Your billable rate has to cover your labor cost, your overhead per hour, and your profit margin, in that order. Working backward from what the other guy charges is how you end up busy and broke. Start from your real overhead and build up.</p></div>
+      </section>
+
+      <div class="cta">
+        <h2>That's the whole reason we built the app.</h2>
+        <p>Set your rates, margin, and overhead once. Every job after that, the right number comes out on its own.</p>
+        <a href="https://dead-hand.app">Get Dead Hand</a>
+      </div>
+
+      <div class="related">
+        <span class="lbl">More from The Markup</span>
+        <a href="/the-markup/margin-vs-markup/"><div class="rt">Margin vs. Markup, in Plain English</div><div class="rd">The one calculation that decides whether a busy year is a profitable one.</div></a>
+        <a href="/the-markup/shop-rate/"><div class="rt">What Should My Shop Rate Actually Be?</div><div class="rd">Building a billable hourly rate from your real overhead, not the competition's.</div></a>
+        <a href="/the-markup/write-an-estimate/"><div class="rt">How to Write an Estimate That Wins the Job</div><div class="rd">Once the number's right, this is how you put it on the page.</div></a>
+      </div>
+    </article>
+  </main>
+</Layout>

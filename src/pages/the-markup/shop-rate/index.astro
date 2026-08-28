@@ -1,0 +1,100 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import pageStyle from "../../../styles/pages/the-markup-shop-rate.css?raw";
+const jsonld = [
+String.raw`{
+    "@context":"https://schema.org","@type":"Article",
+    "headline":"What Should My Shop Rate Actually Be?",
+    "description":"How to build a billable hourly rate from labor cost, overhead per hour, and profit, instead of copying the competition.",
+    "image":"https://getdeadhand.com/deadhand-share.png",
+    "author":{"@type":"Organization","name":"Dead Hand"},
+    "publisher":{"@type":"Organization","name":"Dead Hand","alternateName":"Friendly App LLC"},
+    "mainEntityOfPage":"https://getdeadhand.com/the-markup/shop-rate/"
+  }`,
+String.raw`{
+    "@context":"https://schema.org","@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Dead Hand","item":"https://getdeadhand.com/"},
+      {"@type":"ListItem","position":2,"name":"The Markup","item":"https://getdeadhand.com/the-markup/"},
+      {"@type":"ListItem","position":3,"name":"Shop Rate","item":"https://getdeadhand.com/the-markup/shop-rate/"}
+    ]
+  }`,
+];
+const meta = {
+  title: "What Should My Shop Rate Actually Be?",
+  description: "What should your shop's hourly rate be? Build it from your own labor cost, overhead per hour and profit instead of copying the competition.",
+  robots: "index, follow",
+  canonical: "https://getdeadhand.com/the-markup/shop-rate/",
+  ogTitle: "What Should My Shop Rate Actually Be?",
+  ogDescription: "Build a billable hourly rate from your real overhead, not the guy across town's.",
+  ogType: "article",
+  ogUrl: "https://getdeadhand.com/the-markup/shop-rate/",
+  ogImage: "https://getdeadhand.com/deadhand-share.png",
+  twitterCard: "summary_large_image",
+};
+---
+
+<Layout
+  {...meta}
+  jsonld={jsonld}
+  pageStyle={pageStyle}
+>
+<main class="wrap">
+    <div class="crumb"><a href="/">Dead Hand</a> &nbsp;/&nbsp; <a href="/the-markup/">The Markup</a> &nbsp;/&nbsp; Shop Rate</div>
+    <h1>What should my shop rate actually be?</h1>
+    <p class="standfirst">Not what the guy across town charges. That number tells you what he decided to survive on &mdash; it tells you nothing about what it costs to run your truck.</p>
+    <p class="byline">The Markup &middot; Dead Hand</p>
+    <article>
+      <p>Ask ten contractors how they set their hourly rate and nine will tell you some version of "it's about what everyone around here charges." It's the most natural way to price and it's backwards. The competition's rate is the <em>last</em> number you should look at, because it's built on their costs, their overhead, and their tolerance for working cheap &mdash; none of which are yours.</p>
+      <p>A billable rate that actually works gets built from the bottom up, in three layers.</p>
+
+      <h2>Layer one: your labor cost</h2>
+      <p>Start with what an hour of the work actually costs you. For a tech, that's their wage plus payroll taxes, workers' comp, and benefits &mdash; usually a good bit more than the hourly wage on the check. For an owner-operator, it's what you've decided your time is worth as a wage, before the business makes a dime. Call it your <strong>labor cost per hour.</strong></p>
+
+      <h2>Layer two: overhead per hour</h2>
+      <p>This is the layer that gets skipped, and skipping it is why shops stay busy and broke. Total up a year of running costs &mdash; truck, fuel, insurance, tools, phone, licensing, software, accounting, and the unpaid hours spent quoting and invoicing &mdash; and divide by the hours you actually bill in a year. Not the hours you work. The hours you <em>bill</em>. The gap between those two is bigger than most owners think, which is why the real number lands high.</p>
+
+      <div class="callout">
+        <span class="lbl">Why billable hours, not worked hours</span>
+        <p>If you're on the clock 2,000 hours a year but only 1,200 of them are billable &mdash; the rest is driving, quoting, and paperwork &mdash; then a full year of overhead has to be recovered across those 1,200 hours, not 2,000. Divide by the wrong number and every hour is underpriced.</p>
+      </div>
+
+      <h2>Layer three: profit</h2>
+      <p>Cost plus overhead only gets you to break-even. Profit is the layer on top that lets the business grow, absorb a bad month, and eventually be worth something. Decide the margin you want the business to earn and build it in on purpose &mdash; it does not show up by accident. If the word margin is fuzzy, <a class="inline" href="/the-markup/margin-vs-markup/">here's margin vs. markup in plain English</a>.</p>
+
+      <h2>Stack it up</h2>
+      <p>Put a real example on it. Say your labor cost runs $45 an hour, and you've done the math and your overhead is $95 an hour across your billable time. That's a $140 floor before a cent of profit. Layer a healthy margin on top and you're looking at a service-call rate around $200 and a continuous rate a bit below it &mdash; which, not by coincidence, is right where a lot of well-run shops land.</p>
+
+      <div class="mathcard">
+        <div class="row"><span>Labor cost / hr</span><b>$45</b></div>
+        <div class="row"><span>+ Overhead / hr</span><b>$95</b></div>
+        <div class="row"><span>Break-even floor</span><b>$140</b></div>
+        <div class="row"><span>+ Profit margin</span><b>&rarr;</b></div>
+        <div class="row tot"><span>Billable rate</span><b>~$180&ndash;$202</b></div>
+      </div>
+
+      <p class="pull">The competition's rate isn't your answer. It's their guess at their own costs.</p>
+
+      <p>Split it if it helps &mdash; a higher first-hour service rate to get the truck to the door, a continuous rate for the hours after. However you split it, the overhead has to be riding inside every hour, or the split just hides the hole.</p>
+
+      <section class="faqs">
+        <h2>Questions</h2>
+        <div class="faq"><h3>How do I set my hourly shop rate?</h3><p>Build it in three layers: your labor cost per hour, your overhead per hour, then the profit margin you want. Cost plus overhead is your break-even floor; profit is added on top on purpose. Don't start from the competition's rate, which is built on their costs, not yours.</p></div>
+        <div class="faq"><h3>Should I use billable hours or worked hours for overhead?</h3><p>Billable hours. If you work 2,000 hours a year but only bill 1,200, a full year of overhead has to be recovered across those 1,200 billable hours. Dividing by worked hours underprices every hour.</p></div>
+        <div class="faq"><h3>What is a typical service rate for a trade shop?</h3><p>Many well-run one- to three-truck shops land around a $200 first-hour service rate and a continuous rate a bit below it. But that's a result of the math, not a target to copy. Your real number depends on your own labor cost and overhead.</p></div>
+      </section>
+
+      <div class="cta">
+        <h2>Set your rate once. Let the tool defend it.</h2>
+        <p>Dead Hand carries your service, continuous, and overhead rates on every quote &mdash; so the floor you built is always in the number, even at the kitchen table.</p>
+        <a href="https://dead-hand.app">Get Dead Hand</a>
+      </div>
+
+      <div class="related">
+        <span class="lbl">More from The Markup</span>
+        <a href="/the-markup/price-a-job/"><div class="rt">How to Price a Trade Job Without Losing Money</div><div class="rd">The full picture &mdash; labor, materials, and overhead, worked end to end.</div></a>
+        <a href="/the-markup/flat-rate-vs-hourly/"><div class="rt">Flat Rate vs. Time and Materials</div><div class="rd">Once your rate is set, which way of quoting it wins more work?</div></a>
+      </div>
+    </article>
+  </main>
+</Layout>
