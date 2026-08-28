@@ -82,10 +82,38 @@
     footer .credit .hb{display:inline-flex;line-height:0}
     footer .credit .hb img{height:18px;width:auto;display:block}
     footer .credit .hb:hover{opacity:.85}
+  
+    /* ============ shared shell (last in the sheet, so it wins) ============ */
+    :root{--line:#2a2d31;--red-ink:#e05a48;--dim:#90969d;--dimmer:#80868e;--card:#111214;--bright:#ffffff}
+    footer{border-top:1px solid var(--line);background:transparent;margin-top:64px;padding:26px 0 30px;display:block}
+    footer .wrap{max-width:900px;margin:0 auto;padding:0 clamp(20px,5vw,28px);display:block}
+    footer .frow{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px 22px}
+    footer .fbase{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11px;letter-spacing:1px;color:var(--dimmer)}
+    .footer-mark-link{display:inline-flex;line-height:0}
+    .footer-mark{height:22px;width:auto;opacity:.3;display:block}
+    .footer-links{font-family:var(--mono);font-size:11px;letter-spacing:1px;color:var(--dimmer);display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+    .footer-links a{color:var(--dimmer);text-decoration:none}
+    .footer-links a:hover{color:var(--dim)}
+    footer .credit{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+    footer .credit .hb{display:inline-flex;line-height:0}
+    footer .credit .hb img{height:18px;width:auto;display:block}
+    footer .credit .hb:hover{opacity:.85}
+    header.top{border-bottom:1px solid var(--line);background:#000}
+    header.top .wrap{max-width:900px;margin:0 auto;padding:0 clamp(20px,5vw,28px);display:flex;align-items:center;justify-content:space-between;height:58px}
+    header.top .brand{font-family:var(--display);font-size:24px;letter-spacing:2px;color:#fff;text-decoration:none;display:flex;align-items:center;gap:7px}
+    header.top .brand .star{color:var(--red-ink);font-size:15px}
+    header.top nav{display:flex;gap:18px}
+    header.top nav a{font-family:var(--mono);font-size:12px;letter-spacing:1px;color:var(--dim);text-decoration:none;text-transform:uppercase}
+    header.top nav a:hover{color:#fff}
+    body{font-size:18px;line-height:1.75}
+    h1{font-family:var(--display);font-size:clamp(40px,6.5vw,72px);line-height:.95;letter-spacing:1px}
+    h2{font-family:var(--display);font-size:clamp(24px,3.4vw,34px);line-height:1.06;letter-spacing:1px}
+    :root{--measure:720px}
+    .content{max-width:720px;padding-left:clamp(20px,5vw,28px);padding-right:clamp(20px,5vw,28px)}
   </style>
 </head>
 <body>
-  <header class="top"><div class="wrap"><a class="brand" href="/"><span class="star" aria-hidden="true">&#9733;</span> DEAD HAND</a><nav><a href="/">The App</a><a href="/the-book/">The Book</a></nav></div></header>
+  <header class="top"><div class="wrap"><a class="brand" href="/"><span class="star" aria-hidden="true">&#9733;</span> DEAD HAND</a><nav><a href="/">The App</a><a href="/the-book/">The Book</a><a href="/the-markup/">The Markup</a></nav></div></header>
   <main class="wrap">
     <div class="crumb"><a href="/">Dead Hand</a> &nbsp;/&nbsp; <a href="/the-markup/">The Markup</a> &nbsp;/&nbsp; Shop Rate</div>
     <h1>What should my shop rate actually be?</h1>
@@ -144,6 +172,6 @@
       </div>
     </article>
   </main>
-  <footer><div class="wrap"><a class="brand" href="/" style="font-size:20px"><span class="star" aria-hidden="true">&#9733;</span> DEAD HAND</a><div class="fl"><a href="/">The App</a><a href="/the-book/">The Book</a><a href="/the-markup/">The Markup</a><a href="/security/">Security</a><a href="/calculator-privacy/">Privacy</a><a href="/calculator-terms/">Terms</a><span>&copy; 2026 Friendly App LLC</span><span class="credit">Site by Handbuilt <a class="hb" href="https://handbuilt.works" target="_blank" rel="noopener" aria-label="Handbuilt &mdash; handbuilt.works"><img src="/handbuilt-hand.webp" width="200" height="183" alt="" loading="lazy" decoding="async" /></a></span></div></div></footer>
+  <footer><div class="wrap"><div class="frow"><a href="/" class="footer-mark-link" aria-label="Dead Hand &mdash; home"><img src="/deadhand-wordmark.webp" alt="" class="footer-mark" width="1024" height="272" /></a><nav class="footer-links"><a href="/">The App</a><a href="/the-book/">The Book</a><a href="/the-markup/">The Markup</a><a href="/security/">Security</a><a href="/calculator-privacy/">Privacy</a><a href="/calculator-terms/">Terms</a><a href="mailto:founder@getdeadhand.com">Contact</a></nav></div><div class="frow fbase"><span>&copy; 2026 Friendly App LLC, dba Dead Hand</span><span class="credit">Site by Handbuilt <a class="hb" href="https://handbuilt.works" target="_blank" rel="noopener" aria-label="Handbuilt &mdash; handbuilt.works"><img src="/handbuilt-hand.webp" width="200" height="183" alt="" decoding="async" /></a></span></div></div></footer>
 </body>
 </html>
