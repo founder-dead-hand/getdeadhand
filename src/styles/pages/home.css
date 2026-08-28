@@ -1,0 +1,405 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --black:   #0a0a0a; --raised:  #1a1a1a; --red:     #c0392b; --white:   #e8e8e8; --label:   #e2624c; --border:  1px solid #2a2a2a; --display: 'Bebas Neue', sans-serif; --mono:    'IBM Plex Mono', monospace; --body:    'IBM Plex Sans', sans-serif; --space-xs: 8px; --space-sm: 16px; --space-md: 32px; --space-lg: 64px; --space-xl: 66px; --max: 960px; --pad: clamp(24px, 6vw, 80px) }
+html { scroll-behavior: smooth; }
+body {
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--body);
+      font-size: 18px;
+      line-height: 1.62;
+      -webkit-font-smoothing: antialiased;
+    }
+/* -- HERO -- */
+.hero {
+      min-height: 72svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 48px var(--pad);
+      border-bottom: var(--border);
+    }
+.hero-mark {
+      width: 100%;
+      max-width: 460px;
+      height: auto;
+      margin-bottom: 26px;
+    }
+.hero-headline {
+      font-family: var(--display);
+      font-size: clamp(36px, 5vw, 68px);
+      color: var(--bright);
+      letter-spacing: 1px;
+      line-height: 1.05;
+      margin-bottom: 16px;
+      max-width: 900px;
+    }
+.hero-sub {
+      font-family: var(--mono);
+      font-size: clamp(13px, 1.6vw, 17px);
+      color: var(--dim);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+.hero-cta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+.btn {
+      font-family: var(--display);
+      font-size: 20px;
+      letter-spacing: 4px;
+      padding: 15px 32px;
+      cursor: pointer;
+      border-radius: 0;
+      transition: opacity 120ms, border-color 120ms, color 120ms;
+      text-decoration: none;
+      display: inline-block;
+    }
+.btn-primary { background: var(--red); border: none; color: var(--bright); }
+.btn-primary:hover { opacity: 0.85; }
+.btn-ghost { background: transparent; border: var(--border); color: var(--white); }
+.btn-ghost:hover { border-color: #777; color: var(--white); }
+.hero-note {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--dim);
+      letter-spacing: 1px;
+      margin-top: 24px;
+    }
+/* -- SECTIONS -- */
+.section {
+      padding: var(--space-xl) var(--pad);
+      max-width: var(--max);
+      margin: 0 auto;
+      border-bottom: var(--border);
+    }
+.label {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--label);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: var(--space-md);
+      display: block;
+    }
+.section h2 {
+      font-family: var(--display);
+      font-size: clamp(28px, 3.5vw, 48px);
+      color: var(--bright);
+      letter-spacing: 1px;
+      line-height: 1.1;
+      margin-bottom: var(--space-md);
+    }
+.section p { color: var(--white); margin-bottom: var(--space-sm); }
+.section p:last-child { margin-bottom: 0; }
+/* -- ORIGIN (the name) -- */
+.origin {
+      padding: var(--space-xl) var(--pad);
+      max-width: var(--max);
+      margin: 0 auto;
+      border-bottom: var(--border);
+    }
+.origin h2 {
+      font-family: var(--display);
+      font-size: clamp(28px, 3.5vw, 48px);
+      color: var(--bright);
+      letter-spacing: 1px;
+      line-height: 1.1;
+      margin-bottom: var(--space-md);
+    }
+.origin p {
+      color: var(--dim);
+      font-size: 18px;
+      line-height: 1.65;
+      margin-bottom: var(--space-sm);
+    }
+.origin p.turn { color: var(--white); }
+.origin p:last-child { margin-bottom: 0; }
+.origin .kicker {
+      font-family: var(--display);
+      font-size: clamp(22px, 2.6vw, 30px);
+      color: var(--bright);
+      letter-spacing: 1px;
+      line-height: 1.2;
+      margin-top: var(--space-md);
+      border-left: 3px solid var(--red);
+      padding-left: var(--space-md);
+    }
+/* -- REAL TALK (Problem) -- */
+.realtalk {
+      padding: var(--space-xl) var(--pad);
+      max-width: var(--max);
+      margin: 0 auto;
+      border-bottom: var(--border);
+    }
+.realtalk p {
+      color: var(--dim);
+      font-size: 18px;
+      line-height: 1.65;
+      margin-bottom: var(--space-sm);
+    }
+.realtalk p:last-child { margin-bottom: 0; }
+/* -- STEPS -- */
+.steps { margin-top: var(--space-md); }
+.step {
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: var(--space-sm) var(--space-md);
+      padding: var(--space-md) 0;
+      border-top: var(--border);
+    }
+.step:last-child { border-bottom: var(--border); }
+.step-num {
+      font-family: var(--display);
+      font-size: 52px;
+      color: var(--dimmer);
+      line-height: 1;
+      padding-top: 4px;
+    }
+.step h3 {
+      font-family: var(--display);
+      font-size: 22px;
+      color: var(--bright);
+      letter-spacing: 2px;
+      margin-bottom: var(--space-xs);
+    }
+.step p { font-size: 16px; color: var(--dim); line-height: 1.65; }
+/* -- COMPARE -- */
+.compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-md);
+      margin-top: var(--space-md);
+    }
+.compare .col h3 {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--dim);
+      margin-bottom: var(--space-sm);
+    }
+.compare .col.yes h3 { color: var(--label); }
+.compare ul {
+      list-style: none;
+      font-family: var(--mono);
+      font-size: 13px;
+      line-height: 1.9;
+    }
+.compare .col.no ul li {
+      color: var(--dimmer);
+      text-decoration: line-through;
+      text-decoration-color: var(--dimmer);
+    }
+.compare .col.yes ul li { color: var(--white); }
+.shots{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(16px,4vw,40px);align-items:start}
+.shot img{width:100%;max-width:430px;height:auto;display:block}
+.shot figcaption{color:var(--dim);font-size:15px;line-height:1.55;margin-top:14px;max-width:430px}
+.shot figcaption strong{color:var(--bright);font-weight:600}
+.section p a{color:var(--bright);text-decoration:underline;text-underline-offset:3px}
+.section p a:hover{color:var(--label)}
+@media(max-width:640px){.shots{grid-template-columns:1fr;gap:36px;justify-items:center}.shot figcaption{text-align:left}}
+.compare .col.yes ul li::before { content: "\2014\00a0"; color: var(--red); }
+@media (max-width: 640px) {
+      .compare { grid-template-columns: 1fr; gap: var(--space-md); }
+    }
+/* -- REVIEW -- */
+.review {
+      padding: var(--space-xl) var(--pad);
+      max-width: var(--max);
+      margin: 0 auto;
+      border-bottom: var(--border);
+    }
+.review-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--dim);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: var(--space-md);
+      display: block;
+    }
+.review blockquote {
+      border-left: 3px solid var(--red);
+      padding-left: var(--space-md);
+      margin-bottom: var(--space-md);
+    }
+.review blockquote p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: var(--white);
+      margin-bottom: var(--space-sm);
+    }
+.review blockquote p:last-child { margin-bottom: 0; }
+.review-sig {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--dim);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: var(--space-md);
+    }
+/* -- PRICING -- */
+.pricing-strip {
+      padding: var(--space-xl) var(--pad);
+      max-width: var(--max);
+      margin: 0 auto;
+      border-bottom: var(--border);
+    }
+.pricing-strip h2 {
+      font-family: var(--display);
+      font-size: clamp(28px, 3.5vw, 48px);
+      color: var(--bright);
+      letter-spacing: 1px;
+      margin-bottom: var(--space-md);
+      /* Every other h2 on this page sets 1.1; this one never did and has been
+         inheriting the body's 1.62 since it was written. Pinned here so the
+         Astro build renders byte-for-byte what the old page rendered.
+         Worth revisiting on its own, not inside a migration. */
+      line-height: 1.62;
+    }
+.pricing-subtitle {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: var(--dim);
+      margin-bottom: var(--space-lg);
+      text-transform: uppercase;
+    }
+.pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-bottom: var(--space-md);
+    }
+.pricing-card {
+      background: var(--card);
+      border: var(--border);
+      padding: 28px;
+      position: relative;
+    }
+.pricing-card.featured { border-color: var(--red); }
+.pricing-card .badge {
+      position: absolute;
+      top: -10px;
+      right: 16px;
+      background: var(--red);
+      color: var(--bright);
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 2px;
+      padding: 3px 10px;
+      text-transform: uppercase;
+    }
+.pricing-tier {
+      font-family: var(--display);
+      font-size: 26px;
+      color: var(--bright);
+      letter-spacing: 3px;
+      margin-bottom: 4px;
+    }
+.pricing-price {
+      font-family: var(--mono);
+      font-size: 30px;
+      color: var(--red);
+      margin-bottom: 4px;
+    }
+.pricing-price span { font-size: 13px; color: var(--dim); }
+.pricing-desc {
+      font-size: 14px;
+      color: var(--dim);
+      line-height: 1.6;
+      margin: 16px 0 0;
+      padding-top: 16px;
+      border-top: var(--border);
+    }
+.pricing-note {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--dim);
+      letter-spacing: 0.5px;
+      line-height: 1.7;
+    }
+.cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: var(--space-md);
+    }
+/* -- HOW YOU GET IT -- */
+.getit {
+      padding: var(--space-xl) var(--pad);
+      max-width: var(--max);
+      margin: 0 auto;
+      border-bottom: var(--border);
+    }
+.getit h2 {
+      font-family: var(--display);
+      font-size: clamp(28px, 3.5vw, 48px);
+      color: var(--bright);
+      letter-spacing: 1px;
+      line-height: 1.1;
+      margin-bottom: var(--space-md);
+    }
+.getit p { color: var(--dim); font-size: 16px; line-height: 1.8; margin-bottom: var(--space-sm); }
+.getit p:last-child { margin-bottom: 0; }
+.getit strong { color: var(--white); font-weight: 600; }
+/* -- PROMISES -- */
+.promises-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-md);
+      margin-top: var(--space-md);
+    }
+@media (max-width: 640px) {
+      .promises-grid { grid-template-columns: 1fr; }
+    }
+.promise h3 {
+      font-family: var(--display);
+      font-size: 22px;
+      color: var(--bright);
+      letter-spacing: 2px;
+      margin-bottom: var(--space-xs);
+    }
+.promise p { color: var(--dim); font-size: 15px; line-height: 1.7; }
+/* -- FINAL CTA -- */
+.final {
+      padding: var(--space-xl) var(--pad);
+      max-width: var(--max);
+      margin: 0 auto;
+      border-bottom: var(--border);
+      text-align: center;
+    }
+.final h2 {
+      font-family: var(--display);
+      font-size: clamp(30px, 4vw, 56px);
+      color: var(--bright);
+      letter-spacing: 1px;
+      line-height: 1.05;
+      margin-bottom: var(--space-md);
+    }
+.final p {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: var(--dim);
+      text-transform: uppercase;
+      margin-top: var(--space-md);
+    }
+/* -- FOOTER -- */
+footer { justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px }
+.footer-links a { transition: color 120ms }
+@media (max-width: 600px) {
+      .step { grid-template-columns: 40px 1fr; gap: var(--space-xs) var(--space-sm); }
+      .step-num { font-size: 40px; }
+      footer { flex-direction: column; align-items: flex-start; }
+      .hero-mark { max-width: 260px; margin-bottom: 22px; }
+      .hero { min-height: auto; padding: 44px var(--pad) 56px; }
+      .origin, .realtalk, .section, .review, .pricing-strip, .getit, .final { padding-top: 46px; padding-bottom: 46px; }
+    }

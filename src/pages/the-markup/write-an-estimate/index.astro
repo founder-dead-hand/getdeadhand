@@ -1,0 +1,105 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import pageStyle from "../../../styles/pages/the-markup-write-an-estimate.css?raw";
+const jsonld = [
+String.raw`{
+    "@context":"https://schema.org","@type":"Article",
+    "headline":"How to Write an Estimate That Wins the Job",
+    "description":"Estimate vs. quote, what every estimate needs, how much detail to show, and the mistakes that lose jobs.",
+    "image":"https://getdeadhand.com/deadhand-share.png",
+    "author":{"@type":"Organization","name":"Dead Hand"},
+    "publisher":{"@type":"Organization","name":"Dead Hand","alternateName":"Friendly App LLC"},
+    "mainEntityOfPage":"https://getdeadhand.com/the-markup/write-an-estimate/"
+  }`,
+String.raw`{
+    "@context":"https://schema.org","@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Dead Hand","item":"https://getdeadhand.com/"},
+      {"@type":"ListItem","position":2,"name":"The Markup","item":"https://getdeadhand.com/the-markup/"},
+      {"@type":"ListItem","position":3,"name":"How to Write an Estimate","item":"https://getdeadhand.com/the-markup/write-an-estimate/"}
+    ]
+  }`,
+];
+const meta = {
+  title: "How to Write an Estimate That Wins the Job",
+  description: "How to write an estimate that wins the job: what goes on the page, how much detail to show, and the mistakes that quietly cost trade shops work.",
+  robots: "index, follow",
+  canonical: "https://getdeadhand.com/the-markup/write-an-estimate/",
+  ogTitle: "How to Write an Estimate That Wins the Job",
+  ogDescription: "What goes on the page, how much to show, and the details that make a customer trust your number over the next guy's.",
+  ogType: "article",
+  ogUrl: "https://getdeadhand.com/the-markup/write-an-estimate/",
+  ogImage: "https://getdeadhand.com/deadhand-share.png",
+  twitterCard: "summary_large_image",
+};
+---
+
+<Layout
+  {...meta}
+  jsonld={jsonld}
+  pageStyle={pageStyle}
+>
+<main class="wrap">
+    <div class="crumb"><a href="/">Dead Hand</a> &nbsp;/&nbsp; <a href="/the-markup/">The Markup</a> &nbsp;/&nbsp; Writing an Estimate</div>
+    <h1>How to write an estimate that wins the job</h1>
+    <p class="standfirst">The customer isn't only comparing your price to the next guy's. They're comparing your paperwork to his &mdash; and the cleaner number usually wins, even when it's the higher one.</p>
+    <p class="byline">The Markup &middot; Dead Hand</p>
+    <article>
+      <p>Two shops look at the same job and land within fifty bucks of each other. One writes the number on the back of a business card and mumbles it at the door. The other hands over a clean sheet with the work spelled out, a total, and a line to sign. Most of the time the second shop gets the job, and it isn't because of the fifty dollars. It's because one of them looked like a business and the other looked like a guess.</p>
+      <p>Your estimate is often the only piece of your actual work the customer sees before they decide. Here's how to make it carry its weight.</p>
+
+      <h2>First: is it an estimate or a quote?</h2>
+      <p>These two words get used like they mean the same thing, and the difference is the one that ends up in an argument. An <strong>estimate</strong> is your considered best guess &mdash; it can move if the job turns out to be bigger than it looked. A <strong>quote</strong> is a firm price you're committing to honor no matter what you find. Both are legitimate. What's not legitimate is being fuzzy about which one you handed over, then fighting about it when the final bill lands higher. Say the word, and if it's an estimate, say plainly what would make it change.</p>
+
+      <h2>What every estimate has to have</h2>
+      <p>Whether it's two lines or two pages, a real estimate carries the same bones. Miss one of these and you've left a gap for a misunderstanding to grow in.</p>
+
+      <ul class="checklist">
+        <li><b>Who you are.</b><span>Business name, license number, phone, email. It signals you're licensed and reachable, and it's often required.</span></li>
+        <li><b>The date, and an expiration.</b><span>"Valid for 30 days." Prices move, and an expiration protects you and nudges them to decide.</span></li>
+        <li><b>The customer and the job address.</b><span>Who it's for and where the work happens &mdash; not always the same place.</span></li>
+        <li><b>A clear description of the work.</b><span>Plain sentences on what you're going to do. This is the line that stops "I thought that was included."</span></li>
+        <li><b>The price, laid out the way you want it read.</b><span>Line items or a clean lump sum &mdash; your call, covered below.</span></li>
+        <li><b>What's not included.</b><span>Exclusions. The single most protective line on the page. More on this in a second.</span></li>
+        <li><b>Payment terms and any deposit.</b><span>When you expect to be paid, and what's due to start.</span></li>
+        <li><b>A way to say yes.</b><span>A signature line or a simple "approve" &mdash; make accepting it a single, obvious step.</span></li>
+      </ul>
+
+      <h2>How much detail to show</h2>
+      <p>This is where shops go wrong in both directions. Itemize everything down to the last coupling and you've handed the customer a shopping list to price-check against Amazon and the next contractor, line by line. Show nothing but a single lump number and a nervous customer has nothing to hold onto, so they stall.</p>
+      <p>The sweet spot is enough detail to make the number feel earned, and no more. Group your labor into one figure &mdash; you're selling the outcome, not your hourly. List the major materials or bundle them into a materials line. Never, ever break out your margin as a line; that's your business, not theirs. The customer should finish reading and think "that makes sense," not "let me go price a water heater myself." If you quote flat, our note on <a class="inline" href="/the-markup/flat-rate-vs-hourly/">flat rate vs. time and materials</a> covers how to package it.</p>
+
+      <div class="callout">
+        <span class="lbl">The line that saves you</span>
+        <p>Exclusions are the cheapest insurance you'll ever write. "Does not include drywall repair, permit fees, or code upgrades discovered once the wall is open." One sentence, and the day you find the surprise, you're pointing at a line you both already read instead of eating it or fighting about it.</p>
+      </div>
+
+      <h2>The mistakes that quietly lose jobs</h2>
+      <p>Handwritten and torn from a pad reads as "I do this on the side." No expiration means the number's stale and you're stuck honoring last spring's material price. A vague scope is an open invitation to scope creep. And the quiet killer: being slow. The customer who's ready to say yes today will say it to whoever hands them a clean estimate first. A good estimate delivered while you're still standing there beats a perfect one emailed three days later.</p>
+
+      <p class="pull">The fast, clean estimate beats the perfect, late one. Every time.</p>
+
+      <h2>Make it look like you take your own work seriously</h2>
+      <p>None of this means fancy. It means finished. A tidy, consistent estimate with your name at the top and a total they can act on tells the customer exactly one thing: this person is organized, and organized people don't botch your water heater. That impression is doing real work on the price. Getting the number right is <a class="inline" href="/the-markup/price-a-job/">step one</a>; putting it on a page that looks like you mean it is step two.</p>
+
+      <section class="faqs">
+        <h2>Questions</h2>
+        <div class="faq"><h3>What's the difference between an estimate and a quote?</h3><p>An estimate is your best-considered guess at the cost and can move if the job changes. A quote is a firm price you commit to honor. Both are fine, but you should say clearly which one you're handing the customer so there's no argument later about whether the number was binding.</p></div>
+        <div class="faq"><h3>Should an estimate be itemized or a lump sum?</h3><p>Show enough detail to justify the price without inviting the customer to shop each line. Group labor into one figure, list major materials or bundle them, and never itemize your margin. The goal is a number they trust, not a spreadsheet they can pick apart.</p></div>
+        <div class="faq"><h3>How long should an estimate be valid?</h3><p>Put an expiration on every estimate, commonly 14 to 30 days. Material prices move, and an expiration protects you from being held to a number you gave months ago while also nudging the customer to decide.</p></div>
+      </section>
+
+      <div class="cta">
+        <h2>Hand them something clean, from your phone.</h2>
+        <p>Dead Hand turns your rates and parts into a tidy estimate and sends it as a PDF, on the spot &mdash; no clipboard, no torn pad, no "I'll email it tonight."</p>
+        <a href="https://dead-hand.app">Get Dead Hand</a>
+      </div>
+
+      <div class="related">
+        <span class="lbl">More from The Markup</span>
+        <a href="/the-markup/present-your-price/"><div class="rt">How to Present Your Price So They Say Yes</div><div class="rd">The estimate's written. Now comes the moment you actually say the number.</div></a>
+        <a href="/the-markup/price-a-job/"><div class="rt">How to Price a Trade Job Without Losing Money</div><div class="rd">Get the number right before you ever put it on the page.</div></a>
+      </div>
+    </article>
+  </main>
+</Layout>

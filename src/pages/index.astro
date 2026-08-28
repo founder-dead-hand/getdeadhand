@@ -1,0 +1,287 @@
+---
+import Layout from "../layouts/Layout.astro";
+import pageStyle from "../styles/pages/home.css?raw";
+const jsonld = [
+String.raw`{
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Dead Hand",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web browser (iOS, Android, desktop)",
+    "description": "The pocket tool for field quoting. Set your rates once. Every job after that, the right number \u2014 margin, markup, and overhead already built in \u2014 comes out automatically. Runs in the browser, adds to your home screen, no app store.",
+    "url": "https://getdeadhand.com/",
+    "image": "https://getdeadhand.com/deadhand-share.png",
+    "offers": [
+      {
+        "@type": "Offer",
+        "price": "15.00",
+        "priceCurrency": "USD",
+        "description": "Monthly plan, billed monthly"
+      },
+      {
+        "@type": "Offer",
+        "price": "150.00",
+        "priceCurrency": "USD",
+        "description": "Annual plan, billed yearly"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "Friendly App LLC",
+      "alternateName": "Dead Hand"
+    }
+  }`,
+];
+const meta = {
+  title: "Dead Hand &mdash; Quote on the spot, like a pro",
+  description: "The pocket tool for field quoting. Set your rates once, then quote any job on the spot and hand over a clean estimate. No app store.",
+  robots: "index, follow",
+  canonical: "https://getdeadhand.com/",
+  ogTitle: "Dead Hand &mdash; Quote on the spot, like a pro",
+  ogDescription: "Set your rates once. The right number comes out on its own, every time.",
+  ogType: "website",
+  ogUrl: "https://getdeadhand.com",
+  ogImage: "https://getdeadhand.com/deadhand-share.png",
+  twitterCard: "summary_large_image",
+};
+---
+
+<Layout
+  {...meta}
+  jsonld={jsonld}
+  pageStyle={pageStyle}
+  showHeader={false}
+>
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      src="/deadhand-wordmark.webp"
+      alt="Dead Hand"
+      class="hero-mark"
+      width="1024" height="272"
+    />
+    <h1 class="hero-headline">Set your rates once. Never fumble another quote.</h1>
+    <p class="hero-sub">The pocket tool for field quoting</p>
+
+    <div class="hero-cta">
+      <a href="https://dead-hand.app" class="btn btn-primary">Get Dead Hand</a>
+      <a href="https://dead-hand.app/demo" class="btn btn-ghost">See it price a job</a>
+    </div>
+    <p class="hero-note">Works on any phone &middot; Adds to your home screen<br />No app store</p>
+  </section>
+
+  <!-- THE NAME / ORIGIN -->
+  <section class="origin">
+    <span class="label">Why It's Called Dead Hand</span>
+    <h2>Built to get it right when you can't.</h2>
+    <p>The name comes from an old fail-safe idea: a system built to respond correctly on its own, at the exact moment the people who'd normally make the call aren't able to. No hesitating, no second-guessing &mdash; it just does what it's set up to do.</p>
+    <p class="turn">Your version of that moment is the kitchen table.</p>
+    <p>You're tired, you're moving fast, the customer's waiting, and the number you say in the next thirty seconds is the one you're honoring tomorrow. That's exactly when a good tradesman talks himself into a price that's too low.</p>
+    <p class="turn">Dead Hand takes that off your shoulders.</p>
+    <p>Your rates, your margin, your overhead &mdash; set once, then applied automatically to every job after. The right number comes out even when you're too slammed to work it out in your head.</p>
+    <p class="kicker">It gets the number right,<br />so you don't have to be perfect on your worst day.</p>
+  </section>
+
+  <!-- THE PROBLEM -->
+  <section class="realtalk">
+    <span class="label">The Problem</span>
+    <h2 style="font-family: var(--display); font-size: clamp(28px, 3.5vw, 48px); color: var(--bright); letter-spacing: 1px; line-height: 1.1; margin-bottom: var(--space-md);">The kitchen table is where jobs get lost.</h2>
+    <p>Quote too high, they call the next guy. Quote too low, you eat the difference all week. Scratch it on a pad and half the time you've forgotten the margin by the time you write the invoice.</p>
+    <p>You've done this in your head for years and you're good at it. But the customer wants to see the breakdown &mdash; a document, not a guess. And you'd rather be the one who hands them something clean than the one digging through the truck for a clipboard.</p>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section" id="how">
+    <span class="label">How It Works</span>
+    <h2>Four taps from walking in to quote delivered.</h2>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div>
+          <h3>Enter Hours</h3>
+          <p>How long is the job. That's it. Your rates are already set from the first time you opened it. No dropdown, no "which labor type," no picker.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">02</div>
+        <div>
+          <h3>Add Materials</h3>
+          <p>Tap, type the cost. Tap again for the next one. Your margin's already applied and the total updates as you go. Reorder or remove with a swipe.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">03</div>
+        <div>
+          <h3>Present to the Customer</h3>
+          <p>Flip the phone around. Presenter mode shows the number big and clean &mdash; subtotal, tax, total. Settled right in front of them. No loading screen, no ads.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">04</div>
+        <div>
+          <h3>Send the PDF</h3>
+          <p>One button. Their email, from your phone's share sheet. No login for them, and the only thing that ever leaves your phone is the quote you chose to send.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT SHOTS -->
+  <section class="section" id="look">
+    <span class="label">What It Looks Like</span>
+    <h2>Your screen, then their screen.</h2>
+    <p style="color: var(--dim); margin-bottom: var(--space-md);">The same job from both sides of the counter &mdash; a fifty-gallon gas water heater, three hours, hauled the old one away.</p>
+
+    <div class="shots">
+      <figure class="shot">
+        <img
+          src="/deadhand-shot-calculator.webp"
+          alt="The Dead Hand calculator on a phone, showing a $2,041.52 water heater job with each material line broken out by cost and margin tier"
+          width="430" height="861" loading="lazy" decoding="async"
+        />
+        <figcaption><strong>Yours.</strong> Every line carries what it cost you and what you're making on it. The labor's already at your rates, the overhead's already inside the number.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img
+          src="/deadhand-shot-estimate.webp"
+          alt="The customer-facing Dead Hand estimate for the same job: the shop&rsquo;s name at the top, line items and a $2,041.52 total, and no cost or margin anywhere on it"
+          width="430" height="861" loading="lazy" decoding="async"
+        />
+        <figcaption><strong>Theirs.</strong> Turn the phone around. Your shop&rsquo;s name at the top, the work, the number, how long it holds &mdash; and nothing about your margin anywhere on it.</figcaption>
+      </figure>
+    </div>
+    <p style="color: var(--dim); margin-top: var(--space-md);">That exact job is open at <a href="https://dead-hand.app/demo">dead-hand.app/demo</a> &mdash; change the hours or a cost and watch both screens move. No sign-up, and nothing you do there is saved.</p>
+  </section>
+
+  <!-- WHAT IT ISN'T -->
+  <section class="section">
+    <span class="label">What It Isn't</span>
+    <h2>This isn't a CRM. It's a tape measure.</h2>
+    <p style="color: var(--dim); margin-bottom: var(--space-md);">Dead Hand does one thing: quote fast, quote right, send clean. It won't turn into a dispatch board or a customer database you have to feed. If you ever need those, that's a different product &mdash; this one stays sharp.</p>
+
+    <div class="compare">
+      <div class="col no">
+        <h3>What you skip</h3>
+        <ul>
+          <li>Customer database</li>
+          <li>Dispatch and scheduling</li>
+          <li>A store account to manage</li>
+          <li>Ads and upsells</li>
+          <li>A setup that takes a weekend</li>
+        </ul>
+      </div>
+      <div class="col yes">
+        <h3>What you get</h3>
+        <ul>
+          <li>A clean price in front of the customer</li>
+          <li>A PDF in their inbox</li>
+          <li>Your rates saved and applied every time</li>
+          <li>Works on the spot, basement or not</li>
+          <li>The same simple screen every job</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIRST REVIEW -->
+  <section class="review">
+    <span class="review-label">From the Founder</span>
+    <blockquote>
+      <p>I built this because I'm the guy standing in the kitchen. Years in the trades, quoting in my head, losing jobs to guys who wrote a cleaner estimate faster.</p>
+      <p>I don't need a CRM &mdash; I already know my customers. I need to look sharp in front of the one across the counter, get the number right the first time, and hand over something that looks like I take my own work seriously. Because I do.</p>
+      <p>Every feature in here earned its place on a real job. Anything that would slow me down never made it in. If it doesn't help me quote in under a minute, it's not in the app.</p>
+    </blockquote>
+    <p class="review-sig">&mdash; The Founder &middot; Tom Falk Plumbing &amp; Heating, Inc.</p>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing-strip" id="get">
+    <span class="label">Pricing</span>
+    <h2>Pay monthly, or save with the year.</h2>
+    <p class="pricing-subtitle">No free tier. No ads. Cancel anytime, right in the app.</p>
+
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pricing-tier">Monthly</div>
+        <div class="pricing-price">$15 <span>/ month</span></div>
+        <div class="pricing-desc">Month to month. Stop whenever you want &mdash; the cancel button lives inside the app.</div>
+      </div>
+
+      <div class="pricing-card featured">
+        <span class="badge">Best value</span>
+        <div class="pricing-tier">Annual</div>
+        <div class="pricing-price">$150 <span>/ year</span></div>
+        <div class="pricing-desc">Ten months for twelve. The same tool, two months of it free. Renews yearly, cancel anytime.</div>
+      </div>
+    </div>
+
+    <div class="cta-row">
+      <a href="https://dead-hand.app" class="btn btn-primary">Get Dead Hand</a>
+      <a href="https://dead-hand.app" class="btn btn-ghost">Sign In</a>
+    </div>
+    <p class="pricing-note" style="margin-top: var(--space-md);">Prices in USD, sales tax where it applies. You'll set your rates the first time you open it &mdash; takes about thirty seconds.</p>
+  </section>
+
+  <!-- THE BOOK -->
+  <section class="section" id="book">
+    <span class="label">The Pricebook</span>
+    <h2>The Book, for the jobs you already know.</h2>
+    <p style="color: var(--dim); margin-bottom: var(--space-md);">The calculator prices the job you're working out at the table. The Book is the other kind &mdash; the changeouts and service calls you've done four hundred times. You build one once with your own numbers and pull it in a tap after that. It&rsquo;s its own product, priced flat by the size of your shop instead of by the tech &mdash; $30 a month for one truck, $80 for two to five.</p>
+    <div class="hero-cta" style="justify-content:flex-start;">
+      <a href="/the-book/" class="btn btn-ghost">See The Book</a>
+    </div>
+  </section>
+
+  <!-- HOW YOU GET IT -->
+  <section class="getit">
+    <span class="label">How You Get It</span>
+    <h2>No app store. No download you forget you're paying for.</h2>
+    <p><strong>Pay on the site</strong> and you're in &mdash; no store account, no waiting on a review, no buried subscription.</p>
+    <p><strong>Add it to your home screen.</strong> One tap and Dead Hand sits right next to your other apps and opens the same way. Works on any phone.</p>
+    <p><strong>Stop whenever you want.</strong> The cancel button is inside the app, in plain sight. You'll never dig through a store account to get out &mdash; you know exactly where it is because that's where you signed up.</p>
+  </section>
+
+  <!-- THE PROMISES -->
+  <section class="section">
+    <span class="label">The Promises</span>
+    <h2>Four things Dead Hand will always hold to.</h2>
+
+    <div class="promises-grid">
+      <div class="promise">
+        <h3>Your Customers Stay Yours</h3>
+        <p>We don't sell your data or mine your quotes. The only thing that leaves your phone is the PDF you choose to send.</p>
+      </div>
+      <div class="promise">
+        <h3>Never Show Ads</h3>
+        <p>You pay for the tool, so the tool works for you. That's the whole arrangement. No ads, no upsells mid-job.</p>
+      </div>
+      <div class="promise">
+        <h3>Easy In, Easy Out</h3>
+        <p>You sign up on the site and cancel in the app. No phone call, no retention maze, no hunting through a store account.</p>
+      </div>
+      <div class="promise">
+        <h3>Stays Sharp</h3>
+        <p>It's a quoting tool and it stays one. Fast, focused, and finished &mdash; it won't bloat into something you have to manage.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final">
+    <h2>Set your rates once.<br />Never fumble another quote.</h2>
+    <div class="hero-cta" style="justify-content:center;">
+      <a href="https://dead-hand.app" class="btn btn-primary">Get Dead Hand</a>
+    </div>
+    <p>Works on any phone &middot; No app store</p>
+  </section>
+
+  </main>
+
+  <!-- FOOTER -->
+</Layout>

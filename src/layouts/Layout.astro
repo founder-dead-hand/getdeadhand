@@ -1,0 +1,61 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const {
+  title,
+  description = "",
+  robots = "",
+  canonical = "",
+  ogTitle = "",
+  ogDescription = "",
+  ogType = "",
+  ogUrl = "",
+  ogImage = "",
+  twitterCard = "",
+  jsonld = [],
+  pageStyle = "",
+  showHeader = true,
+  showFooter = true,
+} = Astro.props;
+
+// The head is assembled as raw HTML on purpose. Passing these through JSX
+// attributes would re-escape the "&" in entities like &mdash;, and the site
+// rule is that every page stays pure ASCII with typographic characters
+// entity-ized. Order here is the order the hand-authored pages used.
+const head = [
+  '<meta charset="UTF-8" />',
+  '<meta name="viewport" content="width=device-width, initial-scale=1.0" />',
+  description && `<meta name="description" content="${description}" />`,
+  robots && `<meta name="robots" content="${robots}" />`,
+  `<title>${title}</title>`,
+  canonical && `<link rel="canonical" href="${canonical}" />`,
+  '<link rel="icon" href="/favicon.ico" sizes="any" />',
+  '<link rel="icon" type="image/svg+xml" href="/favicon.svg" />',
+  '<link rel="apple-touch-icon" href="/apple-touch-icon.png" />',
+  ogTitle && `<meta property="og:title" content="${ogTitle}" />`,
+  ogDescription && `<meta property="og:description" content="${ogDescription}" />`,
+  ogType && `<meta property="og:type" content="${ogType}" />`,
+  ogUrl && `<meta property="og:url" content="${ogUrl}" />`,
+  ogImage && `<meta property="og:image" content="${ogImage}" />`,
+  twitterCard && `<meta name="twitter:card" content="${twitterCard}" />`,
+  '<link rel="stylesheet" href="/fonts.css" media="print" onload="this.media=\'all\'" />',
+  '<noscript><link rel="stylesheet" href="/fonts.css" /></noscript>',
+  ...jsonld.map((b) => `<script type="application/ld+json">${b}</script>`),
+  // The one shared source: tokens, type scale, header and footer, every page.
+  '<link rel="stylesheet" href="/global.css" />',
+  pageStyle ? `<style>${pageStyle}</style>` : "",
+]
+  .filter(Boolean)
+  .join("\n  ");
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head><Fragment set:html={head} /></head>
+  <body>
+    {showHeader && <Header />}
+    <slot />
+    {showFooter && <Footer />}
+  </body>
+</html>

@@ -1,0 +1,53 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import pageStyle from "../../styles/pages/launching.css?raw";
+const jsonld = [];
+const meta = {
+  title: "Dead Hand &mdash; Launching Soon",
+  description: "Dead Hand, the pocket tool for field quoting, is launching soon. Leave your email and get the invite the day it opens.",
+  robots: "noindex, follow",
+  canonical: "https://getdeadhand.com/launching/",
+  ogTitle: "Dead Hand &mdash; Launching Soon",
+  ogDescription: "The pocket tool for field quoting is almost here. Get the invite the day it opens.",
+  ogType: "website",
+  ogUrl: "https://getdeadhand.com/launching/",
+  ogImage: "https://getdeadhand.com/deadhand-share.png",
+};
+---
+
+<Layout
+  {...meta}
+  jsonld={jsonld}
+  pageStyle={pageStyle}
+>
+<div class="stage">
+    <div class="wrap">
+      <img src="/deadhand-wordmark.webp" alt="Dead Hand" class="mark" width="1024" height="272" />
+      <p class="kick">Launching Soon</p>
+      <h1>It's almost here.</h1>
+      <p class="lede">Dead Hand is the pocket tool for field quoting. <strong>Set your rates once, and the right number comes out on its own</strong> &mdash; every job after that. We're putting the last pieces in place. Leave your email and you'll get the invite the day it opens.</p>
+
+      <form name="launch-list" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/launching/?joined=1" class="signup" id="joinForm">
+        <input type="hidden" name="form-name" value="launch-list" />
+        <p class="hp"><label>Leave this empty: <input name="bot-field" /></label></p>
+        <input type="email" name="email" required placeholder="you@yourshop.com" aria-label="Email address" />
+        <button type="submit">Notify Me</button>
+      </form>
+      <div class="done" id="joinDone">You're on the list. We'll email you the day it opens.</div>
+      <p class="note" id="joinNote">No spam. One email when it's live. That's it.</p>
+
+      <p class="markup-link">While you wait &mdash; <a href="/the-markup/">read The Markup</a>, our field notes on pricing and estimating.</p>
+    </div>
+  </div>
+  
+  <script is:inline>
+    (function(){
+      try{
+        if(new URLSearchParams(location.search).has('joined')){
+          var f=document.getElementById('joinForm'), d=document.getElementById('joinDone'), n=document.getElementById('joinNote');
+          if(f)f.style.display='none'; if(d)d.style.display='inline-block'; if(n)n.style.display='none';
+        }
+      }catch(e){}
+    })();
+  </script>
+</Layout>

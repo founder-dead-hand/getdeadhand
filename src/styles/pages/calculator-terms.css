@@ -1,0 +1,26 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --black: #0a0a0a; --raised: #1a1a1a; --red: #c0392b; --white: #e8e8e8; --border: 1px solid #2a2a2a; --display: 'Bebas Neue', sans-serif; --mono: 'IBM Plex Mono', monospace; --body: 'IBM Plex Sans', sans-serif; --pad: clamp(20px, 5vw, 48px); --max: 680px }
+body { background: var(--black); color: var(--white); font-family: var(--body); -webkit-font-smoothing: antialiased }
+.nav { padding: 20px var(--pad); border-bottom: var(--border); display: flex; align-items: center; justify-content: space-between; }
+.nav-mark { height: 28px; width: auto; }
+.nav-link { font-family: var(--mono); font-size: 11px; color: var(--dim); text-decoration: none; letter-spacing: 2px; }
+.nav-link:hover { color: var(--white); }
+.content {
+  margin: 0 auto;
+  /* Left/right padding comes from global.css so every page has the same gutter.
+     Only the vertical padding is this page's own. */
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+.label { font-family: var(--mono); font-size: 11px; color:var(--red-ink); letter-spacing: 4px; text-transform: uppercase; display: block; margin-bottom: 24px; }
+h1 { color: var(--bright); margin-bottom: 8px }
+.updated { font-family: var(--mono); font-size: 11px; color: var(--dimmer); letter-spacing: 2px; margin-bottom: 48px; display: block; }
+h2 { color: var(--bright); margin: 40px 0 12px }
+p { color: var(--white); margin-bottom: 16px; }
+p:last-child { margin-bottom: 0; }
+ul { color: var(--white); padding-left: 20px; margin-bottom: 16px; }
+ul li { margin-bottom: 8px; line-height: 1.65; }
+strong { color: var(--white); }
+a { color: var(--white); }
+footer { justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px }
+@media (max-width: 500px) { footer { flex-direction: column; align-items: flex-start; } }

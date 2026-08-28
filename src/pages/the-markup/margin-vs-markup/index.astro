@@ -1,0 +1,109 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import pageStyle from "../../../styles/pages/the-markup-margin-vs-markup.css?raw";
+const jsonld = [
+String.raw`{
+    "@context":"https://schema.org","@type":"Article",
+    "headline":"Margin vs. Markup, in Plain English",
+    "description":"Why margin and markup are different numbers, and how confusing them drains profit from every trade job.",
+    "image":"https://getdeadhand.com/deadhand-share.png",
+    "author":{"@type":"Organization","name":"Dead Hand"},
+    "publisher":{"@type":"Organization","name":"Dead Hand","alternateName":"Friendly App LLC"},
+    "mainEntityOfPage":"https://getdeadhand.com/the-markup/margin-vs-markup/"
+  }`,
+String.raw`{
+    "@context":"https://schema.org","@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Dead Hand","item":"https://getdeadhand.com/"},
+      {"@type":"ListItem","position":2,"name":"The Markup","item":"https://getdeadhand.com/the-markup/"},
+      {"@type":"ListItem","position":3,"name":"Margin vs. Markup","item":"https://getdeadhand.com/the-markup/margin-vs-markup/"}
+    ]
+  }`,
+];
+const meta = {
+  title: "Margin vs. Markup, in Plain English",
+  description: "Margin and markup are not the same number, and mixing them up drains profit on every job. Plain-English math and the divisor that fixes it.",
+  robots: "index, follow",
+  canonical: "https://getdeadhand.com/the-markup/margin-vs-markup/",
+  ogTitle: "Margin vs. Markup, in Plain English",
+  ogDescription: "The one calculation that decides whether a busy year is a profitable one.",
+  ogType: "article",
+  ogUrl: "https://getdeadhand.com/the-markup/margin-vs-markup/",
+  ogImage: "https://getdeadhand.com/deadhand-share.png",
+  twitterCard: "summary_large_image",
+};
+---
+
+<Layout
+  {...meta}
+  jsonld={jsonld}
+  pageStyle={pageStyle}
+>
+<main class="wrap">
+    <div class="crumb"><a href="/">Dead Hand</a> &nbsp;/&nbsp; <a href="/the-markup/">The Markup</a> &nbsp;/&nbsp; Margin vs. Markup</div>
+    <h1>Margin vs. markup, in plain English</h1>
+    <p class="standfirst">They sound like the same thing. They are not the same number. And the gap between them is coming straight out of your pocket.</p>
+    <p class="byline">The Markup &middot; Dead Hand</p>
+    <article>
+      <p>Here's a question that decides whether a busy year is a profitable one: when you "add 40%" to a part, are you making a 40% profit? Almost every tradesman says yes. Almost every tradesman is wrong, and the mistake is costing them real money on every ticket.</p>
+
+      <h2>The two words, defined once</h2>
+      <p><strong>Markup</strong> is the amount you add on top of what something cost you, measured against the <em>cost</em>. <strong>Margin</strong> is the amount of profit in the sale, measured against the <em>price the customer pays</em>. Same dollars of profit &mdash; measured against two different starting points, which is why the percentages never match.</p>
+      <p>A $100 part sold for $140 has $40 of profit in it either way. As markup, that $40 is measured against the $100 cost: 40%. As margin, that same $40 is measured against the $140 the customer paid: 28.6%. Nothing changed but the yardstick.</p>
+
+      <div class="mathcard">
+        <div class="row"><span>Cost</span><b>$100.00</b></div>
+        <div class="row"><span>Profit added</span><b>$40.00</b></div>
+        <div class="row"><span>Price</span><b>$140.00</b></div>
+        <div class="row"><span>As markup ($40 / $100)</span><b>40%</b></div>
+        <div class="row tot"><span>As margin ($40 / $140)</span><b>28.6%</b></div>
+      </div>
+
+      <p class="pull">Every markup number is a bigger-sounding version of a smaller real margin.</p>
+
+      <h2>The table worth taping to the truck</h2>
+      <p>Because the two drift further apart as the numbers climb, a markup that feels generous can leave you with a margin that doesn't cover your overhead. Here's the conversion:</p>
+
+      <table class="mm">
+        <thead><tr><th>If your markup is</th><th>Your real margin is</th></tr></thead>
+        <tbody>
+          <tr><td>20%</td><td>16.7%</td></tr>
+          <tr><td>30%</td><td>23.1%</td></tr>
+          <tr><td>40%</td><td>28.6%</td></tr>
+          <tr><td>50%</td><td>33.3%</td></tr>
+          <tr><td>66.7%</td><td>40.0%</td></tr>
+          <tr><td>100%</td><td>50.0%</td></tr>
+        </tbody>
+      </table>
+
+      <h2>How to price for the margin you actually want</h2>
+      <p>Stop adding a percentage. Start dividing. If you want a job to carry a real <strong>40% margin</strong>, take your cost and divide it by <strong>0.60</strong> &mdash; that's 1 minus your target margin. The part that cost you $100 has to bill at $166.67. Want 50% margin? Divide by 0.50. Want 35%? Divide by 0.65.</p>
+
+      <div class="callout">
+        <span class="lbl">The one formula</span>
+        <p>Price = Cost &divide; (1 &minus; margin). For a 40% margin: $100 &divide; 0.60 = <strong>$166.67</strong>. Add-40%-markup would have charged $140 and quietly handed back eleven points of profit.</p>
+      </div>
+
+      <p>On one part, eleven points is a few bucks. Across a year of jobs, on every part you touch, it's the difference between a shop that pays you and a shop you pay to keep open. It's the same overhead logic behind <a class="inline" href="/the-markup/shop-rate/">setting your shop rate</a> &mdash; the money's real, it's just quiet.</p>
+
+      <section class="faqs">
+        <h2>Questions</h2>
+        <div class="faq"><h3>Is a 40% markup the same as a 40% margin?</h3><p>No. A 40% markup is only a 28.6% margin. Markup is measured against your cost; margin is measured against the price the customer pays. The same dollars of profit produce two different percentages.</p></div>
+        <div class="faq"><h3>How do I price for a specific margin?</h3><p>Divide your cost by (1 minus the margin you want). For a 40% margin, divide cost by 0.60. A $100 part must bill at $166.67. Adding 40% markup would only charge $140 and leave you at a 28.6% margin.</p></div>
+        <div class="faq"><h3>Why does confusing margin and markup cost money?</h3><p>If you add a markup percentage while believing it's your margin, every job earns less profit than you think. On a 40% markup you keep 28.6%, giving back more than eleven points of profit on every part, all year long.</p></div>
+      </section>
+
+      <div class="cta">
+        <h2>Set the margin once. Never do this math on a job again.</h2>
+        <p>Dead Hand holds your margin and applies it to every part automatically &mdash; the price comes out right whether you did the division in your head or not.</p>
+        <a href="https://dead-hand.app">Get Dead Hand</a>
+      </div>
+
+      <div class="related">
+        <span class="lbl">More from The Markup</span>
+        <a href="/the-markup/price-a-job/"><div class="rt">How to Price a Trade Job Without Losing Money</div><div class="rd">The full picture &mdash; labor, materials, and the overhead most shops forget.</div></a>
+        <a href="/the-markup/shop-rate/"><div class="rt">What Should My Shop Rate Actually Be?</div><div class="rd">Building a billable hourly rate from your real overhead, not the competition's.</div></a>
+      </div>
+    </article>
+  </main>
+</Layout>

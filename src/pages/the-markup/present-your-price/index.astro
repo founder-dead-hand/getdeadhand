@@ -1,0 +1,96 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import pageStyle from "../../../styles/pages/the-markup-present-your-price.css?raw";
+const jsonld = [
+String.raw`{
+    "@context":"https://schema.org","@type":"Article",
+    "headline":"How to Present Your Price So the Customer Says Yes",
+    "description":"How to hand over a price with confidence, use silence, avoid apologizing, and answer price objections without discounting.",
+    "image":"https://getdeadhand.com/deadhand-share.png",
+    "author":{"@type":"Organization","name":"Dead Hand"},
+    "publisher":{"@type":"Organization","name":"Dead Hand","alternateName":"Friendly App LLC"},
+    "mainEntityOfPage":"https://getdeadhand.com/the-markup/present-your-price/"
+  }`,
+String.raw`{
+    "@context":"https://schema.org","@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Dead Hand","item":"https://getdeadhand.com/"},
+      {"@type":"ListItem","position":2,"name":"The Markup","item":"https://getdeadhand.com/the-markup/"},
+      {"@type":"ListItem","position":3,"name":"How to Present Your Price","item":"https://getdeadhand.com/the-markup/present-your-price/"}
+    ]
+  }`,
+];
+const meta = {
+  title: "How to Present Your Price So the Customer Says Yes",
+  description: "How to present your price so they say yes: hand over a clean number, stop talking, and answer 'that's more than I thought' without discounting.",
+  robots: "index, follow",
+  canonical: "https://getdeadhand.com/the-markup/present-your-price/",
+  ogTitle: "How to Present Your Price So the Customer Says Yes",
+  ogDescription: "The number does half the work. How you hand it over does the rest.",
+  ogType: "article",
+  ogUrl: "https://getdeadhand.com/the-markup/present-your-price/",
+  ogImage: "https://getdeadhand.com/deadhand-share.png",
+  twitterCard: "summary_large_image",
+};
+---
+
+<Layout
+  {...meta}
+  jsonld={jsonld}
+  pageStyle={pageStyle}
+>
+<main class="wrap">
+    <div class="crumb"><a href="/">Dead Hand</a> &nbsp;/&nbsp; <a href="/the-markup/">The Markup</a> &nbsp;/&nbsp; Presenting Your Price</div>
+    <h1>How to present your price so they say yes</h1>
+    <p class="standfirst">The number does about half the work. The other half is the ten seconds around it &mdash; how you hand it over, and whether you flinch when you do.</p>
+    <p class="byline">The Markup &middot; Dead Hand</p>
+    <article>
+      <p>You can do everything right &mdash; price the job honestly, cover your overhead, build in a fair margin &mdash; and still lose it in the last thirty seconds, because of how you said the number. Two tradesmen can quote the same $840 and one gets a yes while the other gets "let me think about it," and the gap between them isn't the price. It's the presentation. This is the part nobody teaches, so here it is.</p>
+
+      <h2>Say it to their face, on paper</h2>
+      <p>Whenever you can, present the price in person and hand over something written at the same time. A number said out loud and nothing else floats away; the customer half-remembers it, gets home, and it grows in their memory. A number on a clean estimate stays put and does the talking for you. The document is your ally &mdash; it makes the price look considered instead of made up on the spot. If you have to send it, send a clean <a class="inline" href="/the-markup/write-an-estimate/">written estimate</a>, not a bare figure in a text.</p>
+
+      <h2>Say the number, then stop talking</h2>
+      <p>This is the single most valuable habit in pricing, and it's free. You say the price &mdash; "it's eight hundred and forty, all in" &mdash; and then you go quiet. You let it sit. The silence feels like an hour and it's really about four seconds, and it is the most important four seconds of the whole job.</p>
+      <p>Most tradesmen can't stand it, so they fill it: "but I could maybe do it for seven-fifty," or "I know that's a lot." You just negotiated against yourself before the customer said a word. You dropped ninety dollars of your own margin to escape a silence. Don't. Let them be the one to break it.</p>
+
+      <p class="pull">Whoever speaks first after the number usually loses. Let it be them.</p>
+
+      <h2>Don't apologize for the price</h2>
+      <p>"I know it's expensive, but&hellip;" teaches the customer that even you think the number's too high. If you priced it right, you have nothing to apologize for, so present it like a fact, not a confession. Plain and steady: "That's the price to do it properly." Confidence isn't arrogance here &mdash; to a customer, a tradesman who's calm about his number reads as a tradesman who's fair and knows his trade. The flinch is what makes them nervous, not the figure.</p>
+
+      <h2>Sell the result, not the hours</h2>
+      <p>When you talk about the price, talk about what they're buying, not what you're spending. Nobody wants to pay for three hours of your time. They want hot water back tonight, no leak under the sink, a licensed person who stands behind the work, and no callback next month. Frame the number against that and $840 stops being "a lot for an afternoon" and becomes "fair for the problem gone for good." You're not defending an hourly &mdash; you're pricing a result.</p>
+
+      <h2>When they say "that's more than I thought"</h2>
+      <p>Hear this for what it is: not a no, a question. They're asking you to help them feel okay about the number. The worst thing you can do is answer it by instantly cutting the price, because that tells them the first number was a bluff &mdash; and now they'll wonder how much lower you'll go. Instead, hold the number and give them a reason, or give them a choice: what's included, why it's built the way it is, or a smaller scope that fits a smaller budget. You can lower a total by removing work. You should almost never lower it by discounting the same work.</p>
+
+      <div class="callout">
+        <span class="lbl">The discount you give at the table</span>
+        <p>A hundred dollars knocked off to break an awkward silence isn't a hundred dollars. It's a hundred dollars of pure profit, gone &mdash; the part that was going to pay you. You'd have to sell another whole job to earn it back. The silence is cheaper. Sit in it.</p>
+      </div>
+
+      <h2>Let the presentation carry the number</h2>
+      <p>How the price looks when they see it matters as much as how you say it. A total scrawled on a torn pad undercuts even a fair number; the same total shown clean &mdash; big, clear, itemized, professional &mdash; makes it feel settled and safe. That's the whole idea behind flipping the phone around and showing the customer a clean screen: subtotal, tax, total, right there in front of them. It reads as "this is the price," not "this is my guess." Get the number right first (<a class="inline" href="/the-markup/price-a-job/">here's how</a>), then let a clean presentation do the closing.</p>
+
+      <section class="faqs">
+        <h2>Questions</h2>
+        <div class="faq"><h3>How do you present a price without losing the job?</h3><p>Hand over a clean written number in person, say it plainly without apologizing, then stop talking and let the customer respond. Confidence reads as fairness. Most jobs are lost not by the price but by the tradesman talking himself into a discount before the customer even objects.</p></div>
+        <div class="faq"><h3>Should I discount when a customer hesitates?</h3><p>No. Hesitation is a question, not a no. If you cut the price the second they pause, you teach them the first number wasn't real and you give away margin you'll never get back. Adjust the scope if you must lower the total, but don't slash a price you built correctly.</p></div>
+        <div class="faq"><h3>How do I justify a higher price than a competitor?</h3><p>Sell the result, not the hours: a licensed pro who stands behind the work, no callbacks, and the job done right the first time. A clean, itemized estimate handed over with confidence makes a higher number feel safer than a lower one scribbled on a card.</p></div>
+      </section>
+
+      <div class="cta">
+        <h2>Show them a clean number, not a scribble.</h2>
+        <p>Dead Hand's presenter mode puts the total big and clear on the screen &mdash; flip the phone around and let the price close itself.</p>
+        <a href="https://dead-hand.app">Get Dead Hand</a>
+      </div>
+
+      <div class="related">
+        <span class="lbl">More from The Markup</span>
+        <a href="/the-markup/write-an-estimate/"><div class="rt">How to Write an Estimate That Wins the Job</div><div class="rd">The document you hand over while you say the number.</div></a>
+        <a href="/the-markup/flat-rate-vs-hourly/"><div class="rt">Flat Rate vs. Time and Materials</div><div class="rd">One price is far easier to present than a running meter. Here's why.</div></a>
+      </div>
+    </article>
+  </main>
+</Layout>
