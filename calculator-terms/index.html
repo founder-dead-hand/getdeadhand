@@ -40,11 +40,16 @@
     strong { color: var(--white); }
     a { color: var(--white); }
     footer { padding: 24px var(--pad); border-top: var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-top: 64px; }
-    .footer-mark { height: 20px; opacity: 0.3; }
+    .footer-mark { height: 20px; width: auto; opacity: 0.3; }
     .footer-links { font-family: var(--mono); font-size: 11px; color: var(--dimmer); letter-spacing: 1px; display: flex; gap: 16px; flex-wrap: wrap; }
     .footer-links a { color: var(--dimmer); text-decoration: none; }
     .footer-links a:hover { color: var(--dim); }
     @media (max-width: 500px) { footer { flex-direction: column; align-items: flex-start; } }
+  
+    footer .credit{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+    footer .credit .hb{display:inline-flex;line-height:0}
+    footer .credit .hb img{height:18px;width:auto;display:block}
+    footer .credit .hb:hover{opacity:.85}
   </style>
 </head>
 <body>
@@ -145,7 +150,7 @@
       <a href="/security/">Security</a><a href="/calculator-privacy/">Privacy</a>
       <a href="/calculator-terms/">Terms</a>
       <a href="mailto:founder@getdeadhand.com">Contact</a>
-      <span>&copy; 2026 Friendly App LLC</span>
+      <span>&copy; 2026 Friendly App LLC</span><span class="credit">Site by Handbuilt <a class="hb" href="https://handbuilt.works" target="_blank" rel="noopener" aria-label="Handbuilt &mdash; handbuilt.works"><img src="/handbuilt-hand.webp" width="200" height="183" alt="" loading="lazy" decoding="async" /></a></span>
     </div>
   </footer>
 
