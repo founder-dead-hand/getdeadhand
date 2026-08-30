@@ -6,6 +6,9 @@ import Footer from "../components/Footer.astro";
 // inline and loaded fonts.css async precisely so nothing blocks first
 // paint, and a migration should not add a render-blocking request.
 import globalCss from "../styles/global.css?raw";
+// Signup attribution. Inlined at the end of the body, same reasoning as the
+// CSS: no extra request, and nothing here is worth blocking a page for.
+import attributionJs from "../scripts/attribution.js?raw";
 
 const {
   title,
@@ -60,5 +63,6 @@ const head = [
     {showHeader && <Header />}
     <slot />
     {showFooter && <Footer />}
+    <script is:inline set:html={attributionJs} />
   </body>
 </html>
