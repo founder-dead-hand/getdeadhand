@@ -126,6 +126,22 @@
   to = "/"
   status = 301
   force = true
+# /calculator was the calculator's own landing page from 2026-04-18 until it was
+# removed on 2026-08-26. That commit said "live URLs already 301'd" - true for the
+# nine other retired pages, not for this one, which has been a 404 ever since.
+# It was live and indexed for four months, so anything that linked to it in that
+# window still points here. Home, like the rest of the retired set.
+[[redirects]]
+  from = "/calculator"
+  to = "/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/calculator.html"
+  to = "/"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/sms-policy"
   to = "/"
