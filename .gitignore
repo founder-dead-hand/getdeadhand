@@ -3,3 +3,6 @@ dist/
 .netlify/
 .env
 .astro/
+# Audit renders land in public/ while checking print output. They are working
+# artifacts, not site assets, and must never be published by a git add -A.
+public/_audit_*.png
