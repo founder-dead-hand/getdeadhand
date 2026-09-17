@@ -8,9 +8,6 @@ body { background:var(--black); color:var(--white); font-family:var(--body); -we
 .top nav{display:flex;gap:18px}
 .top nav a{font-family:var(--mono);font-size:12px;letter-spacing:1px;color:var(--dim);text-decoration:none;text-transform:uppercase}
 .top nav a:hover{color:#fff}
-.crumb{font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--dimmer);margin:28px 0 14px}
-.crumb a{color:var(--dim);text-decoration:none}
-.crumb a:hover{color:#fff}
 .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--red-ink);display:block;margin-bottom:10px}
 h1 { color:#fff; margin-bottom:18px; text-wrap:balance }
 h2 { color:#fff; margin-bottom:16px; text-wrap:balance }

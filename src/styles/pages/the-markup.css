@@ -8,9 +8,6 @@ body { background:var(--black); color:var(--white); font-family:var(--body); -we
 .top nav{display:flex;gap:18px}
 .top nav a{font-family:var(--mono);font-size:12px;letter-spacing:1px;color:var(--dim);text-decoration:none;text-transform:uppercase}
 .top nav a:hover{color:#fff}
-.crumb{font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--dimmer);margin:28px 0 14px}
-.crumb a{color:var(--dim);text-decoration:none}
-.crumb a:hover{color:#fff}
 h1 { color:#fff; margin-bottom:18px; text-wrap:balance }
 .standfirst{font-size:20px;color:var(--dim);line-height:1.6;margin-bottom:14px;border-left:3px solid var(--red);padding-left:20px}
 .intro{font-size:17px;color:var(--dim);line-height:1.7;margin:32px 0 8px}

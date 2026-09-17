@@ -28,3 +28,11 @@ h1{font-family:var(--display);font-size:clamp(40px,6.5vw,72px);line-height:.95;l
 h2{font-family:var(--display);font-size:clamp(24px,3.4vw,34px);line-height:1.06;letter-spacing:1px}
 :root{--measure:720px}
 .content{max-width:720px;padding-left:clamp(20px,5vw,28px);padding-right:clamp(20px,5vw,28px)}
+
+/* Breadcrumb. Was ten byte-identical copies across ten page sheets; one copy now.
+   The link is underlined because without it the only thing separating it from the
+   text beside it is colour, at 1.23:1 - axe flags that, and a contractor on a
+   bright truck dashboard would not see it either. */
+.crumb{font-family:var(--mono);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--dimmer);margin:28px 0 14px}
+.crumb a{color:var(--dim);text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+.crumb a:hover{color:#fff}
