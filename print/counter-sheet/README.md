@@ -1,6 +1,16 @@
 # Counter sheet - source
 `counter-sheet.html` is the source of `public/deadhand-counter-sheet.pdf`. Rebuilt 2026-09-02 after the demo total moved to $2,041.52 (the original 08/27 build had no committed source), and again 2026-10-09 at **$2,211.52**.
 
+## Why this sheet, and not every surface
+
+The rule is **not** "every picture of the app shows the same total." It is narrower, and the narrow version is the one that matters:
+
+> **Anything that points at the live demo and promises the scan will match it, must match it.**
+
+This sheet says *SCAN IT - THIS JOB, LIVE ON YOUR PHONE* over a QR to `dead-hand.app/demo`. A contractor scans it at the counter with the paper in his hand. If the paper and his phone show different numbers, the product looks broken at the exact moment it is being judged. That is why this file, the two product shots on `/` and `/counter/`, and the PDF all track the demo.
+
+**Video, social clips and worked examples in The Markup are the opposite case.** Different jobs with different hours should produce different totals - that is the tool working. A number that is identical in every clip reads as a canned prop rather than a man pricing a job. The test for those is not "does it match the sheet", it is **"is the math on screen right for the inputs on screen"**. Do not re-cut good footage to chase this number.
+
 **The 09/02 rebuild shipped stale.** The demo job had already gone from three hours to four on 2026-08-31 (`deadhand-app` 4da2003), so the sheet chased a number that was two days out of date, and it went live on 09-17 that way. Regenerate the shots from the live demo and read the total off the render - do not take the figure from this file, from the last build, or from a handoff.
 
 Rebuild: open `counter-sheet.html` in headless Chromium and print to Letter with background graphics, zero margins (Playwright: `page.pdf(format='Letter', print_background=True, prefer_css_page_size=True)`). Then render at 300dpi and confirm the QR decodes to `https://dead-hand.app/demo` before anything is printed.
